@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -10,6 +11,24 @@ const geistSans = Geist({
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+});
+
+const salsa = localFont({
+  src: "./fonts/Salsa-Regular.ttf",
+  variable: "--font-salsa",
+  weight: "100 900",
+});
+
+const mavenPro = localFont({
+  src: "./fonts/MavenPro-VariableFont_wght.ttf",
+  variable: "--font-maven-pro",
+  weight: "100 900",
+});
+
+const assistant = localFont({
+  src: "./fonts/Assistant-VariableFont_wght.ttf",
+  variable: "--font-assistant",
+  weight: "100 900",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +44,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} box-border ${geistMono.variable} ${salsa.variable} ${mavenPro.variable} ${assistant.variable} antialiased overflow-x-hidden hide-scrollbar`}
       >
         {children}
       </body>
