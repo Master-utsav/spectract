@@ -1,10 +1,9 @@
 
 import BlinkDot from "@/components/BlinkDot";
-import Card, { get_colors } from "@/components/Card";
+import CardsContainer from "@/components/CardsContainer";
 import Gradient from "@/components/Gradient";
 import CategoryName from "@/components/ui/CategoryName";
-import { colorMap } from "@/constants/colors";
-import { EVENT_DATA } from "@/constants/data";
+import { colorMap, get_colors } from "@/constants/colors";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -60,13 +59,7 @@ export default async function CategoryCard({
 
       <div className="flex-1 overflow-y-auto pt-20 px-6 hide-scrollbar bg-black/50 z-[1100] ">
         <div className="w-full min-h-screen mx-auto rounded-md py-10 flex flex-col">
-          <div className="max-w-7xl mx-auto grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-y-auto ">
-            {EVENT_DATA.filter((data) => data.event_category === category).map(
-              (val, index) => (
-                <Card data={val} key={index} />
-              )
-            )}
-          </div>
+          <CardsContainer category={category}/>
         </div>
       </div>
     </Gradient>

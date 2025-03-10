@@ -1,8 +1,9 @@
 "use client";
 
+import { get_colors } from "@/constants/colors";
 import { motion } from "framer-motion";
 import React from "react";
-import { get_colors } from "../Card";
+
 
 const CategoryName = ({ category }: { category: string }) => {
   const colorCategoryName = get_colors(category);
