@@ -8,6 +8,7 @@ import ButtonContainer from "@/components/ButtonContainer";
 import Footer from "@/components/Footer";
 import SpectractBackground from "@/components/SpectractBackground";
 import { usePageCache } from "@/lib/pageChacheProvider";
+import ComingSoon from "@/components/ComingSoon";
 
 export default function Home() {
   const { cachedHome, setCachedHome } = usePageCache();
@@ -29,6 +30,7 @@ export default function Home() {
           </Link>
           <BlinkDot />
         </nav>
+        <ComingSoon />
         <ButtonContainer />
         <Footer />
       </div>

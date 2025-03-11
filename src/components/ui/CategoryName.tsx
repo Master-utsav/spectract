@@ -1,11 +1,17 @@
 "use client";
 
 import { get_colors } from "@/constants/colors";
+import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import React from "react";
 
-
-const CategoryName = ({ category }: { category: string }) => {
+const CategoryName = ({
+  category,
+  className,
+}: {
+  category: string;
+  className: string;
+}) => {
   const colorCategoryName = get_colors(category);
 
   return (
@@ -48,7 +54,10 @@ const CategoryName = ({ category }: { category: string }) => {
           repeatType: "mirror",
         },
       }}
-      className="flex capitalize justify-center items-center text-center font-[family-name:var(--font-assistant)]  text-transparent bg-clip-text relative"
+      className={cn(
+        "flex capitalize justify-center items-center text-center font-[family-name:var(--font-assistant)]  text-transparent bg-clip-text relative",
+        className
+      )}
     >
       {category
         .replace("-", " ")
@@ -91,15 +100,15 @@ const TechSpardhaWTS = [
   "1px rgba(6, 182, 212, 1)",
 ];
 const KalaUtsavTS = [
-  "0 0 60px rgba(168, 85, 247, 0.7), 0 0 60px rgba(59, 130, 246, 0.7)", // purple-500 & blue-300
-  "0 0 60px rgba(168, 85, 247, 0.9), 0 0 60px rgba(59, 130, 246, 0.9)",
-  "0 0 60px rgba(168, 85, 247, 0.7), 0 0 60px rgba(59, 130, 246, 0.7)",
+  "0 0 60px rgba(192, 132, 252, 0.7), 0 0 60px rgba(191, 219, 254, 0.7)", // purple-400 & blue-200
+  "0 0 60px rgba(192, 132, 252, 0.9), 0 0 60px rgba(191, 219, 254, 0.9)",
+  "0 0 60px rgba(192, 132, 252, 0.7), 0 0 60px rgba(191, 219, 254, 0.7)",
 ];
 
 const KalaUtsavWTS = [
-  "1px rgba(168, 85, 247, 1)", // purple-500
-  "1px rgba(59, 130, 246, 1)", // blue-300
-  "1px rgba(168, 85, 247, 1)",
+  "1px rgba(192, 132, 252, 1)", // purple-400
+  "1px rgba(191, 219, 254, 1)", // blue-200
+  "1px rgba(192, 132, 252, 1)",
 ];
 const RangUtsavTS = [
   "0 0 60px rgba(243, 232, 255, 0.7), 0 0 60px rgba(168, 85, 247, 0.7)", // purple-100 & purple-500

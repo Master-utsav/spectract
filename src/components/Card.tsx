@@ -31,18 +31,18 @@ const Card = ({ data }: { data: EventDataInterface }) => {
       }}
       transition={{ duration: 0.4, ease: "easeInOut" }}
       className={cn(
-        "relative overflow-hidden rounded-lg p-6 w-full max-w-md border-2 pointer-events-auto",
+        "relative overflow-hidden rounded-lg sm:p-6 p-3 w-full max-w-md border-2 pointer-events-auto",
         "perspective-1000 transform-style-preserve-3d group",
         colorMap[color],
         colorMap[color + "_gr_rd"]
       )}
     >
       {/* Event Details */}
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start w-full">
+      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start w-full gap-1">
         {/* Event Name */}
         <h1
           className={cn(
-            "text-2xl font-semibold break-words text-start w-full sm:w-auto capitalize font-[family-name:var(--font-maven-pro)]",
+            "text-2xl font-semibold break-words text-center sm:text-start w-full sm:w-auto capitalize font-[family-name:var(--font-maven-pro)]",
             colorMap[color + "_header_text_code"]
           )}
         >
@@ -52,7 +52,7 @@ const Card = ({ data }: { data: EventDataInterface }) => {
         {/* Date-Time Chip */}
         <div
           className={cn(
-            "flex flex-col justify-center items-start gap-2 px-3 py-1 rounded-sm text-base font-[family-name:var(--font-salsa)] font-medium shadow-md w-fit whitespace-nowrap",
+            "flex sm:flex-col flex-row justify-center items-start gap-2 px-3 py-1 rounded-sm text-base font-[family-name:var(--font-salsa)] font-medium shadow-md w-fit whitespace-nowrap max-sm:w-full text-white",
             colorMap[color + "_gr_side"]
           )}
         >
@@ -70,7 +70,7 @@ const Card = ({ data }: { data: EventDataInterface }) => {
       </div>
 
       {/* Description */}
-      <p className="text-white mt-2 text-base font-[family-name:var(--font-assistant)] line-clamp-3">
+      <p className="text-white mt-2 sm:text-base text-sm font-[family-name:var(--font-assistant)] line-clamp-3">
         {data.event_description}
       </p>
 
@@ -113,21 +113,22 @@ const Card = ({ data }: { data: EventDataInterface }) => {
       </div>
 
       {/* Buttons & Image */}
-      <div className="flex flex-row justify-between items-start mt-6">
-        <div className="flex flex-col justify-start items-start gap-3 font-[family-name:var(--font-maven-pro)]">
+      <div className="flex sm:flex-row flex-col-reverse justify-between items-start mt-6 gap-2">
+        <div className="flex flex-col justify-start items-center sm:items-start sm:gap-3 gap-1 font-[family-name:var(--font-maven-pro)] w-full">
           {/* Read Guidelines Button */}
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className={cn(
-              "w-full px-4 py-2.5 bg-white text-black font-medium rounded-lg shadow-md flex items-center gap-2 transition-all duration-300 border active:scale-95",
+              "w-full sm:w-auto px-3 sm:px-4 py-2.5 bg-white text-black font-medium rounded-lg shadow-md flex items-center gap-2 transition-all duration-300 border active:scale-95",
+              "min-w-0 max-w-full flex-nowrap",
               colorMap[color + "_btn_hover"]
             )}
           >
             <ScrollText
-              className={cn("size-5", colorMap[color + "_text_code"])}
+              className={cn("size-5 shrink-0", colorMap[color + "_text_code"])}
             />
-            Read Guidelines
+            <span className="truncate">Read Guidelines</span>
           </motion.button>
 
           {/* Register Now CTA */}
@@ -135,14 +136,16 @@ const Card = ({ data }: { data: EventDataInterface }) => {
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
             className={cn(
-              "w-full px-4 py-2.5 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2 transition-all duration-300 hover:brightness-110 active:scale-95",
+              "w-full sm:w-auto px-3 sm:px-4 py-2.5 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2 transition-all duration-300 hover:brightness-110 active:scale-95",
+              "min-w-0 max-w-full flex-nowrap",
               colorMap[color + "_btn"]
             )}
           >
-            <Rocket className="size-5 text-white" />
-            Register Now
+            <Rocket className="size-5 text-white shrink-0" />
+            <span className="truncate">Register Now</span>
           </motion.button>
         </div>
+
         {/* <div>
           <Image
             src={"/img/beauty.jpeg"}
@@ -153,9 +156,9 @@ const Card = ({ data }: { data: EventDataInterface }) => {
           />
         </div> */}
         {/* Prize Money */}
-        <div className="flex flex-col justify-center items-start gap-3 p-4 rounded-lg shadow-lg border border-white/30 bg-gradient-to-b from-white/20 to-transparent font-[family-name:var(--font-salsa)] font-bold">
+        <div className="flex flex-col justify-center sm:items-start items-center gap-1 sm:gap-3 lg:p-4 w-full p-1 rounded-lg shadow-lg border border-white/30 bg-gradient-to-b from-white/20 to-transparent font-[family-name:var(--font-salsa)] font-bold backdrop-blur-3xl">
           {/* First Prize */}
-          <span className="text-2xl font-bold text-yellow-400 drop-shadow-lg flex items-center gap-3">
+          <span className="text-2xl font-bold text-yellow-400 drop-shadow-lg flex items-center lg:gap-3 gap-1">
             <Image
               width={40}
               height={40}
@@ -164,13 +167,13 @@ const Card = ({ data }: { data: EventDataInterface }) => {
               loading="eager"
               className="w-8 h-8 object-contain mix-blend-lighten"
             />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500">
-              {data.prize_money.first}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500 flex justify-center items-center">
+            <IndianRupee className="size-5 text-yellow-300 " /> {data.prize_money.first}
             </span>
           </span>
 
           {/* Second Prize */}
-          <span className="text-xl font-semibold text-yellow-300 drop-shadow-md flex items-center gap-3">
+          <span className="text-xl font-semibold text-yellow-300 drop-shadow-md flex items-center lg:gap-3 gap-1">
             <Image
               width={40}
               height={40}
@@ -179,13 +182,13 @@ const Card = ({ data }: { data: EventDataInterface }) => {
               loading="eager"
               className="w-8 h-8 object-contain mix-blend-lighten"
             />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-500">
-              {data.prize_money.second}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-500 flex justify-center items-center">
+            <IndianRupee className="size-4 text-gray-300 " />{data.prize_money.second}
             </span>
           </span>
 
           {/* Third Prize */}
-          <span className="text-lg font-medium text-yellow-200 drop-shadow-sm flex items-center gap-3">
+          <span className="text-lg font-medium text-yellow-200 drop-shadow-sm flex items-center lg:gap-3 gap-1">
             <Image
               width={40}
               height={40}
@@ -194,8 +197,8 @@ const Card = ({ data }: { data: EventDataInterface }) => {
               loading="eager"
               className="w-8 h-8 object-contain mix-blend-lighten"
             />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500">
-              {data.prize_money.third}
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500 flex justify-center items-center">
+            <IndianRupee className="size-3 text-orange-300 " />{data.prize_money.third}
             </span>
           </span>
         </div>

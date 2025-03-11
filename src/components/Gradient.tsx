@@ -41,7 +41,7 @@ const Gradient = ({ children }: { children: React.ReactNode }) => {
           repeatType: "mirror",
         }}
       />
-      <div className="w-[90vw] rounded-full h-[85%] md:scale-100 max-w-[500px] bottom-[6rem] sm:bottom-4 absolute  transform -translate-x-1/2 left-1/2 z-[900]  overflow-hidden mix-blend-lighten">
+      <div className="w-[90vw] rounded-full h-[85%] md:scale-100 max-w-[500px] bottom-[6rem] sm:bottom-4 absolute  transform -translate-x-1/2 left-1/2 z-[900]  overflow-hidden mix-blend-lighten  max-[420px]:translate-y-8 max-[440px]:translate-y-8 max-[500px]:translate-y-4">
         <Image
           src="/img/spring_st.png"
           alt="MKBC"

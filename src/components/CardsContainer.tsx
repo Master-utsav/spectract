@@ -12,7 +12,7 @@ const CardsContainer = ({category}: {category : string}) => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.3,
+        staggerChildren: 0.5,
       },
     },
   };
@@ -23,7 +23,7 @@ const CardsContainer = ({category}: {category : string}) => {
   };
   return (
     <motion.div
-      className="max-w-7xl mx-auto grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3 py-10 px-5 overflow-hidden"
+      className="max-w-7xl mx-auto grid gap-6 grid-cols-1 md:grid-cols-2 xl:grid-cols-3 py-10 px-5 overflow-hidden"
       variants={containerVariants}
       initial="hidden"
       animate="show"
