@@ -4,15 +4,12 @@ import { usePageCache } from "@/lib/pageChacheProvider";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const text = "Coming Soon";
-
 export default function ComingSoon() {
   const { cachedHome } = usePageCache();
   const [show, setShow] = useState(false);
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
-
     if (cachedHome === null) {
       timer = setTimeout(() => {
         setShow(true);
@@ -20,33 +17,93 @@ export default function ComingSoon() {
     } else {
       setShow(true);
     }
-
     return () => clearTimeout(timer);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 top-24 max-[640px]:top-16  max-[420px]:top-44 text-2xl text-white/80 w-fit h-fit text-center font-light flex gap-1 font-[family-name:var(--font-assistant)]">
-      {text.split("").map((char, index) => (
-        <motion.span
-          key={index}
-          initial={{ y: index % 2 === 0 ? -50 : 50, opacity: 0 }}
-          animate={
-            show
-              ? { y: 0, opacity: 1 }
-              : { y: index % 2 === 0 ? -50 : 50, opacity: 0 }
-          }
-          transition={{
-            type: "spring",
-            stiffness: 120,
-            damping: 10,
-            delay: index * 0.1, // Each letter appears with a delay
-          }}
-          className="inline-block"
-        >
-          {char === " " ? "\u00A0" : char}
-        </motion.span>
-      ))}
+    <div className="text-3xl text-white font-light z-[999] py-2 min-w-fit overflow-visible h-fit text-center flex justify-center items-center gap-2">
+      {/* "7th" */}
+      <motion.span
+        initial={{ y: 50, opacity: 0, scale: 1.0 }}
+        animate={
+          show
+            ? { y: 0, opacity: 1, scale: 1.3 }
+            : { y: 50, opacity: 0, scale: 1.0 }
+        }
+        transition={{ type: "spring", stiffness: 180, damping: 12, delay: 0.2 }}
+        whileHover={{ scale: 1.4 }}
+        className="relative flex items-start font-[family-name:var(--font-salsa)]
+        bg-gradient-to-r from-amber-400 via-pink-300 to-yellow-700 
+        bg-clip-text text-transparent drop-shadow-[0px_0px_10px_rgba(255,165,0,0.6)]"
+      >
+        7
+        <sup className="text-sm font-light text-white/40 ml-1 mt-[2px] font-[family-name:var(--font-maven-pro)]">
+          th
+        </sup>
+      </motion.span>
+
+      {/* "-" (Dash) */}
+      <motion.span
+        initial={{ y: 50, opacity: 0, scale: 1.0 }}
+        animate={
+          show
+            ? { y: 0, opacity: 1, scale: 1.3 }
+            : { y: 50, opacity: 0, scale: 1.0 }
+        }
+        transition={{
+          type: "spring",
+          stiffness: 180,
+          damping: 12,
+          delay: 0.25,
+        }}
+        whileHover={{ scale: 1.4 }}
+        className="font-[family-name:var(--font-assistant)] text-white/70 mx-1"
+      >
+        -
+      </motion.span>
+
+      {/* "9th" */}
+      <motion.span
+        initial={{ y: 50, opacity: 0, scale: 1.0 }}
+        animate={
+          show
+            ? { y: 0, opacity: 1, scale: 1.3 }
+            : { y: 50, opacity: 0, scale: 1.0 }
+        }
+        transition={{ type: "spring", stiffness: 180, damping: 12, delay: 0.3 }}
+        whileHover={{ scale: 1.4 }}
+        className="relative flex items-start font-[family-name:var(--font-salsa)]
+        bg-gradient-to-r from-amber-400 via-pink-300 to-yellow-700 
+        bg-clip-text text-transparent drop-shadow-[0px_0px_10px_rgba(255,165,0,0.6)]"
+      >
+        9
+        <sup className="text-sm font-light text-white/40 ml-1 mt-[2px] font-[family-name:var(--font-maven-pro)]">
+          th
+        </sup>
+      </motion.span>
+
+      {/* "April" */}
+      <motion.span
+        initial={{ y: -50, opacity: 0, rotate: -10 }}
+        animate={
+          show
+            ? { y: 0, opacity: 1, rotate: 0 }
+            : { y: -50, opacity: 0, rotate: -10 }
+        }
+        transition={{
+          type: "spring",
+          stiffness: 120,
+          damping: 10,
+          delay: 0.35,
+        }}
+        whileHover={{ scale: 1.1 }}
+        className="font-[family-name:var(--font-dancing-script)] w-fit px-1 text-4xl  
+        bg-gradient-to-r from-cyan-500 to-purple-400 bg-clip-text text-transparent 
+        drop-shadow-[0px_0px_10px_rgba(59,130,246,0.6)] min-w-fit  text-center flex "
+      >
+        April
+      </motion.span>
     </div>
   );
 }

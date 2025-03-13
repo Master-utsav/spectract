@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect } from "react";
-
-import Link from "next/link";
 import BlinkDot from "@/components/BlinkDot";
 import ButtonContainer from "@/components/ButtonContainer";
 import Footer from "@/components/Footer";
 import SpectractBackground from "@/components/SpectractBackground";
 import { usePageCache } from "@/lib/pageChacheProvider";
-import ComingSoon from "@/components/ComingSoon";
+import Logo from "@/components/ui/Logo";
+import { VideoProvider } from "@/lib/VideoPreloaderProvider";
+import LogoText from "@/components/ui/LogoText";
+
 
 export default function Home() {
   const { cachedHome, setCachedHome } = usePageCache();
@@ -18,23 +19,18 @@ export default function Home() {
   }
 
   const homeContent = (
-    <>
+    <VideoProvider>
       <SpectractBackground />
-      <div className="container mx-auto py-2 relative flex flex-col z-[999]">
+      <div className="container mx-auto py-1 relative flex flex-col z-[999]">
         <nav className="flex px-4 flex-row w-full justify-between items-center relative max-w-7xl mx-auto">
-          <Link
-            href="/"
-            className="font-[family-name:var(--font-salsa)] text-3xl text-emerald-300"
-          >
-            Logo
-          </Link>
+          <LogoText/>
           <BlinkDot />
         </nav>
-        <ComingSoon />
+        <Logo />
         <ButtonContainer />
         <Footer />
       </div>
-    </>
+    </VideoProvider>
   );
 
   // eslint-disable-next-line react-hooks/rules-of-hooks

@@ -26,6 +26,12 @@ const mavenPro = localFont({
   weight: "100 900",
 });
 
+const dancingScript = localFont({
+  src: "./fonts/DancingScript-Medium.ttf",
+  variable: "--font-dancing-script",
+  weight: "100 900",
+});
+
 const assistant = localFont({
   src: "./fonts/Assistant-VariableFont_wght.ttf",
   variable: "--font-assistant",
@@ -87,7 +93,7 @@ export default function RootLayout({
     <html lang="en">
       <PageCacheProvider>
         <body
-          className={`${geistSans.variable} box-border ${geistMono.variable} ${salsa.variable} ${mavenPro.variable} ${assistant.variable} antialiased overflow-x-hidden hide-scrollbar`}
+          className={`${geistSans.variable} box-border ${dancingScript.variable} ${geistMono.variable} ${salsa.variable} ${mavenPro.variable} ${assistant.variable} antialiased overflow-x-hidden hide-scrollbar`}
         >
           {children}
         </body>

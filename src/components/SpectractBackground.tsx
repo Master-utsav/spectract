@@ -4,15 +4,19 @@ import React from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { usePageCache } from "@/lib/pageChacheProvider";
+import { useVideo } from "@/lib/VideoPreloaderProvider";
 
 const SpectractBackground: React.FC = () => {
   const {cachedHome} = usePageCache();
+  const {videoUrl} = useVideo()
   return (
+
     <div
       className="absolute inset-0 w-[100vw] min-h-screen overflow-hidden bg-gradient-to-br 
       from-[#10121E] via-[#2A1443] to-[#5B1D5C] z-[100] [perspective:1000px] [transform-style:preserve-3d]"
     >
       {/* Bottom Sunrise Effect */}
+
       <div
         className="absolute bottom-0 left-0 w-full h-[50%] 
         bg-gradient-to-t from-[#193F66] via-[#5B1D5C] to-transparent opacity-90"
@@ -78,7 +82,7 @@ const SpectractBackground: React.FC = () => {
       {/* video of the spiral  */}
       <div className="w-[90vw] rounded-full sm:h-[85%] h-[80vh] md:scale-100 max-w-[500px] bottom-[8rem] sm:bottom-24 absolute  transform -translate-x-1/2 left-1/2 z-[900]  overflow-hidden mix-blend-lighten">
         <motion.video
-          src="/video/spring_v_4.mp4"
+          src={videoUrl ? videoUrl : "/video/spring_v_4.mp4"}
           className="w-full h-full scale-90  blur-none z-[900] max-[640px]:-translate-y-8  max-[420px]:translate-y-18 max-[440px]:translate-y-8 max-[500px]:translate-y-4"
           autoPlay
           preload="auto"
