@@ -32,15 +32,15 @@ const assistant = localFont({
   weight: "100 900",
 });
 export const metadata: Metadata = {
-  title: "Spectract LNCT Fest",
+  title: "Tejanta LNCT Fest",
   description:
-    "Experience the vibrant fusion of technology, art, and culture at Spectract LNCT Fest. Join us for an electrifying celebration featuring tech exhibitions, cultural performances, workshops, and thrilling competitions.",
+    "Experience the vibrant fusion of technology, art, and culture at Tejanta LNCT Fest. Join us for an electrifying celebration featuring tech exhibitions, cultural performances, workshops, and thrilling competitions.",
   keywords: [
-    "Spectract LNCT Fest",
+    "Tejanta LNCT Fest",
     "LNCT Fest",
     "Tech Fest LNCT",
     "LNCT Events",
-    "Spectract Fest 2025",
+    "Tejanta Fest 2025",
     "Cultural Fest LNCT",
     "Tech Exhibitions",
     "Workshops LNCT",
@@ -51,16 +51,16 @@ export const metadata: Metadata = {
   ],
 
   openGraph: {
-    title: "Spectract LNCT Fest",
+    title: "Tejanta LNCT Fest",
     description:
-      "Experience the vibrant fusion of technology, art, and culture at Spectract LNCT Fest. Engage in thrilling competitions, tech showcases, and cultural performances.",
-    url: "https://spectract.vercel.app",
+      "Experience the vibrant fusion of technology, art, and culture at Tejanta LNCT Fest. Engage in thrilling competitions, tech showcases, and cultural performances.",
+    url: "https://tejanta.vercel.app",
     images: [
       {
-        url: "https://spectract.vercel.app/img/spectract_1.jpg",
+        url: "https://tejanta.vercel.app/img/tejanta_1.jpg",
         width: 1200,
         height: 630,
-        alt: "Spectract LNCT Fest - The Ultimate Tech & Cultural Celebration",
+        alt: "Tejanta LNCT Fest - The Ultimate Tech & Cultural Celebration",
       },
     ],
     type: "website",
@@ -68,13 +68,14 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    site: "@SpectractLNCT",
-    title: "Spectract LNCT Fest",
+    site: "@TejantaLNCT",
+    title: "Tejanta LNCT Fest",
     description:
-      "Join us at Spectract LNCT Fest for an immersive experience in technology, culture, and innovation! Competitions, exhibitions, and performances await.",
-    images: "https://spectract.vercel.app/img/spectract_1.jpg",
+      "Join us at Tejanta LNCT Fest for an immersive experience in technology, culture, and innovation! Competitions, exhibitions, and performances await.",
+    images: "https://tejanta.vercel.app/img/tejanta_1.jpg",
   },
 };
+
 
 
 export default function RootLayout({
