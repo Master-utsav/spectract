@@ -13,7 +13,7 @@ export default function BackButton({ color }: { color: string }) {
       className={cn(
         "relative flex items-center justify-center text-white px-1 py-2 rounded-lg transition-all duration-300 hover:bg-white/20 active:scale-95 min-sm:hidden"
       )}
-      onClick={() => router.back()}
+      onClick={() => router.push("/") }
     >
       {/* Back Text */}
       <span

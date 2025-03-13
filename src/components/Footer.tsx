@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         masterxdevs
       </Link>
       <span className="text-white/90  flex justify-center items-center text-center sm:text-base text-sm">
-        <p>© 2025 SPECTRACT | LNCT Group of Colleges, Indore</p>
+        <p>© 2025 TEJANTA | LNCT Group of Colleges, Indore</p>
       </span>
       <Link href={"https://lnctgroup.in/"} target="_blank">
         <Image
