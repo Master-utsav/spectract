@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
 import { PageCacheProvider } from "@/lib/pageChacheProvider";
+import SEOData from "@/components/SEOData";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -96,6 +97,7 @@ export default function RootLayout({
           className={`${geistSans.variable} box-border ${dancingScript.variable} ${geistMono.variable} ${salsa.variable} ${mavenPro.variable} ${assistant.variable} antialiased overflow-x-hidden hide-scrollbar`}
         >
           {children}
+          <SEOData/>
         </body>
       </PageCacheProvider>
     </html>

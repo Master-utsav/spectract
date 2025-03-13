@@ -30,6 +30,9 @@ export default function Home() {
         <ButtonContainer />
         <Footer />
       </div>
+      <div className="hidden">
+
+      </div>
     </VideoProvider>
   );
 
