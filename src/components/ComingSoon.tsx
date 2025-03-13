@@ -22,88 +22,88 @@ export default function ComingSoon() {
   }, []);
 
   return (
-    <div className="text-3xl text-white font-light z-[999] py-2 min-w-fit overflow-visible h-fit text-center flex justify-center items-center gap-2">
-      {/* "7th" */}
-      <motion.span
-        initial={{ y: 50, opacity: 0, scale: 1.0 }}
-        animate={
-          show
-            ? { y: 0, opacity: 1, scale: 1.3 }
-            : { y: 50, opacity: 0, scale: 1.0 }
-        }
-        transition={{ type: "spring", stiffness: 180, damping: 12, delay: 0.2 }}
-        whileHover={{ scale: 1.4 }}
-        className="relative flex items-start font-[family-name:var(--font-salsa)]
-        bg-gradient-to-r from-amber-400 via-pink-300 to-yellow-700 
-        bg-clip-text text-transparent drop-shadow-[0px_0px_10px_rgba(255,165,0,0.6)]"
-      >
-        7
-        <sup className="text-sm font-light text-white/40 ml-1 mt-[2px] font-[family-name:var(--font-maven-pro)]">
-          th
-        </sup>
-      </motion.span>
+    show && (
+      <div className="text-4xl text-white font-light z-[999] py-0 min-w-full overflow-visible text-center flex justify-center items-center gap-3">
+        {/* "7th" */}
+        <motion.span
+          initial={{ y: 50, opacity: 0, scale: 1 }}
+          animate={{ y: 0, opacity: 1, scale: 1.2 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 15,
+            delay: 0.2,
+          }}
+          whileHover={{ scale: 1.3 }}
+          className="relative flex items-start font-[family-name:var(--font-salsa)]
+      bg-gradient-to-r from-amber-400 via-pink-300 to-yellow-700 
+      bg-clip-text text-transparent drop-shadow-[0px_0px_10px_rgba(255,165,0,0.6)]"
+        >
+          7
+          <sup className="text-sm font-light text-white/50 ml-[2px] mt-[2px] font-[family-name:var(--font-maven-pro)]">
+            th
+          </sup>
+        </motion.span>
 
-      {/* "-" (Dash) */}
-      <motion.span
-        initial={{ y: 50, opacity: 0, scale: 1.0 }}
-        animate={
-          show
-            ? { y: 0, opacity: 1, scale: 1.3 }
-            : { y: 50, opacity: 0, scale: 1.0 }
-        }
-        transition={{
-          type: "spring",
-          stiffness: 180,
-          damping: 12,
-          delay: 0.25,
-        }}
-        whileHover={{ scale: 1.4 }}
-        className="font-[family-name:var(--font-assistant)] text-white/70 mx-1"
-      >
-        -
-      </motion.span>
+        {/* "to" (Subtle Transition) */}
+        <motion.span
+          initial={{ y: 50, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 15,
+            delay: 0.25,
+          }}
+          className="font-[family-name:var(--font-assistant)] text-white/70 text-lg sm:text-2xl"
+        >
+          to
+        </motion.span>
 
-      {/* "9th" */}
-      <motion.span
-        initial={{ y: 50, opacity: 0, scale: 1.0 }}
-        animate={
-          show
-            ? { y: 0, opacity: 1, scale: 1.3 }
-            : { y: 50, opacity: 0, scale: 1.0 }
-        }
-        transition={{ type: "spring", stiffness: 180, damping: 12, delay: 0.3 }}
-        whileHover={{ scale: 1.4 }}
-        className="relative flex items-start font-[family-name:var(--font-salsa)]
-        bg-gradient-to-r from-amber-400 via-pink-300 to-yellow-700 
-        bg-clip-text text-transparent drop-shadow-[0px_0px_10px_rgba(255,165,0,0.6)]"
-      >
-        9
-        <sup className="text-sm font-light text-white/40 ml-1 mt-[2px] font-[family-name:var(--font-maven-pro)]">
-          th
-        </sup>
-      </motion.span>
+        {/* "9th" */}
+        <motion.span
+          initial={{ y: 50, opacity: 0, scale: 1 }}
+          animate={{ y: 0, opacity: 1, scale: 1.2 }}
+          transition={{
+            type: "spring",
+            stiffness: 200,
+            damping: 15,
+            delay: 0.3,
+          }}
+          whileHover={{ scale: 1.3 }}
+          className="relative flex items-start font-[family-name:var(--font-salsa)]
+      bg-gradient-to-r from-amber-400 via-pink-300 to-yellow-700 
+      bg-clip-text text-transparent drop-shadow-[0px_0px_10px_rgba(255,165,0,0.6)]"
+        >
+          9
+          <sup className="text-sm font-light text-white/50 ml-[2px] mt-[2px] font-[family-name:var(--font-maven-pro)]">
+            th
+          </sup>
+        </motion.span>
 
-      {/* "April" */}
-      <motion.span
-        initial={{ y: -50, opacity: 0, rotate: -10 }}
-        animate={
-          show
-            ? { y: 0, opacity: 1, rotate: 0 }
-            : { y: -50, opacity: 0, rotate: -10 }
-        }
-        transition={{
-          type: "spring",
-          stiffness: 120,
-          damping: 10,
-          delay: 0.35,
-        }}
-        whileHover={{ scale: 1.1 }}
-        className="font-[family-name:var(--font-dancing-script)] w-fit px-1 text-4xl  
-        bg-gradient-to-r from-cyan-500 to-purple-400 bg-clip-text text-transparent 
-        drop-shadow-[0px_0px_10px_rgba(59,130,246,0.6)] min-w-fit  text-center flex "
-      >
-        April
-      </motion.span>
-    </div>
+        {/* "April" (More Emphasis & Larger Gradient) */}
+        <motion.span
+          initial={{ y: -50, opacity: 0, rotate: -10 }}
+          animate={{ y: 0, opacity: 1, rotate: 0 }}
+          transition={{
+            type: "spring",
+            stiffness: 160,
+            damping: 12,
+            delay: 0.35,
+          }}
+          whileHover={{ scale: 1.1 }}
+          className="font-[family-name:var(--font-dancing-script)] px-2 text-5xl  
+      bg-gradient-to-r  from-cyan-400  via-pink-300 to-yellow-700  bg-clip-text text-transparent 
+      drop-shadow-[0px_0px_15px_rgba(59,130,246,0.7)] font-bold"
+        >
+          April
+        </motion.span>
+        <span
+          className={
+            "absolute inset-x-0 bottom-px h-[1.6px] rounded-e-md w-full mx-auto bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
+          }
+        />
+      </div>
+    )
   );
 }

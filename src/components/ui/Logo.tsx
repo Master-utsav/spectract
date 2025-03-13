@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
-// import ComingSoon from "../ComingSoon";
+import ComingSoon from "../ComingSoon";
 
 const Logo = () => {
   const [showLogo, setShowLogo] = useState(false);
@@ -17,7 +17,7 @@ const Logo = () => {
   }, []);
 
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 max-[440px]:top-32 max-[500px]:top-18 top-8 sm:top-16 md:top-10 flex flex-col justify-center items-center max-[440px]:w-[40vw] w-[28vw] sm:w-[24vw] lg:w-[14vw] md:w-[18vw]">
+    <div className="absolute left-1/2 -translate-x-1/2 max-[440px]:top-14 max-[500px]:top-10 top-0 sm:top-4 md:top-0 flex flex-col justify-center items-center max-[440px]:w-[40vw] w-[28vw] sm:w-[24vw] lg:w-[14vw] md:w-[18vw]">
       {showLogo && (
         <motion.div
           initial={{ y: 0, opacity: 0, scale: 0.8 }}
@@ -56,7 +56,7 @@ const Logo = () => {
           </motion.div>
         </motion.div>
       )}
-      {/* <ComingSoon/> */}
+      <ComingSoon/>
     </div>
   );
 };
