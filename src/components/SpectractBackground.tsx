@@ -1,22 +1,36 @@
 "use client";
 
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { usePageCache } from "@/lib/pageChacheProvider";
 import { useVideo } from "@/lib/VideoPreloaderProvider";
 
 const SpectractBackground: React.FC = () => {
-  const {cachedHome} = usePageCache();
-  const {videoUrl} = useVideo()
-  return (
+  const [show, setShow] = useState(false);
+  const { videoUrl } = useVideo();
+  const { cachedHome } = usePageCache();
 
+  useEffect(() => {
+    let timer: NodeJS.Timeout;
+
+    if (cachedHome === null) {
+      timer = setTimeout(() => {
+        setShow(true);
+      }, 5000);
+    } else {
+      setShow(true);
+    }
+
+    return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  return (
     <div
       className="absolute inset-0 w-[100vw] min-h-screen overflow-hidden bg-gradient-to-br 
       from-[#10121E] via-[#2A1443] to-[#5B1D5C] z-[100] [perspective:1000px] [transform-style:preserve-3d]"
     >
-      {/* Bottom Sunrise Effect */}
-
       <div
         className="absolute bottom-0 left-0 w-full h-[50%] 
         bg-gradient-to-t from-[#193F66] via-[#5B1D5C] to-transparent opacity-90"
@@ -47,6 +61,65 @@ const SpectractBackground: React.FC = () => {
           repeatType: "mirror",
         }}
       />
+      {show && (
+        <>
+          {/* Light ray left 1 */}
+
+          <motion.span
+            className="absolute top-0 left-0 sm:w-[30%] sm:h-[15%] w-[20%] h-[30%] overflow-hidden
+          bg-gradient-to-r from-[#2b1346] via-[#571483] via-25% to-transparent 
+          blur-[20px] opacity-80 mix-blend-screen"
+            initial={{ opacity: 0.6, rotate: 0, y: -150 }}
+            animate={{ opacity: 0.8, rotate: 45, y: 0 }}
+            transition={{
+              delay: 0,
+              duration: 2,
+              repeatType: "mirror",
+            }}
+          />
+          {/* Light ray left 2 */}
+          <motion.span
+            className="absolute top-16 -left-10 rotate-45 sm:w-[30%] sm:h-[18%] w-[20%] h-[30%] overflow-hidden
+          bg-gradient-to-r from-[#2b1346] via-[#571483] via-25% to-transparent 
+          blur-[20px] opacity-80 mix-blend-screen"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: [0.6, 1, 0.6] }}
+            transition={{
+              delay: 2,
+              duration: 6,
+              repeat: Infinity,
+              repeatType: "mirror",
+            }}
+          />
+          {/* light ray right 1 */}
+          <motion.span
+            className="absolute top-0 right-0  sm:w-[30%] sm:h-[15%] w-[20%] h-[30%] overflow-hidden
+          bg-gradient-to-r  from-[#02246e] via-[#5B1D5C] via-25% to-transparent 
+          blur-[20px] opacity-80 mix-blend-screen"
+            initial={{ opacity: 0.6, rotate: 0, y: -150 }}
+            animate={{ opacity: 0.8, rotate: 135, y: 0 }}
+            transition={{
+              delay: 0,
+              duration: 2,
+              repeatType: "mirror",
+            }}
+          />
+          {/* Light ray right 2 */}
+          <motion.span
+            className="absolute top-12 -right-10 rotate-135 sm:w-[30%] sm:h-[18%] w-[20%] h-[30%] overflow-hidden
+          bg-gradient-to-r from-[#02236a] via-[#5B1D5C] via-25% to-transparent 
+          blur-[20px] opacity-80 mix-blend-screen"
+            animate={{ opacity: [0.6, 1, 0.6] }}
+            transition={{
+              delay: 2,
+              duration: 6,
+              repeat: Infinity,
+              repeatType: "mirror",
+            }}
+          />
+        </>
+      )}
+
       {/* 🔷 Responsive 3D Grid (Perspective Effect) */}
       <div className="absolute rotate-x-60 bottom-8 sm:-bottom-10 left-0 w-full h-[50vw] sm:h-[50%] z-[50] overflow-hidden">
         <svg
@@ -88,14 +161,15 @@ const SpectractBackground: React.FC = () => {
           preload="auto"
           muted
           playsInline
-          poster="/img/spring_st.png"
           style={{
             objectFit: "cover",
             backgroundColor: "transparent",
             mixBlendMode: "lighten",
             willChange: "transform, opacity",
           }}
-          initial={cachedHome !== null ? { y: 20, opacity: 1 } : { y: 800, opacity: 0 }}
+          initial={
+            cachedHome !== null ? { y: 20, opacity: 1 } : { y: 800, opacity: 0 }
+          }
           animate={{ opacity: 1, y: 20 }}
           exit={{ opacity: 0, y: 0 }}
           transition={{ delay: 0, duration: 5, ease: [0, 0.55, 0.45, 1] }}
@@ -119,7 +193,7 @@ const SpectractBackground: React.FC = () => {
           mass: 1,
         }}
         style={{
-          perspective: 1000,
+          perspective: 1200, // Enhancing 3D depth
         }}
       >
         <motion.div
@@ -136,6 +210,7 @@ const SpectractBackground: React.FC = () => {
           }}
           className="relative w-[90vw] max-w-[500px] h-auto z-[900]"
         >
+          {/* Stand Image */}
           <Image
             src="/img/stand_img.png"
             alt="Stand Image"
@@ -143,6 +218,49 @@ const SpectractBackground: React.FC = () => {
             height={500}
             className="relative w-full h-auto md:scale-105 drop-shadow-xl"
           />
+
+          {/* Circle Aura (Aligned to Stand) */}
+          {show && cachedHome !== null && (
+            <motion.div
+              initial={{ scale: 1, opacity: 0 }}
+              animate={{ scale: 1, opacity: 1 }}
+              transition={{
+                duration: 5,
+                ease: "easeInOut",
+              }}
+            >
+              <motion.span
+                className="absolute bottom-[6rem] left-1/2 transform -translate-x-1/2 w-[50%] h-[50%] bg-radial bg-gradient-radial from-transparent via-yellow-500 to-purple-500 blur-[50px] opacity-75 mix-blend-screen"
+                animate={{ opacity: 0.5, scale: [0.8, 1, 0.8] }}
+                transition={{
+                  delay: 0,
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                }}
+              />
+              <motion.span
+                className="absolute bottom-[18rem] left-1/2 transform -translate-x-1/2 w-[50%] h-[50%] bg-radial bg-gradient-radial from-transparent via-pink-500 to-purple-500 blur-[50px] opacity-75 mix-blend-screen"
+                animate={{ opacity: 0.5, scale: [0.8, 1, 0.8] }}
+                transition={{
+                  delay: 0,
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                }}
+              />
+              <motion.span
+                className="absolute bottom-[24rem] left-1/2 transform -translate-x-1/2 w-[50%] h-[50%] bg-radial bg-gradient-radial from-transparent via-blue-400-500 to-cyan-500 blur-[50px] opacity-75 mix-blend-screen"
+                animate={{ opacity: 0.5, scale: [0.8, 1, 0.8] }}
+                transition={{
+                  delay: 0,
+                  duration: 4,
+                  repeat: Infinity,
+                  repeatType: "mirror",
+                }}
+              />
+            </motion.div>
+          )}
         </motion.div>
       </motion.div>
     </div>

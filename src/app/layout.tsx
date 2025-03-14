@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { PageCacheProvider } from "@/lib/pageChacheProvider";
 import SEOData from "@/components/SEOData";
+import { VideoProvider } from "@/lib/VideoPreloaderProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -98,12 +99,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <PageCacheProvider>
-        <body
-          className={`${geistSans.variable} box-border ${dancingScriptBold.variable} ${dancingScript.variable} ${geistMono.variable} ${salsa.variable} ${mavenPro.variable} ${assistant.variable} antialiased overflow-x-hidden hide-scrollbar`}
-        >
-          {children}
-          <SEOData />
-        </body>
+        <VideoProvider>
+          <body
+            className={`${geistSans.variable} box-border ${dancingScriptBold.variable} ${dancingScript.variable} ${geistMono.variable} ${salsa.variable} ${mavenPro.variable} ${assistant.variable} antialiased overflow-x-hidden hide-scrollbar`}
+          >
+            {children}
+            <SEOData />
+          </body>
+        </VideoProvider>
       </PageCacheProvider>
     </html>
   );
