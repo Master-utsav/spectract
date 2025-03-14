@@ -66,7 +66,7 @@ const SpectractBackground: React.FC = () => {
           {/* Light ray left 1 */}
 
           <motion.span
-            className="absolute top-0 left-0 sm:w-[30%] sm:h-[15%] w-[20%] h-[30%] overflow-hidden
+            className="absolute top-0 left-0 sm:w-[30%] sm:h-[15%] max-sm:hidden overflow-hidden
           bg-gradient-to-r from-[#2b1346] via-[#571483] via-25% to-transparent 
           blur-[20px] opacity-80 mix-blend-screen"
             initial={{ opacity: 0.6, rotate: 0, y: -150 }}
@@ -79,7 +79,7 @@ const SpectractBackground: React.FC = () => {
           />
           {/* Light ray left 2 */}
           <motion.span
-            className="absolute top-16 -left-10 rotate-45 sm:w-[30%] sm:h-[18%] w-[20%] h-[30%] overflow-hidden
+            className="absolute top-16 -left-10 rotate-45 sm:w-[30%] sm:h-[18%] max-sm:hidden overflow-hidden
           bg-gradient-to-r from-[#2b1346] via-[#571483] via-25% to-transparent 
           blur-[20px] opacity-80 mix-blend-screen"
             initial={{ opacity: 0 }}
@@ -93,7 +93,7 @@ const SpectractBackground: React.FC = () => {
           />
           {/* light ray right 1 */}
           <motion.span
-            className="absolute top-0 right-0  sm:w-[30%] sm:h-[15%] w-[20%] h-[30%] overflow-hidden
+            className="absolute top-0 right-0  sm:w-[30%] sm:h-[15%] overflow-hidden max-sm:hidden
           bg-gradient-to-r  from-[#02246e] via-[#5B1D5C] via-25% to-transparent 
           blur-[20px] opacity-80 mix-blend-screen"
             initial={{ opacity: 0.6, rotate: 0, y: -150 }}
@@ -106,14 +106,66 @@ const SpectractBackground: React.FC = () => {
           />
           {/* Light ray right 2 */}
           <motion.span
-            className="absolute top-12 -right-10 rotate-135 sm:w-[30%] sm:h-[18%] w-[20%] h-[30%] overflow-hidden
-          bg-gradient-to-r from-[#02236a] via-[#5B1D5C] via-25% to-transparent 
+            className="absolute top-12 -right-10 rotate-135 sm:w-[30%] sm:h-[18%]  overflow-hidden
+          bg-gradient-to-r from-[#02236a] via-[#5B1D5C] via-25% to-transparent max-sm:hidden
           blur-[20px] opacity-80 mix-blend-screen"
             animate={{ opacity: [0.6, 1, 0.6] }}
             transition={{
               delay: 2,
               duration: 6,
               repeat: Infinity,
+              repeatType: "mirror",
+            }}
+          />
+          {/* small screen light */}
+          <motion.span
+            className="absolute top-0 left-0 w-[20%] h-[50%] sm:hidden overflow-hidden
+          bg-gradient-to-t from-[#2b1346] via-[#571483] via-25% to-transparent 
+          blur-[15px] opacity-80 mix-blend-screen"
+            initial={{ opacity: 0.6, rotate: 150, y: 10 }}
+            animate={{ opacity: 0.8, rotate: 45, y: 10 }}
+            transition={{
+              delay: 1,
+              duration: 2,
+              repeatType: "mirror",
+            }}
+          />
+          {/* Light ray left 2 */}
+          <motion.span
+            className="absolute top-8 -left-10 w-[20%] h-[60%]  sm:hidden overflow-hidden
+          bg-gradient-to-t from-[#2b1346] via-[#571483] via-25% to-transparent 
+          blur-[15px] opacity-80 mix-blend-screen"
+            initial={{ opacity: 0.6, rotate: 150, y: 10 }}
+            animate={{ opacity: 0.8, rotate: 45, y: 10 }}
+            transition={{
+              delay: 1,
+              duration: 2,
+              repeatType: "mirror",
+            }}
+          />
+          {/* light ray right 1 */}
+          <motion.span
+            className="absolute top-0 right-0  w-[20%] h-[50%] overflow-hidden sm:hidden
+          bg-gradient-to-b  from-[#02246e] via-[#5B1D5C] via-25% to-transparent 
+          blur-[15px] opacity-80 mix-blend-screen"
+            initial={{ opacity: 0.6, rotate: 45, y: 10 }}
+            animate={{ opacity: 0.8, rotate: 135, y: 10 }}
+            transition={{
+              delay: 1,
+              duration: 2,
+              repeatType: "mirror",
+            }}
+          />
+          {/* Light ray right 2 */}
+          <motion.span
+            className="absolute top-8 -right-10  w-[20%] h-[60%]  overflow-hidden
+          bg-gradient-to-b from-[#02236a] via-[#5B1D5C] via-25% to-transparent sm:hidden
+          blur-[15px] opacity-80 mix-blend-screen"
+            initial={{ opacity: 0.6, rotate: 45, y: 10 }}
+            animate={{ opacity: 0.8, rotate: 135, y: 10 }}
+            transition={{
+              delay: 1,
+              duration: 2,
               repeatType: "mirror",
             }}
           />
