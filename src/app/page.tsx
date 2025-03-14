@@ -8,6 +8,7 @@ import SpectractBackground from "@/components/SpectractBackground";
 import { usePageCache } from "@/lib/pageChacheProvider";
 import Logo from "@/components/ui/Logo";
 import LogoText from "@/components/ui/LogoText";
+import { VideoProvider } from "@/lib/VideoPreloaderProvider";
 
 export default function Home() {
   const { cachedHome, setCachedHome } = usePageCache();
@@ -17,7 +18,7 @@ export default function Home() {
   }
 
   const homeContent = (
-    <>
+    <VideoProvider>
       <SpectractBackground />
       <div className="container mx-auto py-1 relative flex flex-col z-[999]">
         <nav className="flex px-4 flex-row w-full justify-between items-center relative max-w-7xl mx-auto">
@@ -30,7 +31,7 @@ export default function Home() {
         <Footer />
       </div>
       <div className="hidden"></div>
-    </>
+    </VideoProvider>
   );
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
