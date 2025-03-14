@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { PageCacheProvider } from "@/lib/pageChacheProvider";
 import SEOData from "@/components/SEOData";
-import Head from "next/head";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -62,7 +61,9 @@ export const metadata: Metadata = {
     "LNCT College Events",
     "Student Fest LNCT",
   ],
-
+  verification: {
+    google: "UCXi1Cjwp3J0OMwafKDmgsznHtdR0JQVGhmnmKbrkVk",
+  },
   openGraph: {
     title: "Tejanta LNCT Fest",
     description:
@@ -96,12 +97,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <Head>
-        <meta
-          name="google-site-verification"
-          content="UCXi1Cjwp3J0OMwafKDmgsznHtdR0JQVGhmnmKbrkVk"
-        />
-      </Head>
       <PageCacheProvider>
         <body
           className={`${geistSans.variable} box-border ${dancingScriptBold.variable} ${dancingScript.variable} ${geistMono.variable} ${salsa.variable} ${mavenPro.variable} ${assistant.variable} antialiased overflow-x-hidden hide-scrollbar`}
