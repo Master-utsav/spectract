@@ -2,13 +2,25 @@
 
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { usePageCache } from "@/lib/pageChacheProvider";
 
 export default function LogoText() {
   const [show, setShow] = useState(false);
+  const { cachedHome } = usePageCache();
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 6000);
+    let timer: NodeJS.Timeout;
+
+    if (cachedHome === null) {
+      timer = setTimeout(() => {
+        setShow(true);
+      }, 6000);
+    } else {
+      setShow(true);
+    }
+
     return () => clearTimeout(timer);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
@@ -31,30 +43,29 @@ export default function LogoText() {
         L
       </motion.span> */}
       <div className="text-4xl text-white font-light min-w-fit h-full text-center flex">
-        {"Lnct".split("").map((char, index) => (
+        {"LNCT".split("").map((char, index) => (
           <motion.span
             key={index}
-            initial={{ y: index % 2 === 0 ? -50 : 50, opacity: 0 }} // Odd from top, even from bottom
-            animate={
-              show
-                ? { y: 0, opacity: 1 }
-                : { y: index % 2 === 0 ? -50 : 50, opacity: 0 }
-            }
+            initial={show && { y: 0, opacity: 1 } } // Starts at normal position
+            animate={show ? {
+              y: [0, 4 , 0], // Moves up and down
+              opacity: [1, 0.9, 1], // Subtle opacity shift
+            } : {opacity : 0}}
             transition={{
-              type: "spring",
-              stiffness: 150,
-              damping: 10,
-              delay: index * 0.1,
-            }} // Staggered effect
-            whileHover={{ scale: 1.4 }}
+              duration: 1.6, // Smooth animation cycle
+              repeat: Infinity, // Loop forever
+              repeatType: "reverse", // Moves back and forth
+              delay: index * 0.4, // Staggered delay per letter
+            }}
             className="font-[family-name:var(--font-salsa)] 
-             bg-gradient-to-br from-amber-400 via-cyan-500 to-purple-500 py-1 bg-clip-text text-transparent 
-             drop-shadow-[0px_0px_10px_rgba(59,130,246,0.6)]"
+       bg-gradient-to-br from-amber-400 via-cyan-500 to-purple-500 py-1 
+       bg-clip-text text-transparent drop-shadow-[0px_0px_10px_rgba(59,130,246,0.6)]"
           >
             {char}
           </motion.span>
         ))}
       </div>
+
       {/* <div
         className="text-4xl font-light min-w-fit h-full text-center flex font-[family-name:var(--font-maven-pro)] 
          bg-gradient-to-br from-amber-400 via-cyan-500 to-purple-500

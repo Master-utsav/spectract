@@ -20,7 +20,7 @@ export default async function CategoryCard({
         <BackButton color={get_colors(category)} />
         <Link
           href={"/"}
-          className="font-[family-name:var(--font-salsa)] text-3xl text-emerald-300  relative w-[22vw] sm:w-[15vw] md:w-[10vw] lg:w-[8vw] aspect-[16/9] flex justify-center items-center"
+          className="font-[family-name:var(--font-salsa)] text-3xl text-emerald-300  relative w-[22vw] sm:w-[15vw] md:w-[10vw] lg:w-[8vw] aspect-[16/9] flex justify-center items-center group"
         >
           <Image
             src="/img/tejanta_1.png"
@@ -35,7 +35,7 @@ export default async function CategoryCard({
             alt="Logo"
             width={1600}
             height={900}
-            className="absolute inset-0 w-full h-full object-cover"
+            className="absolute inset-0 w-full h-full object-cover mix-blend-color-dodge  hover:scale-105 hover:transition-transform group-hover:delay-150 hover:duration-300"
           />
         </Link>
         <div className="relative w-1/3 max-sm:hidden">

@@ -13,67 +13,50 @@ export default function ComingSoon() {
     if (cachedHome === null) {
       timer = setTimeout(() => {
         setShow(true);
-      }, 6000);
+      }, 7000);
     } else {
       setShow(true);
     }
     return () => clearTimeout(timer);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (
     show && (
-      <div className="text-4xl text-white font-light z-[999] py-0 min-w-full overflow-visible text-center flex justify-center items-center gap-3">
+      <div className="text-4xl text-white font-light z-[999] py-0 min-w-full relative overflow-visible text-center flex justify-center items-center gap-3">
         {/* "7th" */}
         <motion.span
-          initial={{ y: 50, opacity: 0, scale: 1 }}
-          animate={{ y: 0, opacity: 1, scale: 1.2 }}
-          transition={{
-            type: "spring",
-            stiffness: 200,
-            damping: 15,
-            delay: 0.2,
-          }}
-          whileHover={{ scale: 1.3 }}
+          initial={{ rotateY: 270, opacity: 0, scale: 1 }}
+          animate={{ rotateY: 0, opacity: 1, scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 200, damping: 6, delay: 0 }}
           className="relative flex items-start font-[family-name:var(--font-salsa)]
-      bg-gradient-to-r from-amber-400 via-pink-300 to-yellow-700 
-      bg-clip-text text-transparent drop-shadow-[0px_0px_10px_rgba(255,165,0,0.6)]"
+            bg-gradient-to-r from-amber-400 via-pink-300 to-yellow-700 
+            bg-clip-text text-transparent drop-shadow-[0px_0px_10px_rgba(255,165,0,0.6)] group-hover:scale-[1.2] transition-transform group-hover:delay-150 group-hover:duration-300"
         >
           7
-          <sup className="text-sm font-light text-white/50 ml-[2px] mt-[2px] font-[family-name:var(--font-maven-pro)]">
+          <sup className="text-sm font-light text-white/50 ml-[2px] mt-[2px] font-[family-name:var(--font-maven-pro)] ">
             th
           </sup>
         </motion.span>
 
-        {/* "to" (Subtle Transition) */}
+        {/* "to" */}
         <motion.span
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{
-            type: "spring",
-            stiffness: 200,
-            damping: 15,
-            delay: 0.25,
-          }}
-          className="font-[family-name:var(--font-assistant)] text-white/70 text-lg sm:text-2xl"
+          initial={{ rotateY: 270, opacity: 0, scale: 1 }}
+          animate={{ rotateY: 0, opacity: 1, scale: 1.0 }}
+          transition={{ type: "spring", stiffness: 200, damping: 6, delay: 0.3 }} // Delay adjusted
+          className="font-[family-name:var(--font-assistant)] text-white/70 text-lg sm:text-2xl "
         >
           to
         </motion.span>
 
         {/* "9th" */}
         <motion.span
-          initial={{ y: 50, opacity: 0, scale: 1 }}
-          animate={{ y: 0, opacity: 1, scale: 1.2 }}
-          transition={{
-            type: "spring",
-            stiffness: 200,
-            damping: 15,
-            delay: 0.3,
-          }}
-          whileHover={{ scale: 1.3 }}
+          initial={{ rotateY: 270, opacity: 0, scale: 1 }}
+          animate={{ rotateY: 0, opacity: 1, scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 200, damping: 6, delay: 0.6 }} // Delay adjusted
           className="relative flex items-start font-[family-name:var(--font-salsa)]
-      bg-gradient-to-r from-amber-400 via-pink-300 to-yellow-700 
-      bg-clip-text text-transparent drop-shadow-[0px_0px_10px_rgba(255,165,0,0.6)]"
+            bg-gradient-to-r from-amber-400 via-pink-300 to-yellow-700 
+            bg-clip-text text-transparent drop-shadow-[0px_0px_10px_rgba(255,165,0,0.6)] group-hover:scale-[1.2] transition-transform group-hover:delay-150 group-hover:duration-300"
         >
           9
           <sup className="text-sm font-light text-white/50 ml-[2px] mt-[2px] font-[family-name:var(--font-maven-pro)]">
@@ -81,27 +64,42 @@ export default function ComingSoon() {
           </sup>
         </motion.span>
 
-        {/* "April" (More Emphasis & Larger Gradient) */}
+        {/* "April" */}
         <motion.span
-          initial={{ y: -50, opacity: 0, rotate: -10 }}
-          animate={{ y: 0, opacity: 1, rotate: 0 }}
-          transition={{
-            type: "spring",
-            stiffness: 160,
-            damping: 12,
-            delay: 0.35,
-          }}
-          whileHover={{ scale: 1.1 }}
-          className="font-[family-name:var(--font-dancing-script)] px-2 text-5xl  
-      bg-gradient-to-r  from-cyan-400  via-pink-300 to-yellow-700  bg-clip-text text-transparent 
-      drop-shadow-[0px_0px_15px_rgba(59,130,246,0.7)] font-bold"
+          initial={{ rotateY: 270, opacity: 0, scale: 1 }}
+          animate={{ rotateY: 0, opacity: 1, scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 160, damping: 6, delay: 0.9 }} // Delay adjusted
+          className="font-[family-name:var(--font-dancing-script-bold)] px-2 py-3 text-5xl  
+            bg-gradient-to-r from-cyan-400 via-pink-300 to-yellow-700 bg-clip-text text-transparent 
+            drop-shadow-[0px_0px_15px_rgba(59,130,246,0.7)] font-bold group-hover:scale-[1.2] transition-transform group-hover:delay-150 group-hover:duration-300"
         >
           April
         </motion.span>
-        <span
-          className={
-            "absolute inset-x-0 bottom-px h-[1.6px] rounded-e-md w-full mx-auto bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
-          }
+
+        {/* Gradient Lines & Effects */}
+        <motion.span
+          initial={{ x: 80 }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 200, damping: 15, delay: 1.6 }} // Delay adjusted
+          className="absolute inset-x-0 bottom-3 h-[1.6px] rounded-e-md w-full mx-auto bg-gradient-to-r from-transparent via-yellow-500 to-transparent"
+        />
+        <motion.span
+          initial={{ opacity: 0, scale: 1.0 }}
+          animate={{ opacity: 1, scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 200, damping: 15, delay: 1.4 }} // Delay adjusted
+          className="absolute inset-x-0 bottom-2 h-[10px] opacity-80 blur-md rounded-e-md w-full mx-auto bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
+        />
+        <motion.span
+          initial={{ x: -80 }}
+          animate={{ x: 0 }}
+          transition={{ type: "spring", stiffness: 200, damping: 15, delay: 1.2 }} // Delay adjusted
+          className="absolute inset-x-0 bottom-4 h-[1.6px] rounded-e-md w-full mx-auto bg-gradient-to-r from-transparent via-cyan-500 to-transparent"
+        />
+        <motion.span
+          initial={{ opacity: 0, scale: 1.0 }}
+          animate={{ opacity: 1, scale: 1.2 }}
+          transition={{ type: "spring", stiffness: 200, damping: 15, delay: 1.5 }} // Delay adjusted
+          className="absolute inset-x-0 bottom-3 h-[10px] opacity-80 blur-md rounded-e-md w-full mx-auto bg-gradient-to-r from-transparent via-yellow-500 to-transparent"
         />
       </div>
     )

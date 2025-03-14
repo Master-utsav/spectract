@@ -4,19 +4,29 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
+import { usePageCache } from "@/lib/pageChacheProvider";
+
 
 const SmallLogo = () => {
-  const [showLogo, setShowLogo] = useState(false);
+  const [show, setShow] = useState(false);
+    const { cachedHome } = usePageCache();
+  
+    useEffect(() => {
+      let timer: NodeJS.Timeout;
+  
+      if (cachedHome === null) {
+        timer = setTimeout(() => {
+          setShow(true);
+        }, 6500);
+      } else {
+        setShow(true);
+      }
+  
+      return () => clearTimeout(timer);
+   // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-  useEffect(() => {
-    const timeout = setTimeout(() => {
-      setShowLogo(true);
-    }, 6500);
-
-    return () => clearTimeout(timeout);
-  }, []);
-
-  if (!showLogo) return null; 
+  if (!show) return null; 
 
   return (
     <motion.div
@@ -35,7 +45,7 @@ const SmallLogo = () => {
       <Link href="/" className="relative w-full h-full">
         {/* Blurred Background */}
         <Image
-          src="/img/tejanta_1.png"
+          src="/img/tejanta_2.png"
           alt="Logo"
           width={1600}
           height={900}
@@ -43,11 +53,11 @@ const SmallLogo = () => {
         />
         {/* Main Logo */}
         <Image
-          src="/img/tejanta_1.png"
+          src="/img/tejanta_2.png"
           alt="Logo"
           width={1600}
           height={900}
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover  mix-blend-color-dodge"
         />
       </Link>
     </motion.div>
