@@ -15,10 +15,11 @@ import {
   ScrollText,
   User,
 } from "lucide-react";
+import { useRouter } from "next/navigation";
 
 const Card = ({ data }: { data: EventDataInterface }) => {
   const color: string = get_colors(data.event_category);
-
+  const router = useRouter();
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.9, y: 20 }}
@@ -124,6 +125,7 @@ const Card = ({ data }: { data: EventDataInterface }) => {
               "min-w-0 max-w-full flex-nowrap",
               colorMap[color + "_btn_hover"]
             )}
+            onClick={() => router.push(`/${data.event_category}/${data.event_name}`)}
           >
             <ScrollText
               className={cn("size-5 shrink-0", colorMap[color + "_text_code"])}

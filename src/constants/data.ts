@@ -69,6 +69,22 @@ export const EVENT_DATA = [
   },
   {
     event_category: "tech-spardha",
+    event_name: "illustratex",
+    event_date: "05-04-2025",
+    event_time: "10:00AM",
+    event_organizer: "masterxdevs",
+    event_location: "Mac Lab",
+    event_description:
+      "A time-bound coding marathon where teams build innovative projects on given themes.",
+    event_image: "hackathon_poster",
+    event_link: "registration_link",
+    entry_fees: 249,
+    prize_money: { first: 1000, second: 600, third: 400 },
+    event_requirement: "Teams of 2-4 members required.",
+    event_guidelines: ["No prebuilt projects", "Use open-source tools"],
+  },
+  {
+    event_category: "tech-spardha",
     event_name: "robo-race",
     event_date: "06-04-2025",
     event_time: "3:00PM",
@@ -87,10 +103,10 @@ export const EVENT_DATA = [
     ],
   },
 
-  // Kala-Utsav Events
+  // Kalaa-utsav Events
   {
-    event_category: "kala-utsav",
-    event_name: "painting-contest",
+    event_category: "kalaa-utsav",
+    event_name: "drama-performance",
     event_date: "2025-04-02",
     event_time: "11:30AM",
     event_organizer: "Art Club",
@@ -104,8 +120,8 @@ export const EVENT_DATA = [
     event_guidlines: ["No digital paintings", "Canvas size limited to A3"],
   },
   {
-    event_category: "kala-utsav",
-    event_name: "sketching-challenge",
+    event_category: "kalaa-utsav",
+    event_name: "poetry-slam",
     event_date: "2025-04-03",
     event_time: "1:00PM",
     event_organizer: "Creative Arts Society",
@@ -119,7 +135,7 @@ export const EVENT_DATA = [
     event_guidlines: ["No tracing", "Time limit is 1 hour"],
   },
   {
-    event_category: "kala-utsav",
+    event_category: "kalaa-utsav",
     event_name: "dance-competition",
     event_date: "2025-04-04",
     event_time: "5:00PM",
@@ -134,8 +150,8 @@ export const EVENT_DATA = [
     event_guidlines: ["No vulgar content", "Performance limited to 5 minutes"],
   },
   {
-    event_category: "kala-utsav",
-    event_name: "sculpture-contest",
+    event_category: "kalaa-utsav",
+    event_name: "music-and-performing-arts",
     event_date: "2025-04-05",
     event_time: "3:00PM",
     event_organizer: "Sculptors Club",
@@ -149,8 +165,8 @@ export const EVENT_DATA = [
     event_guidlines: ["Must use provided materials", "Time limit: 2 hours"],
   },
   {
-    event_category: "kala-utsav",
-    event_name: "origami-challenge",
+    event_category: "kalaa-utsav",
+    event_name: "stand-up-comedy-competition",
     event_date: "2025-04-06",
     event_time: "4:00PM",
     event_organizer: "Paper Art Club",
@@ -428,7 +444,7 @@ export const EVENT_DATA = [
 
   {
     event_category: "rang-riwaaz",
-    event_name: "folk-dance-festival",
+    event_name: "poster-making",
     event_date: "2025-07-10",
     event_time: "6:00PM",
     event_organizer: "Cultural Committee",
@@ -447,7 +463,7 @@ export const EVENT_DATA = [
   },
   {
     event_category: "rang-riwaaz",
-    event_name: "handicraft-exhibition",
+    event_name: "rangoli",
     event_date: "2025-07-11",
     event_time: "11:00AM",
     event_organizer: "Art & Crafts Society",
@@ -463,7 +479,7 @@ export const EVENT_DATA = [
   },
   {
     event_category: "rang-riwaaz",
-    event_name: "traditional-music-concert",
+    event_name: "tattoo-making",
     event_date: "2025-07-12",
     event_time: "7:30PM",
     event_organizer: "Music Club",
@@ -481,7 +497,7 @@ export const EVENT_DATA = [
     ],
   },
   {
-    event_category: "rang-riwaaz",
+    event_category: "face-painting",
     event_name: "heritage-fashion-show",
     event_date: "2025-07-13",
     event_time: "5:00PM",

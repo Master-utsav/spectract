@@ -8,12 +8,14 @@ import React from "react";
 const CategoryName = ({
   category,
   className,
+  name,
 }: {
   category: string;
   className: string;
+  name?:string
 }) => {
   const colorCategoryName = get_colors(category);
-
+ console.log(name)
   return (
     <motion.h1
       animate={{
@@ -59,7 +61,7 @@ const CategoryName = ({
         className
       )}
     >
-      {category
+      {(name ? name : category)
         .replace("-", " ")
         .split(" ")
         .map((word, index) => (

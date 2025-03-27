@@ -92,7 +92,7 @@ const ButtonContainer = () => {
                 className:
                   "absolute max-[640px]:left-[50%] max-[420px]:left-[60%] sm:left-44 sm:top-48 max-[640px]:top-[30%] max-[500px]:top-[40%] max-[420px]:top-[50%]",
                 color: "blue",
-                btnName: "Kala Utsav",
+                btnName: "Kalaa Utsav",
               },
               {
                 key: "4",

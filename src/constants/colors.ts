@@ -66,7 +66,7 @@ export const get_colors = (data: string): string => {
     return "cyan";
   } else if (data === "rang-utsav") {
     return "purple";
-  } else if (data === "kala-utsav") {
+  } else if (data === "kalaa-utsav") {
     return "blue";
   } else if (data === "fashion-show") {
     return "pink";
