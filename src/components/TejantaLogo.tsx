@@ -5,12 +5,14 @@ interface TejantaLogoProps {
   className?: string;
   width?: number;
   height?: number;
+  name?:string;
 }
 
 const TejantaLogo: React.FC<TejantaLogoProps> = ({
   className,
   width = 500,
   height = 500,
+  name="intro"
 }) => {
 
   return (
@@ -18,7 +20,7 @@ const TejantaLogo: React.FC<TejantaLogoProps> = ({
       className={cn("svg-stroke-effect", className)}
       width={width}
       height={height}
-      viewBox="0 0 500 500"
+      viewBox={`${name === "intro" ? "0 0 500 500" : "0 0 600 50"}`}
       xmlns="http://www.w3.org/2000/svg"
       preserveAspectRatio="xMidYMid meet"
     >
@@ -70,8 +72,12 @@ const TejantaLogo: React.FC<TejantaLogoProps> = ({
           <stop offset="100%" stopColor="#ed4637" />
         </radialGradient>
       </defs>
-      <g
-        transform="translate(0,500) scale(0.100000,-0.100000)"
+        <g
+        transform={`${
+          name === "intro"
+            ? "translate(20,500) scale(0.1,-0.1)" // Smaller scale
+            : "translate(-50, 440) scale(0.15,-0.15)" // Larger scale
+        }`}
         fill="#000000"
         stroke="none"
       >

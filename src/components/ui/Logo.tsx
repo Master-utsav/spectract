@@ -2,9 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
 import ComingSoon from "../ComingSoon";
 import { usePageCache } from "@/lib/pageChacheProvider";
+import TejantaLogo from "../TejantaLogo";
 
 
 const Logo = () => {
@@ -27,7 +27,7 @@ const Logo = () => {
    }, []);
 
   return (
-    <div className="absolute left-1/2 -translate-x-1/2 max-[440px]:top-14 max-[500px]:top-10 top-0 sm:top-4 md:top-0 flex flex-col justify-center items-center max-[440px]:w-[40vw] w-[28vw] sm:w-[24vw] lg:w-[14vw] md:w-[18vw] z-[1200] group">
+    <div className="absolute left-1/2 -translate-x-1/2 max-[440px]:top-14 max-[500px]:top-10 top-0 sm:top-4 md:top-0 flex flex-col justify-center items-center max-[440px]:w-[40vw] w-[28vw] sm:w-[24vw] lg:w-[14vw] md:w-[18vw] z-[1200] group space-y-0">
       {show && (
         <motion.div
           initial={{ y: 0, opacity: 0, scale: 0.8 }}
@@ -41,33 +41,16 @@ const Logo = () => {
             mass: 2, // Keeps a heavy, realistic effect
           }}
          
-          className="relative w-full aspect-[16/9] flex justify-center items-center"
+          className="relative w-full aspect-[16/9] flex justify-center items-center h-fit"
         >
           {/* Blurred Background (Creates Depth Effect) */}
-          <Image
-            src="/img/tejanta_1.png"
-            alt="Logo"
-            width={1600}
-            height={900}
-            className="absolute inset-0 w-full h-full object-cover blur-[20px] opacity-80"
-          />
-          {/* Main Logo */}
-          <motion.div
-            initial={{ scale: 1 }}
-            animate={{ scale: [1, 1.15, 1] }} // Quick bounce effect on impact
-            transition={{ duration: 0.3, ease: "easeOut" }}
-          >
-            <Image
-              src="/img/tejanta_1.png"
-              alt="Logo"
-              width={1600}
-              height={900}
-              className="absolute inset-0 w-full h-full object-cover mix-blend-color-dodge hover:mix-blend-plus-lighter hover:scale-105 transition-transform delay-150 duration-300"
-            />
-          </motion.div>
+          <TejantaLogo  height={80} name="head" className="sm:scale-115 md:scale-110 scale-125"/>
+          
         </motion.div>
       )}
-      <ComingSoon/>
+      <div className="absolute left-1/2 -translate-x-1/2 max-[440px]:top-32 max-[500px]:top-24 top-22 sm:top-22 md:top-24 flex flex-col justify-center items-center max-[440px]:w-[40vw] w-[28vw] sm:w-[24vw] lg:w-[14vw] md:w-[18vw] z-[1200] group space-y-0">
+        <ComingSoon/>
+      </div>
     </div>
   );
 };

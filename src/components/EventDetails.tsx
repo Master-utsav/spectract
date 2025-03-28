@@ -31,16 +31,24 @@ import {
 import Image from "next/image";
 import { colorMap, get_colors } from "@/constants/colors";
 import { cn } from "@/lib/utils";
+import { useRouter } from "next/navigation";
+import { GoArrowLeft } from "react-icons/go";
 
-export const EventDetailsComponent = ({ event } : {event : any}) => {
+export const EventDetailsComponent = ({ event }: { event: any }) => {
   const [activeSection, setActiveSection] = useState(null);
   const color = get_colors(event.category);
+  const router = useRouter();
 
   const toggleSection = (section: React.SetStateAction<null>) => {
     setActiveSection(activeSection === section ? null : section);
   };
 
-  const AccordionSection = ({ title, children, icon: Icon, sectionName } : any) => {
+  const AccordionSection = ({
+    title,
+    children,
+    icon: Icon,
+    sectionName,
+  }: any) => {
     const isActive = activeSection === sectionName;
 
     return children ? (
@@ -58,6 +66,7 @@ export const EventDetailsComponent = ({ event } : {event : any}) => {
           whileTap={{ scale: 0.98 }}
         >
           <div className="flex items-center gap-3">
+            
             <Icon className={cn("size-6", colorMap[`${color}_text_code`])} />
             <h3
               className={cn(
@@ -116,10 +125,21 @@ export const EventDetailsComponent = ({ event } : {event : any}) => {
       )}
     >
       {/* Event Header */}
-      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 font-[family-name:var(--font-salsa)]">
+      <div className="flex flex-row justify-between items-center mb-6 font-[family-name:var(--font-salsa)]">
+      <motion.button
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.95 }}
+              className={cn(
+                "px-4 py-2.5 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2",
+               colorMap[color + "_btn"]
+              )}
+              onClick={() => router.back()}
+            >
+              <GoArrowLeft className="size-5 text-white" />
+            </motion.button>
         <h1
           className={cn(
-            "text-4xl font-semibold capitalize mb-4 sm:mb-0",
+            "md:text-4xl sm:text-3xl text-2xl font-semibold capitalize  text-center w-full",
             colorMap[color + "_header_text_code"]
           )}
         >
@@ -289,19 +309,31 @@ export const EventDetailsComponent = ({ event } : {event : any}) => {
         )}
 
         {event.language && (
-          <AccordionSection title="Language" icon={LanguagesIcon} sectionName="language">
+          <AccordionSection
+            title="Language"
+            icon={LanguagesIcon}
+            sectionName="language"
+          >
             {renderListSection(event.language)}
           </AccordionSection>
         )}
 
         {event.language_And_Song_Selection && (
-          <AccordionSection title="Language and song Selection" icon={LassoSelectIcon} sectionName="language_And_Song_Selection">
+          <AccordionSection
+            title="Language and song Selection"
+            icon={LassoSelectIcon}
+            sectionName="language_And_Song_Selection"
+          >
             {renderListSection(event.language_And_Song_Selection)}
           </AccordionSection>
         )}
 
         {event.music_And_Accompaniment && (
-          <AccordionSection title="Music & accompaniment" icon={Music3} sectionName="music_And_Accompaniment">
+          <AccordionSection
+            title="Music & accompaniment"
+            icon={Music3}
+            sectionName="music_And_Accompaniment"
+          >
             {renderListSection(event.music_And_Accompaniment)}
           </AccordionSection>
         )}
@@ -316,7 +348,8 @@ export const EventDetailsComponent = ({ event } : {event : any}) => {
               <ul className="list-disc pl-5 space-y-1">
                 {Object.entries(event.performance_Time).map(([key, value]) => (
                   <li key={key}>
-                    <strong>{key.replace(/_/g, " ")}:</strong> {value as ReactNode}
+                    <strong>{key.replace(/_/g, " ")}:</strong>{" "}
+                    {value as ReactNode}
                   </li>
                 ))}
               </ul>
@@ -395,7 +428,8 @@ export const EventDetailsComponent = ({ event } : {event : any}) => {
               <ul className="list-disc pl-5 space-y-1">
                 {Object.entries(event.judging_Criteria).map(([key, value]) => (
                   <li key={key}>
-                    <strong>{key.replace(/_/g, " ")}:</strong> {value as ReactNode}
+                    <strong>{key.replace(/_/g, " ")}:</strong>{" "}
+                    {value as ReactNode}
                   </li>
                 ))}
               </ul>

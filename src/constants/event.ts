@@ -322,7 +322,7 @@ export const EVENT_DETAILS = [
       "Phones are not allowed.",
     ],
     venue: "LNCT Physics Lab",
-    entry_Fee: "50/- per head",
+    entry_Fee: "50",
     timing: "10:00am – 12:00pm",
     faculty_Coordinator: {
       name: "Ms. Sayali Kulkarni",
@@ -351,7 +351,7 @@ export const EVENT_DETAILS = [
       "Phones are not allowed.",
     ],
     venue: "LNCT Lobby",
-    entry_Fee: "50/- per head",
+    entry_Fee: "50",
     timing: "12:00pm – 2:00pm",
     faculty_Coordinator: {
       name: "Ms. Rajashree Sahu",
@@ -380,7 +380,7 @@ export const EVENT_DETAILS = [
       "No phones, no outside help allowed.",
     ],
     venue: "LNCT Physics Lab",
-    entryFee: "50/- per head",
+    entryFee: "50",
     timing: "2:00pm – 3:00pm",
     faculty_Coordinator: {
       name: "Ms. Nikita Yadav",
@@ -409,7 +409,7 @@ export const EVENT_DETAILS = [
       "No phones, no outside help allowed.",
     ],
     venue: "LNCT Physics Lab",
-    entry_Fee: "50/- per head",
+    entry_Fee: "50",
     timing: "2:30pm – 3:30pm",
     faculty_Coordinator: {
       name: "Ms. Nikita Yadav",

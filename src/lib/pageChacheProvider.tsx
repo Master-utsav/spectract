@@ -20,7 +20,7 @@ export function PageCacheProvider({ children }: { children: ReactNode }) {
         setCachedHome(ContentPage)
       }
     }, 30000)
-  }, [])
+  }, [cachedHome])
 
   return (
     <PageCacheContext.Provider value={{ cachedHome, setCachedHome }}>

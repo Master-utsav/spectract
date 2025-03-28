@@ -57,7 +57,6 @@ const Gradient = ({ children }: { children: React.ReactNode }) => {
           height={800}
         />
       </div>
-
       <motion.div
         className="absolute sm:bottom-0 bottom-16 left-1/2 transform -translate-x-1/2 z-[700]"
         style={{

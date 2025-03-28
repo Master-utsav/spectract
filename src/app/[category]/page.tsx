@@ -6,7 +6,7 @@ import CategoryName from "@/components/ui/CategoryName";
 import { colorMap, get_colors } from "@/constants/colors";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
-import Image from "next/image";
+import TejantaLogo from "@/components/TejantaLogo";
 
 export default async function CategoryCard({
   params,
@@ -22,21 +22,7 @@ export default async function CategoryCard({
           href={"/"}
           className="font-[family-name:var(--font-salsa)] text-3xl text-emerald-300  relative w-[22vw] sm:w-[15vw] md:w-[10vw] lg:w-[8vw] aspect-[16/9] flex justify-center items-center group"
         >
-          <Image
-            src="/img/tejanta_1.png"
-            alt="Logo"
-            width={1600}
-            height={900}
-            className="absolute inset-0 w-full h-full object-cover blur-[20px] "
-          />
-          {/* Main Logo */}
-          <Image
-            src="/img/tejanta_1.png"
-            alt="Logo"
-            width={1600}
-            height={900}
-            className="absolute inset-0 w-full h-full object-cover mix-blend-color-dodge  hover:scale-105 hover:transition-transform group-hover:delay-150 hover:duration-300"
-          />
+          <TejantaLogo height={80} name="head" className="sm:scale-105 scale-150"/>
         </Link>
         <div className="relative w-1/3 max-sm:hidden">
           <span

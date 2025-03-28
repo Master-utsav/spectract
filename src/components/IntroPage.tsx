@@ -17,7 +17,7 @@ const IntroPage = () => {
           ease: "easeInOut"
         }
       }}
-      className='fixed inset-0 h-screen w-full bg-black flex items-center justify-center z-[2000]'
+      className='fixed inset-0 h-screen w-full bg-black flex items-center justify-center z-[2000] mx-auto'
     >
       <motion.div
         initial={{ 
@@ -42,7 +42,7 @@ const IntroPage = () => {
           }
         }}
       >
-        <TejantaLogo />
+        <TejantaLogo  />
       </motion.div>
     </motion.div>
   )
