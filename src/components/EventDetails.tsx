@@ -116,7 +116,7 @@ export const EventDetailsComponent = ({ event } : {event : any}) => {
       )}
     >
       {/* Event Header */}
-      {/* <div className="flex flex-col sm:flex-row justify-between items-start mb-6">
+      <div className="flex flex-col sm:flex-row justify-between items-center mb-6 font-[family-name:var(--font-salsa)]">
         <h1
           className={cn(
             "text-4xl font-semibold capitalize mb-4 sm:mb-0",
@@ -125,7 +125,7 @@ export const EventDetailsComponent = ({ event } : {event : any}) => {
         >
           {event.eventName}
         </h1>
-      </div> */}
+      </div>
 
       {/* Basic Event Details */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 p-6 rounded-lg bg-white/10 backdrop-blur-md shadow-md md:gap-6">

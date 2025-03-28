@@ -4,11 +4,10 @@ import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { usePageCache } from "@/lib/pageChacheProvider";
-import { useVideo } from "@/lib/VideoPreloaderProvider";
+import VideoComponent from "@/lib/VideoPreloaderProvider";
 
 const SpectractBackground: React.FC = () => {
   const [show, setShow] = useState(false);
-  const { videoUrl } = useVideo();
   const { cachedHome } = usePageCache();
 
   useEffect(() => {
@@ -206,28 +205,7 @@ const SpectractBackground: React.FC = () => {
 
       {/* video of the spiral  */}
       <div className="w-[90vw] rounded-full sm:h-[85%] h-[80vh] md:scale-100 max-w-[500px] bottom-[8rem] sm:bottom-24 absolute  transform -translate-x-1/2 left-1/2 z-[900]  overflow-hidden mix-blend-lighten">
-        <motion.video
-          src={videoUrl ? videoUrl : "/video/spring_v_4.mp4"}
-          className="w-full h-full scale-90  blur-none z-[900] max-[640px]:-translate-y-8  max-[420px]:translate-y-18 max-[440px]:translate-y-8 max-[500px]:translate-y-4"
-          autoPlay
-          preload="auto"
-          muted
-          playsInline
-          style={{
-            objectFit: "cover",
-            backgroundColor: "transparent",
-            mixBlendMode: "lighten",
-            willChange: "transform, opacity",
-          }}
-          initial={
-            cachedHome !== null ? { y: 20, opacity: 1 } : { y: 800, opacity: 0 }
-          }
-          animate={{ opacity: 1, y: 20 }}
-          exit={{ opacity: 0, y: 0 }}
-          transition={{ delay: 0, duration: 5, ease: [0, 0.55, 0.45, 1] }}
-          width={500}
-          height={800}
-        />
+      <VideoComponent cachedHome={cachedHome ? !!cachedHome : null}/>
       </div>
 
       <motion.div
