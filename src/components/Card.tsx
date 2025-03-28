@@ -9,10 +9,12 @@ import React from "react";
 import {
   CalendarDays,
   Clock,
+  FileText,
   IndianRupee,
   MapPin,
   Rocket,
   ScrollText,
+  Trophy,
   User,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
@@ -47,7 +49,7 @@ const Card = ({ data }: { data: EventDataInterface }) => {
             colorMap[color + "_header_text_code"]
           )}
         >
-          {data.event_name.replace("-", " ")}
+          {data.event_name.replaceAll("-", " ")}
         </h1>
 
         {/* Date-Time Chip */}
@@ -112,7 +114,29 @@ const Card = ({ data }: { data: EventDataInterface }) => {
           />
         </div>
       </div>
+      {data.recognition !== null && (
+          <div className="flex flex-row mt-4 justify-between sm:items-start items-center gap-1 sm:gap-3 lg:p-4 w-full p-1 rounded-lg shadow-lg border border-white/30 bg-gradient-to-b from-white/20 to-transparent font-[family-name:var(--font-salsa)] font-bold backdrop-blur-3xl">
+            {/* Award Recognition */}
+            {data.recognition.award && (
+              <span className="text-base font-semibold text-green-400 drop-shadow-md flex items-center lg:gap-3 gap-1">
+                <Trophy className="w-8 h-8 text-green-500 stroke-[1.5]" />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-500 flex justify-center items-center">
+                  Awards
+                </span>
+              </span>
+            )}
 
+            {/* Certificate Recognition */}
+            {data.recognition.certificate && (
+              <span className="text-base font-medium text-blue-300 drop-shadow-sm flex items-center lg:gap-3 gap-1">
+                <FileText className="w-7 h-7 text-blue-400 stroke-[1.5]" />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-blue-400 flex justify-center items-center">
+                  Cerificate
+                </span>
+              </span>
+            )}
+          </div>
+        )}
       {/* Buttons & Image */}
       <div className="flex sm:flex-row flex-col-reverse justify-between items-start mt-6 gap-2">
         <div className="flex flex-col justify-start items-center sm:items-start sm:gap-3 gap-1 font-[family-name:var(--font-maven-pro)] w-full">
@@ -125,7 +149,9 @@ const Card = ({ data }: { data: EventDataInterface }) => {
               "min-w-0 max-w-full flex-nowrap",
               colorMap[color + "_btn_hover"]
             )}
-            onClick={() => router.push(`/${data.event_category}/${data.event_name}`)}
+            onClick={() =>
+              router.push(`/${data.event_category}/${data.event_name}`)
+            }
           >
             <ScrollText
               className={cn("size-5 shrink-0", colorMap[color + "_text_code"])}
@@ -158,52 +184,58 @@ const Card = ({ data }: { data: EventDataInterface }) => {
           />
         </div> */}
         {/* Prize Money */}
-        <div className="flex flex-col justify-center sm:items-start items-center gap-1 sm:gap-3 lg:p-4 w-full p-1 rounded-lg shadow-lg border border-white/30 bg-gradient-to-b from-white/20 to-transparent font-[family-name:var(--font-salsa)] font-bold backdrop-blur-3xl">
-          {/* First Prize */}
-          <span className="text-2xl font-bold text-yellow-400 drop-shadow-lg flex items-center lg:gap-3 gap-1">
-            <Image
-              width={40}
-              height={40}
-              src="/img/award_1.png"
-              alt="First Prize"
-              loading="eager"
-              className="w-8 h-8 object-contain mix-blend-lighten"
-            />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500 flex justify-center items-center">
-            <IndianRupee className="size-5 text-yellow-300 " /> {data.prize_money.first}
+        {data.prize_money && (
+          <div className="flex flex-col justify-center sm:items-start items-center gap-1 sm:gap-3 lg:p-4 w-full p-1 rounded-lg shadow-lg border border-white/30 bg-gradient-to-b from-white/20 to-transparent font-[family-name:var(--font-salsa)] font-bold backdrop-blur-3xl">
+            {/* First Prize */}
+            <span className="text-2xl font-bold text-yellow-400 drop-shadow-lg flex items-center lg:gap-3 gap-1">
+              <Image
+                width={40}
+                height={40}
+                src="/img/award_1.png"
+                alt="First Prize"
+                loading="eager"
+                className="w-8 h-8 object-contain mix-blend-lighten"
+              />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500 flex justify-center items-center">
+                <IndianRupee className="size-5 text-yellow-300 " />{" "}
+                {data.prize_money.first}
+              </span>
             </span>
-          </span>
 
-          {/* Second Prize */}
-          <span className="text-xl font-semibold text-yellow-300 drop-shadow-md flex items-center lg:gap-3 gap-1">
-            <Image
-              width={40}
-              height={40}
-              src="/img/award_2.png"
-              alt="Second Prize"
-              loading="eager"
-              className="w-8 h-8 object-contain mix-blend-lighten"
-            />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-500 flex justify-center items-center">
-            <IndianRupee className="size-4 text-gray-300 " />{data.prize_money.second}
+            {/* Second Prize */}
+            <span className="text-xl font-semibold text-yellow-300 drop-shadow-md flex items-center lg:gap-3 gap-1">
+              <Image
+                width={40}
+                height={40}
+                src="/img/award_2.png"
+                alt="Second Prize"
+                loading="eager"
+                className="w-8 h-8 object-contain mix-blend-lighten"
+              />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-500 flex justify-center items-center">
+                <IndianRupee className="size-4 text-gray-300 " />
+                {data.prize_money.second}
+              </span>
             </span>
-          </span>
 
-          {/* Third Prize */}
-          <span className="text-lg font-medium text-yellow-200 drop-shadow-sm flex items-center lg:gap-3 gap-1">
-            <Image
-              width={40}
-              height={40}
-              src="/img/award_3.png"
-              alt="Third Prize"
-              loading="eager"
-              className="w-8 h-8 object-contain mix-blend-lighten"
-            />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500 flex justify-center items-center">
-            <IndianRupee className="size-3 text-orange-300 " />{data.prize_money.third}
+            {/* Third Prize */}
+            <span className="text-lg font-medium text-yellow-200 drop-shadow-sm flex items-center lg:gap-3 gap-1">
+              <Image
+                width={40}
+                height={40}
+                src="/img/award_3.png"
+                alt="Third Prize"
+                loading="eager"
+                className="w-8 h-8 object-contain mix-blend-lighten"
+              />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500 flex justify-center items-center">
+                <IndianRupee className="size-3 text-orange-300 " />
+                {data.prize_money.third}
+              </span>
             </span>
-          </span>
-        </div>
+          </div>
+        )}
+        
       </div>
     </motion.div>
   );

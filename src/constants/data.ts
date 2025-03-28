@@ -104,81 +104,95 @@ export const EVENT_DATA = [
   },
 
   // Kalaa-utsav Events
-  {
-    event_category: "kalaa-utsav",
-    event_name: "drama-performance",
-    event_date: "2025-04-02",
-    event_time: "11:30AM",
-    event_organizer: "Art Club",
-    event_location: "Art Room",
-    event_description: "Showcase your creativity in painting.",
-    event_image: "painting_event_poster",
-    event_link: "registration_link",
-    entry_fees: 80,
-    prize_money: { first: 400, second: 250, third: 150 },
-    event_requirement: "Participants must bring their own painting materials.",
-    event_guidlines: ["No digital paintings", "Canvas size limited to A3"],
-  },
-  {
-    event_category: "kalaa-utsav",
-    event_name: "poetry-slam",
-    event_date: "2025-04-03",
-    event_time: "1:00PM",
-    event_organizer: "Creative Arts Society",
-    event_location: "Art Gallery",
-    event_description: "Create beautiful sketches within a limited time.",
-    event_image: "sketching_event_poster",
-    event_link: "registration_link",
-    entry_fees: 70,
-    prize_money: { first: 350, second: 200, third: 100 },
-    event_requirement: "Pencils and erasers allowed.",
-    event_guidlines: ["No tracing", "Time limit is 1 hour"],
-  },
-  {
-    event_category: "kalaa-utsav",
-    event_name: "dance-competition",
-    event_date: "2025-04-04",
-    event_time: "5:00PM",
-    event_organizer: "Dance Club",
-    event_location: "Auditorium",
-    event_description: "A platform to showcase your dancing skills.",
-    event_image: "dance_competition_poster",
-    event_link: "registration_link",
-    entry_fees: 100,
-    prize_money: { first: 600, second: 400, third: 200 },
-    event_requirement: "Participants must bring their own music tracks.",
-    event_guidlines: ["No vulgar content", "Performance limited to 5 minutes"],
-  },
-  {
-    event_category: "kalaa-utsav",
-    event_name: "music-and-performing-arts",
-    event_date: "2025-04-05",
-    event_time: "3:00PM",
-    event_organizer: "Sculptors Club",
-    event_location: "Workshop Room",
-    event_description: "Create a sculpture within the given theme.",
-    event_image: "sculpture_event_poster",
-    event_link: "registration_link",
-    entry_fees: 90,
-    prize_money: { first: 500, second: 300, third: 200 },
-    event_requirement: "Basic tools will be provided.",
-    event_guidlines: ["Must use provided materials", "Time limit: 2 hours"],
-  },
-  {
-    event_category: "kalaa-utsav",
-    event_name: "stand-up-comedy-competition",
-    event_date: "2025-04-06",
-    event_time: "4:00PM",
-    event_organizer: "Paper Art Club",
-    event_location: "Art Hall",
-    event_description: "Show your skills in paper folding techniques.",
-    event_image: "origami_event_poster",
-    event_link: "registration_link",
-    entry_fees: 60,
-    prize_money: { first: 300, second: 200, third: 100 },
-    event_requirement: "Participants must bring their own paper sheets.",
-    event_guidlines: ["No pre-made folds", "Time limit: 45 minutes"],
-  },
+  
+  
+  
+    {
+      event_category: "kalaa-utsav",
+      event_name: "drama-performance",
+      event_date: "08-04-2025",
+      event_time: "starts on : 11:30 AM",
+      event_organizer: "Mehak Vijaywargiya",
+      event_location: "LNCT Indore",
+      event_description: "Experience the magic of theatre and bring characters to life on stage.",
+      event_image: "drama_event_poster",
+      event_link: "registration_link",
+      entry_fees: 50,
+      recognition: {
+        award: "Winners will receive a prestigious drama excellence trophy and special recognition.",
+        certificate: "All participants will be awarded a certificate of appreciation for their performance."
+      }
+    },
+    {
+      event_category: "kalaa-utsav",
+      event_name: "poetry-slam",
+      event_date: "08-04-2025",
+      event_time: "starts on : 11:30 AM",
+      event_organizer: "Nitin Patel",
+      event_location: "LNCT Indore",
+      event_description: "Express emotions, thoughts, and creativity through the art of spoken poetry.",
+      event_image: "poetry_slam_poster",
+      event_link: "registration_link",
+      entry_fees: 50,
+      recognition: {
+        award: "Top poets will receive an exclusive poetry achievement award and recognition.",
+        certificate: "All performers will be honored with a participation certificate."
+      }
+    },
+    {
+      event_category: "kalaa-utsav",
+      event_name: "dance-competition",
+      event_date: "08-04-2025",
+      event_time: "starts on : 11:30 AM",
+      event_organizer: "Ganesh Rathore",
+      event_location: "LNCT Indore",
+      event_description: "Showcase your talent in an energetic and expressive dance competition.",
+      event_image: "dance_competition_poster",
+      event_link: "registration_link",
+      entry_fees: 50,
+      recognition: {
+        award: "Winners will be honored with a dance maestro trophy and appreciation.",
+        certificate: "All participants will receive a certificate of participation."
+      }
+    },
+    {
+      event_category: "kalaa-utsav",
+      event_name: "music-and-performing-arts",
+      event_date: "08-04-2025",
+      event_time: "starts on : 11:30 AM",
+      event_organizer: "Rajveer Goud",
+      event_location: "LNCT Indore",
+      event_description: "Display your musical prowess and performing arts skills on stage.",
+      event_image: "music_performance_poster",
+      event_link: "registration_link",
+      entry_fees: 50,
+      recognition: {
+        award: "Best performances will receive a musical excellence award and accolades.",
+        certificate: "All performers will be awarded a certificate of artistic contribution."
+      }
+    },
+    {
+      event_category: "kalaa-utsav",
+      event_name: "stand-up-comedy-competition",
+      event_date: "08-04-2025",
+      event_time: "starts on : 11:30 AM",
+      event_organizer: "Kuldeep Mudgal",
+      event_location: "LNCT Indore",
+      event_description: "Make the audience laugh with your wit and humor in this comedy battle.",
+      event_image: "standup_comedy_poster",
+      event_link: "registration_link",
+      entry_fees: 50,
+      recognition: {
+        award: "Funniest acts will receive a comedy champion trophy and recognition.",
+        certificate: "Every participant will get a certificate of humor and creativity."
+      }
+    },
+  
+  
+  
+
+  
+  
 
   {
     event_category: "rang-utsav",
@@ -536,6 +550,7 @@ export const EVENT_DATA = [
 ];
 
 export interface EventDataInterface {
+  recognition: {award : string , certificate: string};
   event_category: string;
   event_name: string;
   event_date: string;
