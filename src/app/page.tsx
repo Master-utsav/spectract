@@ -26,13 +26,13 @@ export default function Home() {
 
   return (
     <AnimatePresence mode="wait">
-      {cachedHome === null && !isIntroComplete && (
-        <IntroPage key="intro" />
-      )}
-      
-      {cachedHome !== null && cachedHome}
-      
-      {cachedHome === null && <ContentPage />}
-    </AnimatePresence>
+    {cachedHome === null && !isIntroComplete ? (
+      <IntroPage key="intro" />
+    ) : cachedHome === null && isIntroComplete ? (
+      <ContentPage key="content" />
+    ) : (
+      cachedHome && <div key="cached">{cachedHome}</div>
+    )}
+  </AnimatePresence>
   );
 }
