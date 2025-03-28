@@ -1,7 +1,6 @@
 "use client";
 
 import { colorMap, get_colors } from "@/constants/colors";
-import { EventDataInterface } from "@/constants/data";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -19,7 +18,8 @@ import {
 } from "lucide-react";
 import { useRouter } from "next/navigation";
 
-const Card = ({ data }: { data: EventDataInterface }) => {
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const Card = ({ data }: { data: any }) => {
   const color: string = get_colors(data.event_category);
   const router = useRouter();
   return (
@@ -117,7 +117,7 @@ const Card = ({ data }: { data: EventDataInterface }) => {
       {data.recognition !== null && (
           <div className="flex flex-row mt-4 justify-between sm:items-start items-center gap-1 sm:gap-3 lg:p-4 w-full p-1 rounded-lg shadow-lg border border-white/30 bg-gradient-to-b from-white/20 to-transparent font-[family-name:var(--font-salsa)] font-bold backdrop-blur-3xl">
             {/* Award Recognition */}
-            {data.recognition.award && (
+            {data.recognition && data.recognition.award && (
               <span className="text-base font-semibold text-green-400 drop-shadow-md flex items-center lg:gap-3 gap-1">
                 <Trophy className="w-8 h-8 text-green-500 stroke-[1.5]" />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-500 flex justify-center items-center">
@@ -127,7 +127,7 @@ const Card = ({ data }: { data: EventDataInterface }) => {
             )}
 
             {/* Certificate Recognition */}
-            {data.recognition.certificate && (
+            {data.recognition &&  data.recognition.certificate && (
               <span className="text-base font-medium text-blue-300 drop-shadow-sm flex items-center lg:gap-3 gap-1">
                 <FileText className="w-7 h-7 text-blue-400 stroke-[1.5]" />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-blue-400 flex justify-center items-center">

@@ -59,8 +59,8 @@ export const EVENT_DETAILS = [
       email: null,
     },
     student_Coordinator: {
-      name: "Ganesh Rathore",
-      contact: "8889220407",
+      name: "Monalika Khanna",
+      contact: "7805060610",
       email: null,
     },
   },

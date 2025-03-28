@@ -144,7 +144,7 @@ export const EVENT_DATA = [
       event_name: "dance-competition",
       event_date: "08-04-2025",
       event_time: "starts on : 11:30 AM",
-      event_organizer: "Ganesh Rathore",
+      event_organizer: "Monalika Khanna",
       event_location: "LNCT Indore",
       event_description: "Showcase your talent in an energetic and expressive dance competition.",
       event_image: "dance_competition_poster",
@@ -550,7 +550,7 @@ export const EVENT_DATA = [
 ];
 
 export interface EventDataInterface {
-  recognition: {award : string , certificate: string};
+  recognition?: {award : string , certificate: string};
   event_category: string;
   event_name: string;
   event_date: string;
