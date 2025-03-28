@@ -33,6 +33,7 @@ import { colorMap, get_colors } from "@/constants/colors";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { GoArrowLeft } from "react-icons/go";
+import Link from "next/link";
 
 export const EventDetailsComponent = ({ event }: { event: any }) => {
   const [activeSection, setActiveSection] = useState(null);
@@ -542,6 +543,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
 
       {/* Action Buttons */}
       <div className="flex justify-center items-center gap-4 mt-6">
+      <Link href={event.link} target="_blank" >
         <motion.button
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
@@ -553,6 +555,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
           <Rocket className="size-5 text-white" />
           Register Now
         </motion.button>
+        </Link>
       </div>
     </motion.div>
   );

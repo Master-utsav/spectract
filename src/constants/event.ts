@@ -63,6 +63,7 @@ export const EVENT_DETAILS = [
       contact: "7805060610",
       email: null,
     },
+     link : "#"
   },
 
   {
@@ -116,6 +117,7 @@ export const EVENT_DETAILS = [
       contact: "7441162752",
       email: "rujhanbajpai@gmail.com",
     },
+     link : "#"
   },
   {
     event: "drama-performance",
@@ -172,6 +174,7 @@ export const EVENT_DETAILS = [
       contact: "9516844542",
       email: null,
     },
+     link : "#"
   },
 
   {
@@ -247,6 +250,7 @@ export const EVENT_DETAILS = [
       contact: "9926510065",
       email: null,
     },
+     link : "#"
   },
   {
     event: "stand-up-comedy-competition",
@@ -314,6 +318,7 @@ export const EVENT_DETAILS = [
       contact: "7581008074",
       email: null,
     },
+    link : "#"
   },
 
   //  RANG RIWAAZ
@@ -346,6 +351,7 @@ export const EVENT_DETAILS = [
       contact: null,
       email: null,
     },
+     link : "#"
   },
   {
     event: "rangoli",
@@ -377,6 +383,7 @@ export const EVENT_DETAILS = [
       contact: null,
       email: null,
     },
+     link : "#"
   },
   {
     event: "tattoo-making",
@@ -408,6 +415,7 @@ export const EVENT_DETAILS = [
       contact: null,
       email: null,
     },
+     link : "#"
   },
   {
     event: "face-painting",
@@ -439,6 +447,7 @@ export const EVENT_DETAILS = [
       contact: null,
       email: null,
     },
+     link : "#"
   },
 
   //   TECH SPARDHA
@@ -466,6 +475,7 @@ export const EVENT_DETAILS = [
       contact: "9691185077",
       email: null,
     },
+     link : "https://forms.gle/bVJ5z2sNWgqwkAWK8",
     eligibility: ["Student must have to reach 10 minutes before the start time of quiz." , "Student must have to show the email where they get token for that quiz."],
     rules: [
       "You must complete all 20 questions within the allocated time (40 minutes).",
@@ -502,6 +512,7 @@ export const EVENT_DETAILS = [
       contact: "9691185077",
       email: null,
     },
+     link : "https://forms.gle/R4mX8aea9Dq1v51k6",
     eligibility: ["Student must have to reach 10 minutes before the start time of quiz." , "Student must have to show the email where they get token for that quiz."],
     rules: [
       "You will be given faulty code that you must fix.",
@@ -543,6 +554,7 @@ export const EVENT_DETAILS = [
       contact: "9691185077",
       email: null,
     },
+     link : "https://forms.gle/eNGHcrhsXf2qsFdB9",
     eligibility: ["Student must have to reach 10 minutes before the start time of quiz." , "Student must have to show the email where they get token for that quiz."],
     rules: [
       "You must finish your project within the time limit of 40 minutes.",
@@ -600,5 +612,6 @@ export const EVENT_DETAILS = [
       contact: "6261029938",
       email: null,
     },
+     link : "https://forms.gle/ePUPfny867qk7BbBA"
   },
 ];
