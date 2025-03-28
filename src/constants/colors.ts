@@ -59,6 +59,18 @@ export const colorMap: Record<string, string> = {
     "bg-gradient-radial from-pink-400 via-pink-200 to-transparent bg-center bg-[radial-gradient(circle_at_bottom,rgba(244,114,182,0.4),rgba(252,231,243,0.1),transparent)]",
   yellow_gr_rd:
     "bg-gradient-radial from-yellow-700 via-yellow-400 to-transparent bg-center bg-[radial-gradient(circle_at_bottom,rgba(202,138,4,0.4),rgba(253,224,71,0.1),transparent)]",
+  cyan_gr_rd_event:
+    "bg-gradient-radial from-cyan-500 via-cyan-300 to-transparent bg-center bg-[radial-gradient(circle_at_bottom,rgba(6,182,212,0.3),rgba(103,232,249,0.1),rgba(0,0,0,0.3))]",
+  purple_gr_rd_event:
+    "bg-gradient-radial from-purple-500 via-purple-300 to-transparent bg-center bg-[radial-gradient(circle_at_bottom,rgba(168,85,247,0.3),rgba(233,213,255,0.1),rgba(0,0,0,0.3))]",
+  amber_gr_rd_event:
+    "bg-gradient-radial from-amber-400 via-amber-200 to-transparent bg-center bg-[radial-gradient(circle_at_bottom,rgba(251,191,36,0.3),rgba(254,243,199,0.1),rgba(0,0,0,0.3))]",
+  blue_gr_rd_event:
+    "bg-gradient-radial from-blue-300 via-blue-200 to-transparent bg-center bg-[radial-gradient(circle_at_bottom,rgba(147,197,253,0.3),rgba(219,234,254,0.1),rgba(0,0,0,0.3))]",
+  pink_gr_rd_event:
+    "bg-gradient-radial from-pink-400 via-pink-200 to-transparent bg-center bg-[radial-gradient(circle_at_bottom,rgba(244,114,182,0.3),rgba(252,231,243,0.1),rgba(0,0,0,0.3))]",
+  yellow_gr_rd_event:
+    "bg-gradient-radial from-yellow-700 via-yellow-400 to-transparent bg-center bg-[radial-gradient(circle_at_bottom,rgba(202,138,4,0.3),rgba(253,224,71,0.1),rgba(0,0,0,0.3))]",
 };
 
 export const get_colors = (data: string): string => {

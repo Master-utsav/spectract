@@ -12,7 +12,7 @@ const CardsContainer = ({category}: {category : string}) => {
     show: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.5,
+        staggerChildren: 0.3,
       },
     },
   };

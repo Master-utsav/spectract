@@ -56,12 +56,12 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
         initial={false}
         className={cn(
           "border-b border-white/20 py-4",
-          "font-[family-name:var(--font-maven-pro)]"
+          "font-[family-name:var(--font-maven-pro)] "
         )}
       >
         <motion.button
           onClick={() => toggleSection(sectionName)}
-          className="w-full flex justify-between items-center"
+          className="w-full flex justify-between items-center cursor-pointer"
           whileHover={{ opacity: 0.8 }}
           whileTap={{ scale: 0.98 }}
         >
@@ -119,9 +119,9 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.4 }}
       className={cn(
-        "relative overflow-hidden rounded-lg  p-6 w-full max-w-4xl mx-auto border-2 perspective-1000 transform-style-preserve-3d",
+        "relative overflow-hidden rounded-lg  sm:p-6 p-4 w-full max-w-4xl mx-auto border-2 perspective-1000 transform-style-preserve-3d",
         colorMap[color],
-        colorMap[color + "_gr_rd"]
+        colorMap[color + "_gr_rd_event"]
       )}
     >
       {/* Event Header */}
@@ -148,13 +148,13 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
       </div>
 
       {/* Basic Event Details */}
-      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 p-6 rounded-lg bg-white/10 backdrop-blur-md shadow-md md:gap-6">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 sm:p-6 p-2 rounded-lg bg-white/10 backdrop-blur-md shadow-md md:gap-6">
         {/* Left Column: Location & Entry Fee */}
         <div className="flex flex-col gap-3 w-full md:w-1/2 justify-start items-start">
           <p className="text-white font-[family-name:var(--font-assistant)]">
             {event.description}
           </p>
-          <div className="flex sm:flex-row flex-col gap-6 w-full md:w-1/2">
+          <div className="flex sm:flex-row flex-col gap-3 w-full md:w-1/2">
             {/* Date & Time */}
             <div
               className={cn(
@@ -166,7 +166,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
                 <CalendarDays className="size-5 text-yellow-400" />
                 {event.date}
               </span>
-              <span className="flex items-center gap-2 text-white text-sm sm:text-base">
+              <span className="flex items-center whitespace-nowrap gap-2 text-white text-sm sm:text-base">
                 <Clock className="size-5 text-blue-400" />
                 {event.time}
               </span>
@@ -179,7 +179,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
                 colorMap[color]
               )}
             >
-              <div className="w-full whitespace-nowrap flex items-center justify-center gap-3 text-white text-lg font-semibold">
+              <div className="w-full whitespace-nowrap flex items-center justify-center gap-1 text-white text-lg font-semibold">
                 <MapPin className="size-6 text-rose-400" />
                 <span>{event.venue}</span>
               </div>

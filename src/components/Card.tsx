@@ -17,6 +17,7 @@ import {
   User,
 } from "lucide-react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 const Card = ({ data }: { data: any }) => {
@@ -114,29 +115,7 @@ const Card = ({ data }: { data: any }) => {
           />
         </div>
       </div>
-      {data.recognition !== null && (
-          <div className="flex flex-row mt-4 justify-between sm:items-start items-center gap-1 sm:gap-3 lg:p-4 w-full p-1 rounded-lg shadow-lg border border-white/30 bg-gradient-to-b from-white/20 to-transparent font-[family-name:var(--font-salsa)] font-bold backdrop-blur-3xl">
-            {/* Award Recognition */}
-            {data.recognition && data.recognition.award && (
-              <span className="text-base font-semibold text-green-400 drop-shadow-md flex items-center lg:gap-3 gap-1">
-                <Trophy className="w-8 h-8 text-green-500 stroke-[1.5]" />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-500 flex justify-center items-center">
-                  Awards
-                </span>
-              </span>
-            )}
-
-            {/* Certificate Recognition */}
-            {data.recognition &&  data.recognition.certificate && (
-              <span className="text-base font-medium text-blue-300 drop-shadow-sm flex items-center lg:gap-3 gap-1">
-                <FileText className="w-7 h-7 text-blue-400 stroke-[1.5]" />
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-blue-400 flex justify-center items-center">
-                  Cerificate
-                </span>
-              </span>
-            )}
-          </div>
-        )}
+      
       {/* Buttons & Image */}
       <div className="flex sm:flex-row flex-col-reverse justify-between items-start mt-6 gap-2">
         <div className="flex flex-col justify-start items-center sm:items-start sm:gap-3 gap-1 font-[family-name:var(--font-maven-pro)] w-full">
@@ -160,6 +139,7 @@ const Card = ({ data }: { data: any }) => {
           </motion.button>
 
           {/* Register Now CTA */}
+          <Link href={data.event_link} target="_blank">
           <motion.button
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}
@@ -172,6 +152,8 @@ const Card = ({ data }: { data: any }) => {
             <Rocket className="size-5 text-white shrink-0" />
             <span className="truncate">Register Now</span>
           </motion.button>
+          </Link>
+
         </div>
 
         {/* <div>
@@ -233,6 +215,29 @@ const Card = ({ data }: { data: any }) => {
                 {data.prize_money.third}
               </span>
             </span>
+          </div>
+        )}
+        {data.recognition !== undefined && (
+          <div className="flex flex-col justify-between sm:items-start items-center gap-1 sm:gap-3 lg:p-4 w-full p-1 rounded-lg shadow-lg border border-white/30 bg-gradient-to-b from-white/20 to-transparent font-[family-name:var(--font-salsa)] font-bold backdrop-blur-3xl">
+            {/* Award Recognition */}
+            {data.recognition && data.recognition.award && (
+              <span className="text-base font-semibold text-green-400 drop-shadow-md flex items-center lg:gap-3 gap-1">
+                <Trophy className="w-8 h-8 text-green-500 stroke-[1.5]" />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-green-300 to-green-500 flex justify-center items-center">
+                  Awards
+                </span>
+              </span>
+            )}
+
+            {/* Certificate Recognition */}
+            {data.recognition &&  data.recognition.certificate && (
+              <span className="text-base font-medium text-blue-300 drop-shadow-sm flex items-center lg:gap-3 gap-1">
+                <FileText className="w-7 h-7 text-blue-400 stroke-[1.5]" />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-blue-400 flex justify-center items-center">
+                  Cerificate
+                </span>
+              </span>
+            )}
           </div>
         )}
         
