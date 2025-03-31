@@ -77,8 +77,8 @@ export const EVENT_DATA = [
       "Race your robot cars through obstacles and challenges to claim victory.",
     event_image: "robo_race_poster",
     event_link: "#",
-    entry_fees: 349,
-    prize_money: { first: 1500, second: 800, third: 500 },
+    entry_fees: 150,
+    prize_money: { first: 1000, second: 600, third: 400 },
   },
 
   // Kalaa-utsav Events
