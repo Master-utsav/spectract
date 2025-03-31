@@ -139,7 +139,7 @@ const Card = ({ data }: { data: any }) => {
           </motion.button>
 
           {/* Register Now CTA */}
-          <Link href={data.event_link} target="_blank">
+          <Link href={data.event_link} target="_blank" className="w-full">
           <motion.button
             whileHover={{ scale: 1.08 }}
             whileTap={{ scale: 0.95 }}

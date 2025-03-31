@@ -356,7 +356,6 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
               </ul>
             </AccordionSection>
           )}
-
         {event.content_Guidelines &&
           Object.keys(event.content_Guidelines).length !== 0 && (
             <AccordionSection
@@ -543,12 +542,12 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
 
       {/* Action Buttons */}
       <div className="flex justify-center items-center gap-4 mt-6">
-      <Link href={event.link} target="_blank" >
+      <Link href={event.link} target="_blank" className="w-full mx-auto justify-center items-center flex">
         <motion.button
           whileHover={{ scale: 1.08 }}
           whileTap={{ scale: 0.95 }}
           className={cn(
-            "px-4 py-2.5 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2",
+            "px-4 w-full sm:w-auto py-2.5 text-white sm:justify-start justify-center font-semibold rounded-lg shadow-lg flex items-center gap-2",
             colorMap[color + "_btn"]
           )}
         >
