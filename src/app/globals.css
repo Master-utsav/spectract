@@ -59,15 +59,18 @@ body {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
+
 @keyframes randomMask {
   0% {
     /* clip-path: polygon(0 0, 50% 50%, 100% 100%, 0 100%); */
     opacity: 0;
   }
+
   50% {
     /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
     opacity: 0.5;
   }
+
   100% {
     /* clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); */
     opacity: 1;
@@ -80,17 +83,20 @@ body {
     stroke-opacity: 0;
     fill-opacity: 0;
   }
+
   40% {
     stroke-dashoffset: 40;
     stroke-opacity: 1;
     stroke-width: 2px;
     fill-opacity: 0;
   }
+
   60% {
     fill-opacity: 0;
     stroke-dashoffset: 0;
     stroke-width: 2px;
   }
+
   100% {
     fill-opacity: 1;
     stroke-width: 1px;
@@ -99,27 +105,34 @@ body {
 
 @keyframes waveFloat {
   0% {
-    transform: translateY(0) ;
+    transform: translateY(0);
   }
+
   25% {
-    transform: translateY(-5px) ;
+    transform: translateY(-5px);
   }
+
   50% {
-    transform: translateY(-10px) ;
+    transform: translateY(-10px);
   }
+
   75% {
-    transform: translateY(5px) ;
+    transform: translateY(5px);
   }
+
   100% {
-    transform: translateY(0) ;
+    transform: translateY(0);
   }
 }
 
 @keyframes fireGlow {
-  0%, 100% {
+
+  0%,
+  100% {
     filter: blur(8px) brightness(0.9);
     opacity: 0.8;
   }
+
   50% {
     filter: blur(12px) brightness(1.1);
     opacity: 1;
@@ -139,11 +152,66 @@ body {
   stroke-linejoin: round;
   opacity: 0;
   transition: all 0.5s ease-in-out;
-  animation: 
+  animation:
     randomMask 2s forwards cubic-bezier(0.4, 0, 0.2, 1),
     svgStrokeAnimation 2s forwards ease-in-out,
     waveFloat 2s ease-in-out 1s infinite alternate,
     fireGlow 3s ease-in-out 1s infinite alternate;
+}
+
+.svg-stroke-effect-fire {
+  fill: none;
+  stroke: orange;
+  stroke-width: 2px;
+  stroke-dasharray: 50;
+  stroke-dashoffset: 50;
+  vector-effect: non-scaling-stroke;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  opacity: 0;
+  animation:
+    svgStrokeAnimationInfinite 2s infinite ease-in-out,
+    waveFloat 2s ease-in-out 1s infinite alternate;
+}
+
+@keyframes svgStrokeAnimationInfinite {
+  0% {
+    stroke-dashoffset: 50;
+    opacity: 0;
+  }
+
+  40% {
+    stroke-dashoffset: 25;
+    opacity: 0.5;
+  }
+
+  60% {
+    stroke-dashoffset: 0;
+  }
+
+  80% {
+    opacity: 0.5;
+  }
+
+  100% {
+    stroke-dashoffset: 50;
+    opacity: 0;
+  }
+}
+
+.svg-stroke-effect-fire path:nth-child(1) {
+  animation-delay: 0.3s;
+  fill: #D33D3D;
+}
+
+.svg-stroke-effect-fire path:nth-child(2) {
+  animation-delay: 0.6s;
+  fill: #FF884D;
+}
+
+.svg-stroke-effect-fire path:nth-child(3) {
+  animation-delay: 0.8s;
+  fill: #FFCF57;
 }
 
 .svg-stroke-effect g path:nth-child(1) {
@@ -222,4 +290,205 @@ body {
   animation-delay: 1.8s;
   fill: url(#LastADown);
   stroke: url(#LastADown);
+}
+
+@keyframes flicker1 {
+  0% {
+    transform: scale(1.00);
+    opacity: 1.0;
+  }
+
+  25% {
+    transform: scale(0.98) translate(-5px, 5px);
+    opacity: 0.9;
+  }
+
+  50% {
+    transform: scale(1.02) translate(7px, -2px);
+    opacity: 1.0;
+  }
+
+  75% {
+    transform: scale(0.99) translate(4px, 3px);
+    opacity: 0.9;
+  }
+
+  100% {
+    transform: scale(1.00);
+    opacity: 1.0;
+  }
+}
+
+@keyframes flicker2 {
+  0% {
+    transform: scale(1.00) translate(0px, 0px);
+  }
+
+  20% {
+    transform: scale(0.97) translate(-8px, 3px);
+  }
+
+  40% {
+    transform: scale(1.03) translate(5px, -5px);
+  }
+
+  60% {
+    transform: scale(0.98) translate(-3px, 2px);
+  }
+
+  80% {
+    transform: scale(1.02) translate(6px, 0px);
+  }
+
+  100% {
+    transform: scale(1.00) translate(0px, 0px);
+  }
+}
+
+@keyframes flicker3 {
+  0% {
+    transform: scale(1.00) translate(0px, 0px);
+  }
+
+  33% {
+    transform: scale(0.96) translate(-4px, -3px);
+  }
+
+  66% {
+    transform: scale(1.04) translate(6px, 4px);
+  }
+
+  100% {
+    transform: scale(1.00) translate(0px, 0px);
+  }
+}
+
+@keyframes ember {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translate(-100px, -200px);
+    opacity: 0;
+  }
+}
+
+@keyframes glow {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+
+  50% {
+    opacity: 0.6;
+    transform: scale(1.05);
+  }
+
+  100% {
+    opacity: 0.3;
+    transform: scale(0.9);
+  }
+}
+
+.animate-flame1 {
+  transform-origin: center bottom;
+  animation: flicker1 3s ease-in-out infinite;
+}
+
+.animate-flame2 {
+  transform-origin: center bottom;
+  animation: flicker2 4s ease-in-out infinite;
+}
+
+.animate-flame3 {
+  transform-origin: center bottom;
+  animation: flicker3 3.5s ease-in-out infinite;
+}
+
+.animate-ember1 {
+  animation: ember 4s ease-out infinite;
+  animation-delay: 0.5s;
+}
+
+.animate-ember2 {
+  animation: ember 5s ease-out infinite;
+  animation-delay: 1.5s;
+}
+
+.animate-ember3 {
+  animation: ember 4.5s ease-out infinite;
+  animation-delay: 2.5s;
+}
+
+.animate-glow {
+  animation: glow 3s ease-in-out infinite;
+}
+
+
+@keyframes float {
+  0% {
+    transform: translate(0px);
+  }
+
+  50% {
+    transform: translate(-50px);
+  }
+
+  100% {
+    transform: translate(0px);
+  }
+}
+
+@keyframes sway {
+  0% {
+    transform: rotate(-5deg);
+  }
+
+  50% {
+    transform: rotate(5deg);
+  }
+
+  100% {
+    transform: rotate(-5deg);
+  }
+}
+
+.floating {
+  animation: float 6s ease-in-out infinite, sway 8s ease-in-out infinite;
+}
+
+@keyframes fireGlow {
+  0% {
+    box-shadow: 0 0 50px rgba(255, 136, 77, 0.3);
+    opacity: 0.7;
+  }
+
+  50% {
+    box-shadow: 0 0 70px rgba(255, 69, 0, 0.4);
+    opacity: 0.5;
+  }
+
+  100% {
+    box-shadow: 0 0 50px rgba(255, 136, 77, 0.3);
+    opacity: 0.7;
+  }
+}
+
+.bg-gradient-radial-glow {
+  background: radial-gradient(circle, rgba(255, 204, 0, 0.4) 20%, rgba(255, 102, 0, 0.3) 50%, transparent 80%);
+}
+
+
+.animate-fireGlow {
+  animation: fireGlow 1.5s infinite alternate ease-in-out;
 }

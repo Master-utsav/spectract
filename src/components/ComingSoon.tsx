@@ -10,7 +10,7 @@ export default function ComingSoon() {
 
   useEffect(() => {
     let timer: NodeJS.Timeout;
-    if (cachedHome === null) {
+    if (cachedHome === false) {
       timer = setTimeout(() => {
         setShow(true);
       }, 7000);

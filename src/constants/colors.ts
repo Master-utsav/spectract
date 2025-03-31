@@ -76,13 +76,13 @@ export const colorMap: Record<string, string> = {
 export const get_colors = (data: string): string => {
   if (data == "tech-spardha") {
     return "cyan";
-  } else if (data === "rang-utsav") {
+  } else if (data === "rang-riwaaz") {
     return "purple";
   } else if (data === "kalaa-utsav") {
     return "blue";
-  } else if (data === "fashion-show") {
+  } else if (data === "fashionista-ads") {
     return "pink";
-  } else if (data === "rang-riwaaz") {
+  } else if (data === "e-sports") {
     return "amber";
   } else if (data === "thrill-arena") {
     return "yellow";

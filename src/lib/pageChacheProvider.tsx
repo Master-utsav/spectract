@@ -1,5 +1,4 @@
 "use client";
-import ContentPage from "@/components/ContentPage";
 import {
   createContext,
   useContext,
@@ -8,19 +7,32 @@ import {
   useEffect,
 } from "react";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const PageCacheContext = createContext<any>(null);
+// Define a proper type for the context
+interface PageCacheContextType {
+  cachedHome: boolean; // Changed from ReactNode to boolean
+  setCachedHome: (value: boolean) => void;
+}
+
+const PageCacheContext = createContext<PageCacheContextType>({
+  cachedHome: false,
+  setCachedHome: () => {},
+});
 
 export function PageCacheProvider({ children }: { children: ReactNode }) {
-  const [cachedHome, setCachedHome] = useState<ReactNode | null>(null);
+  // Changed to store a boolean flag instead of a component
+  const [cachedHome, setCachedHome] = useState<boolean>(false);
   
   useEffect(() => {
-    setTimeout(() => {
-      if(!cachedHome){
-        setCachedHome(ContentPage)
-      }
-    }, 30000)
-  }, [cachedHome])
+    // Set a timeout to mark the home as cached after 30 seconds
+    if (!cachedHome) {
+      const timer = setTimeout(() => {
+        setCachedHome(true);
+      }, 12000);
+      
+      return () => clearTimeout(timer);
+    }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
     <PageCacheContext.Provider value={{ cachedHome, setCachedHome }}>

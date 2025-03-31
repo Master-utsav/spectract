@@ -23,7 +23,7 @@ const ButtonContainer = () => {
   useEffect(() => {
     let timer: NodeJS.Timeout;
 
-    if (cachedHome === null) {
+    if (cachedHome === false) {
       timer = setTimeout(() => {
         setShow(true);
       }, 5000);
@@ -57,14 +57,14 @@ const ButtonContainer = () => {
                 className:
                   "absolute sm:right-36 max-[640px]:right-[50%] max-[420px]:right-[50%] sm:top-68 max-[640px]:top-[40%] max-[500px]:top-[50%] max-[420px]:top-[60%]",
                 color: "purple",
-                btnName: "Rang Utsav",
+                btnName: "Rang Riwaaz",
               },
               {
                 key: "5",
                 className:
                   "absolute sm:right-44 max-[640px]:right-[45%] max-[420px]:right-[50%] max-[500px]:right-[55%] sm:bottom-28 max-[640px]:bottom-[25%] max-[500px]:botom-[12%] max-[420px]:bottom-[15%]",
                 color: "amber",
-                btnName: "Rang Riwaaz",
+                btnName: "E-Sports",
               },
             ].map(({ key, className, color, btnName }, index) => (
               <motion.div
@@ -99,7 +99,7 @@ const ButtonContainer = () => {
                 className:
                   "absolute max-[640px]:left-[50%] max-[420px]:left-[45%] sm:left-36 sm:bottom-44 max-[640px]:top-[50%] max-[500px]:top-[60%] max-[420px]:top-[70%]",
                 color: "pink",
-                btnName: "Fashion show",
+                btnName: "Fashionista Ads",
               },
               {
                 key: "6",

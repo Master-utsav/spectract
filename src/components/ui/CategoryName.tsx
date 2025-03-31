@@ -15,7 +15,6 @@ const CategoryName = ({
   name?:string
 }) => {
   const colorCategoryName = get_colors(category);
- console.log(name)
   return (
     <motion.h1
       animate={{

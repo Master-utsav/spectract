@@ -13,7 +13,7 @@ export default function Home() {
   useVideo();
 
   useEffect(() => {
-    if (cachedHome === null) {
+    if (!cachedHome) {
       const timer = setTimeout(() => {
         setIsIntroComplete(true);
       }, 4500);
@@ -26,13 +26,11 @@ export default function Home() {
 
   return (
     <AnimatePresence mode="wait">
-    {cachedHome === null && !isIntroComplete ? (
-      <IntroPage key="intro" />
-    ) : cachedHome === null && isIntroComplete ? (
-      <ContentPage key="content" />
-    ) : (
-      cachedHome && <div key="cached">{cachedHome}</div>
-    )}
-  </AnimatePresence>
+      {!cachedHome && !isIntroComplete ? (
+        <IntroPage key="intro" />
+      ) : (
+        <ContentPage key="content" />
+      )}
+    </AnimatePresence>
   );
 }

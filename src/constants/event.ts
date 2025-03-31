@@ -321,6 +321,12 @@ export const EVENT_DETAILS = [
     link : "#"
   },
 
+
+
+
+
+
+
   //  RANG RIWAAZ
   {
     event: "poster-making",
@@ -449,6 +455,11 @@ export const EVENT_DETAILS = [
     },
      link : "#"
   },
+
+
+
+
+
 
   //   TECH SPARDHA
   {
@@ -614,4 +625,213 @@ export const EVENT_DETAILS = [
     },
      link : "https://forms.gle/ePUPfny867qk7BbBA"
   },
+  {
+    event: "code-forge",
+    eventName: "Code Forge (mini hackathon)",
+    category: "tech-spardha",
+    description : "A time-bound mini hackathon where teams build innovative projects on given themes.",
+    date: "07/04/2025",
+    time: "starts on : 10:30am",
+    venue: "LNCT Boss Lab",
+    entry_Fee: "150",
+    prize_Money: {
+        first: "1000",
+        second: "600",
+        third: "400",
+    },
+    eligibility: [
+      "Open to all students of every college.",
+      "Participants must have valid student ID cards.",
+      "pending"
+    ],
+    rules:[
+      "pending....."
+    ],
+    faculty_Coordinator: {
+      name: "Mrs. Shrashti Thakur",
+      contact: "9691185077",
+      email: null,
+    },
+    student_Coordinator: {
+      name: "Kalash Maurya",
+      contact: "9926666022",
+      email: null,
+    },
+     link : "https://forms.gle/U6UsvF2deSBAjEWN8"
+  },
+  {
+    event: "robo-race",
+    eventName: "Robo Race",
+    category: "tech-spardha",
+    description : "Race your robot cars through obstacles and challenges to claim victory.",
+    date: "07/04/2025",
+    time: "starts on : 1:00pm",
+    venue: "LNCT Entry Hall",
+    entry_Fee: "150",
+    prize_Money: {
+        first: "1000",
+        second: "600",
+        third: "400",
+    },
+    eligibility: [
+      "Open to all students of every college.",
+      "Participants must have valid student ID cards.",
+      "pending"
+    ],
+    rules:[
+      "pending....."
+    ],
+    faculty_Coordinator: {
+      name: "Mrs. Shrashti Thakur",
+      contact: "9691185077",
+      email: null,
+    },
+    student_Coordinator: {
+      name: "masterxdevs",
+      contact: null,
+      email: null,
+    },
+     link : "#"
+  },
+
+
+
+
+
+  {
+    event: "free-fire",
+    eventName: "Free Fire",
+    category: "e-sports",
+    description : "Engage in fast-paced action and tactical gameplay as you compete against top players in a high-stakes battle for victory!",
+    date: "09/04/2025",
+    time: "starts on : 10:00am",
+    venue: "LNCT Indore",
+    entry_Fee: "250",
+    prize_Money: {
+        first: "1000",
+        second: "600",
+        third: "400",
+    },
+    eligibility: [
+      "pending"
+    ],
+    rules:[
+      "pending....."
+    ],
+    faculty_Coordinator: {
+      name: "Mr. Dilip Sir",
+      contact: "9406834767",
+      email: null,
+    },
+    student_Coordinator: {
+      name: "Jatin Kushwah",
+      contact: "7489085871",
+      email: null,
+    },
+     link : "#"
+  },
+  {
+    event: "bgmi",
+    eventName: "BGMI",
+    category: "e-sports",
+    description : "Showcase your strategic skills and survival instincts in an intense battle royale showdown. Team up, loot, and fight to be the last one standing!",
+    date: "09/04/2025",
+    time: "starts on : 2:00pm",
+    venue: "LNCT Indore",
+    entry_Fee: "250",
+    prize_Money: {
+        first: "1000",
+        second: "600",
+        third: "400",
+    },
+    eligibility: [
+      "pending"
+    ],
+    rules:[
+      "pending....."
+    ],
+    faculty_Coordinator: {
+      name: "Mr. Dilip Sir",
+      contact: "9406834767",
+      email: null,
+    },
+    student_Coordinator: {
+      name: "Tilak Gehlot",
+      contact: "7000061482",
+      email: null,
+    },
+     link : "#"
+  },
+
+
+
+
+
+  {
+    event: "treasure-hunt",
+    eventName: "Treasure Hunt",
+    category: "thrill-arena",
+    description : "Embark on an adventurous quest where you'll solve intricate puzzles and decipher clever riddles to uncover hidden treasures before time runs out!",
+    date: "09/04/2025",
+    time: "starts on : 11:00am",
+    venue: "LNCT Indore",
+    entry_Fee: "150",
+    prize_Money: {
+        first: "800",
+        second: "500",
+        third: "250",
+    },
+    eligibility: [
+      "pending"
+    ],
+    rules:[
+      "pending....."
+    ],
+    faculty_Coordinator: {
+      name: "Mr. Dilip Sir",
+      contact: "9406834767",
+      email: null,
+    },
+    student_Coordinator: {
+      name: "Jatin Kushwah",
+      contact: "7489085871",
+      email: null,
+    },
+     link : "#"
+  },
+  {
+    event: "roadies",
+    eventName: "Roadies",
+    category: "thrill-arena",
+    description : "Test your endurance, strength, and mental grit as you tackle intense obstacle courses and thrilling challenges designed to push your limits!",
+    date: "09/04/2025",
+    time: "starts on : 12:00pm",
+    venue: "LNCT Indore",
+    entry_Fee: "150",
+    prize_Money: {
+        first: "1000",
+        second: "600",
+        third: "400",
+    },
+    eligibility: [
+      "pending"
+    ],
+    rules:[
+      "pending....."
+    ],
+    faculty_Coordinator: {
+      name: "Mr. Dilip Sir",
+      contact: "9406834767",
+      email: null,
+    },
+    student_Coordinator: {
+      name: "Tilak Gehlot",
+      contact: "7000061482",
+      email: null,
+    },
+     link : "#"
+  },
+
+  
+
 ];
