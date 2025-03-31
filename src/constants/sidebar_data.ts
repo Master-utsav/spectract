@@ -21,8 +21,7 @@ export const eventCategories = [
       slug: "fashionista-ads",
       icon: Shirt,
       events: [
-        { name: "Fashion Show", time: "05:00 PM", slug: "fashion-show" },
-        { name: "Model Hunt", time: "06:30 PM", slug: "model-hunt" }
+        { name: "Fashionista Ads", time: "04:30 PM", slug: "fashionista-ads" },
       ]
     },
     { 

@@ -235,58 +235,19 @@ export const EVENT_DATA = [
 
   {
     event_category: "fashionista-ads",
-    event_name: "glamour-night",
+    event_name: "fashionista-ads",
     event_date: "07-04-2025",
-    event_time: "starts on : 04:00 PM",
-    event_organizer: "Fashion Club",
-    event_location: "LNCT Indore",
+    event_time: "04:30 PM onwards",
+    event_organizer: "Mrs. Priya Chauhan",
+    event_location: "LNCTS Indore",
     event_description:
-      "Showcase your fashion sense on the grand runway with dazzling lights!",
+      "A vibrant fashion event celebrating creativity, style, and self-expression through themed performances on the runway.",
     event_image: "glamour_night_poster",
-    event_link: "#",
-    entry_fees: 300,
-    prize_money: { first: 1500, second: 1000, third: 500 },
-    event_requirement: "Participants must bring their own outfits.",
-    event_guidelines: [
-      "No offensive attire",
-      "Follow time slots for performance",
-    ],
+    event_link: "https://forms.gle/8ya7qqXEQfo8oHMe8",
+    entry_fees: 100,
+    prize_money: { first: 1300, second: 1050},
   },
-  {
-    event_category: "fashionista-ads",
-    event_name: "ethnic-elegance",
-    event_date: "07-04-2025",
-    event_time: "starts on : 04:00 PM",
-    event_organizer: "Fashion Club",
-    event_location: "LNCT Indore",
-    event_description:
-      "A celebration of traditional attires from different cultures!",
-    event_image: "ethnic_elegance_poster",
-    event_link: "#",
-    entry_fees: 250,
-    prize_money: { first: 1200, second: 800, third: 400 },
-    event_requirement: "Wear ethnic or traditional outfits.",
-    event_guidelines: [
-      "Respect cultural representation",
-      "No last-minute outfit changes",
-    ],
-  },
-  {
-    event_category: "fashionista-ads",
-    event_name: "futuristic-fashion",
-    event_date: "07-04-2025",
-    event_time: "starts on : 04:00 PM",
-    event_organizer: "Fashion Club",
-    event_location: "LNCT Indore",
-    event_description:
-      "Step into the future with bold, high-tech fashion styles.",
-    event_image: "futuristic_fashion_poster",
-    event_link: "#",
-    entry_fees: 350,
-    prize_money: { first: 1800, second: 1200, third: 600 },
-    event_requirement: "Wear futuristic-themed outfits.",
-    event_guidelines: ["Use innovative designs", "Props should be lightweight"],
-  },
+  
 
 
 

@@ -4,7 +4,8 @@ export const EVENT_DETAILS = [
     event: "dance-competition",
     eventName: "Dance Competition",
     category: "kalaa-utsav",
-    description: "Showcase your talent in an energetic and expressive dance competition.",
+    description:
+      "Showcase your talent in an energetic and expressive dance competition.",
     eligibility: [
       "Open to all currently enrolled college students.",
       "Teams must consist of 3–10 members. Solo and duo performances are allowed.",
@@ -63,14 +64,15 @@ export const EVENT_DETAILS = [
       contact: "7805060610",
       email: null,
     },
-     link : "#"
+    link: "#",
   },
 
   {
     event: "poetry-slam",
     eventName: "Poetry Slam",
     category: "kalaa-utsav",
-    description: "Express emotions, thoughts, and creativity through the art of spoken poetry.",
+    description:
+      "Express emotions, thoughts, and creativity through the art of spoken poetry.",
     eligibility: [
       "Open to all students of every college.",
       "Participants must have valid student ID cards.",
@@ -117,13 +119,14 @@ export const EVENT_DETAILS = [
       contact: "7441162752",
       email: "rujhanbajpai@gmail.com",
     },
-     link : "#"
+    link: "#",
   },
   {
     event: "drama-performance",
     eventName: "Drama Performance",
     category: "kalaa-utsav",
-    description: "Experience the magic of theatre and bring characters to life on stage.",
+    description:
+      "Experience the magic of theatre and bring characters to life on stage.",
     eligibility: [
       "Open to all currently enrolled college students.",
       "Teams must consist of 5–10 members.",
@@ -170,18 +173,19 @@ export const EVENT_DETAILS = [
       email: null,
     },
     student_Coordinator: {
-      name: "Mehak Vijaywargiya",
+      name: "Mahak Vijaywargiya",
       contact: "9516844542",
       email: null,
     },
-     link : "#"
+    link: "#",
   },
 
   {
     event: "music-and-performing-arts",
     eventName: "Music & Performing Arts",
     category: "kalaa-utsav",
-    description: "Display your musical prowess and performing arts skills on stage.",
+    description:
+      "Display your musical prowess and performing arts skills on stage.",
     eligibility: [
       "Open to all registered college students across Indore, irrespective of branch, course, or year.",
       "Participants must present their college ID cards for verification.",
@@ -250,13 +254,14 @@ export const EVENT_DETAILS = [
       contact: "9926510065",
       email: null,
     },
-     link : "#"
+    link: "#",
   },
   {
     event: "stand-up-comedy-competition",
     eventName: "Stand-Up Comedy Competition",
     category: "kalaa-utsav",
-    description: "Make the audience laugh with your wit and humor in this comedy battle.",
+    description:
+      "Make the audience laugh with your wit and humor in this comedy battle.",
     eligibility: [
       "Open to all registered students of SKC LNCT Group of Colleges.",
       "Participants must present their college ID cards for verification.",
@@ -318,21 +323,16 @@ export const EVENT_DETAILS = [
       contact: "7581008074",
       email: null,
     },
-    link : "#"
+    link: "#",
   },
-
-
-
-
-
-
 
   //  RANG RIWAAZ
   {
     event: "poster-making",
     eventName: "Poster Making",
     category: "rang-riwaaz",
-    description: "Unleash your creativity and design stunning posters on cultural themes!",
+    description:
+      "Unleash your creativity and design stunning posters on cultural themes!",
     eligibility: [
       "Open to all registered students of SKC LNCT Group of Colleges.",
       "Participants must present their college ID cards for verification.",
@@ -357,13 +357,14 @@ export const EVENT_DETAILS = [
       contact: null,
       email: null,
     },
-     link : "#"
+    link: "#",
   },
   {
     event: "rangoli",
     eventName: "Rangoli",
     category: "rang-riwaaz",
-    description: "Create vibrant and intricate rangoli designs that showcase your artistic skills.",
+    description:
+      "Create vibrant and intricate rangoli designs that showcase your artistic skills.",
     eligibility: [
       "Open to all registered students of SKC LNCT Group of Colleges.",
       "Participants must present their college ID cards for verification.",
@@ -389,13 +390,14 @@ export const EVENT_DETAILS = [
       contact: null,
       email: null,
     },
-     link : "#"
+    link: "#",
   },
   {
     event: "tattoo-making",
     eventName: "Tattoo Making",
     category: "rang-riwaaz",
-    description: "Showcase your talent in temporary tattoo artistry with unique and intricate designs.",
+    description:
+      "Showcase your talent in temporary tattoo artistry with unique and intricate designs.",
     eligibility: [
       "Open to all registered students of SKC LNCT Group of Colleges.",
       "Participants must present their college ID cards for verification.",
@@ -421,13 +423,14 @@ export const EVENT_DETAILS = [
       contact: null,
       email: null,
     },
-     link : "#"
+    link: "#",
   },
   {
     event: "face-painting",
     eventName: "Face Painting",
     category: "rang-riwaaz",
-    description: "Transform faces into artistic masterpieces with creative and colorful face painting.",
+    description:
+      "Transform faces into artistic masterpieces with creative and colorful face painting.",
     eligibility: [
       "Open to all registered students of SKC LNCT Group of Colleges.",
       "Participants must present their college ID cards for verification.",
@@ -453,28 +456,24 @@ export const EVENT_DETAILS = [
       contact: null,
       email: null,
     },
-     link : "#"
+    link: "#",
   },
-
-
-
-
-
 
   //   TECH SPARDHA
   {
     event: "code-clash",
     eventName: "Code Clash",
     category: "tech-spardha",
-    description : "A fast-paced coding quiz testing your knowledge of programming, algorithms, and logic.",
+    description:
+      "A fast-paced coding quiz testing your knowledge of programming, algorithms, and logic.",
     date: "07/04/2025",
     time: "12:50pm - 1:40pm",
     venue: "LNCT Server Room",
     entry_Fee: "75",
     prize_Money: {
-        first: "500",
-        second: "300",
-        third: "200",
+      first: "500",
+      second: "300",
+      third: "200",
     },
     student_Coordinator: {
       name: "Utsav Jaiswal",
@@ -486,8 +485,11 @@ export const EVENT_DETAILS = [
       contact: "9691185077",
       email: null,
     },
-     link : "https://forms.gle/bVJ5z2sNWgqwkAWK8",
-    eligibility: ["Student must have to reach 10 minutes before the start time of quiz." , "Student must have to show the email where they get token for that quiz."],
+    link: "https://forms.gle/bVJ5z2sNWgqwkAWK8",
+    eligibility: [
+      "Student must have to reach 10 minutes before the start time of quiz.",
+      "Student must have to show the email where they get token for that quiz.",
+    ],
     rules: [
       "You must complete all 20 questions within the allocated time (40 minutes).",
       "Token is valid only for 1 attempt.",
@@ -503,15 +505,16 @@ export const EVENT_DETAILS = [
     event: "bug-bash",
     eventName: "Bug Bash",
     category: "tech-spardha",
-    description: "Find and fix hidden bugs in given programs within a limited time.",
+    description:
+      "Find and fix hidden bugs in given programs within a limited time.",
     date: "07/04/2025",
     time: "1:40pm - 2:30pm",
     venue: "LNCT Server Room",
     entry_Fee: "75",
     prize_Money: {
-        first: "500",
-        second: "300",
-        third: "200",
+      first: "500",
+      second: "300",
+      third: "200",
     },
     student_Coordinator: {
       name: "Utsav Jaiswal",
@@ -523,8 +526,11 @@ export const EVENT_DETAILS = [
       contact: "9691185077",
       email: null,
     },
-     link : "https://forms.gle/R4mX8aea9Dq1v51k6",
-    eligibility: ["Student must have to reach 10 minutes before the start time of quiz." , "Student must have to show the email where they get token for that quiz."],
+    link: "https://forms.gle/R4mX8aea9Dq1v51k6",
+    eligibility: [
+      "Student must have to reach 10 minutes before the start time of quiz.",
+      "Student must have to show the email where they get token for that quiz.",
+    ],
     rules: [
       "You will be given faulty code that you must fix.",
       "Plagiarism will result in immediate disqualification.",
@@ -545,15 +551,16 @@ export const EVENT_DETAILS = [
     event: "code-mirage",
     eventName: "Code Mirage",
     category: "tech-spardha",
-    description: "Recreate the exact code structure based on given outputs, testing logical deduction.",
+    description:
+      "Recreate the exact code structure based on given outputs, testing logical deduction.",
     date: "07/04/2025",
     time: "2:30pm - 3:20pm",
     venue: "LNCT Server Room",
     entry_Fee: "75",
     prize_Money: {
-        first: "500",
-        second: "300",
-        third: "200",
+      first: "500",
+      second: "300",
+      third: "200",
     },
     student_Coordinator: {
       name: "Utsav Jaiswal",
@@ -565,8 +572,11 @@ export const EVENT_DETAILS = [
       contact: "9691185077",
       email: null,
     },
-     link : "https://forms.gle/eNGHcrhsXf2qsFdB9",
-    eligibility: ["Student must have to reach 10 minutes before the start time of quiz." , "Student must have to show the email where they get token for that quiz."],
+    link: "https://forms.gle/eNGHcrhsXf2qsFdB9",
+    eligibility: [
+      "Student must have to reach 10 minutes before the start time of quiz.",
+      "Student must have to show the email where they get token for that quiz.",
+    ],
     rules: [
       "You must finish your project within the time limit of 40 minutes.",
       "No intellisence is given in the code editor.",
@@ -579,15 +589,16 @@ export const EVENT_DETAILS = [
     event: "illustratex",
     eventName: "IllustrateX (Vector Art Designing)",
     category: "tech-spardha",
-    description : "A fast-paced coding quiz testing your knowledge of programming, algorithms, and logic.",
+    description:
+      "A fast-paced coding quiz testing your knowledge of programming, algorithms, and logic.",
     date: "07/04/2025",
     time: "2:30pm - 3:30pm",
     venue: "LNCT Boss Lab",
     entry_Fee: "75",
     prize_Money: {
-        first: "500",
-        second: "300",
-        third: "200",
+      first: "500",
+      second: "300",
+      third: "200",
     },
     eligibility: [
       "Open to all students of every college.",
@@ -623,30 +634,29 @@ export const EVENT_DETAILS = [
       contact: "6261029938",
       email: null,
     },
-     link : "https://forms.gle/ePUPfny867qk7BbBA"
+    link: "https://forms.gle/ePUPfny867qk7BbBA",
   },
   {
     event: "code-forge",
     eventName: "Code Forge (mini hackathon)",
     category: "tech-spardha",
-    description : "A time-bound mini hackathon where teams build innovative projects on given themes.",
+    description:
+      "A time-bound mini hackathon where teams build innovative projects on given themes.",
     date: "07/04/2025",
-    time: "starts on : 10:30am",
+    time: "10:30am onwards",
     venue: "LNCT Boss Lab",
     entry_Fee: "150",
     prize_Money: {
-        first: "1000",
-        second: "600",
-        third: "400",
+      first: "1000",
+      second: "600",
+      third: "400",
     },
     eligibility: [
       "Open to all students of every college.",
       "Participants must have valid student ID cards.",
-      "pending"
+      "pending",
     ],
-    rules:[
-      "pending....."
-    ],
+    rules: ["pending....."],
     faculty_Coordinator: {
       name: "Mrs. Shrashti Thakur",
       contact: "9691185077",
@@ -657,30 +667,29 @@ export const EVENT_DETAILS = [
       contact: "9926666022",
       email: null,
     },
-     link : "https://forms.gle/U6UsvF2deSBAjEWN8"
+    link: "https://forms.gle/U6UsvF2deSBAjEWN8",
   },
   {
     event: "robo-race",
     eventName: "Robo Race",
     category: "tech-spardha",
-    description : "Race your robot cars through obstacles and challenges to claim victory.",
+    description:
+      "Race your robot cars through obstacles and challenges to claim victory.",
     date: "07/04/2025",
-    time: "starts on : 1:00pm",
+    time: "1:00pm onwards",
     venue: "LNCT Entry Hall",
     entry_Fee: "150",
     prize_Money: {
-        first: "1000",
-        second: "600",
-        third: "400",
+      first: "1000",
+      second: "600",
+      third: "400",
     },
     eligibility: [
       "Open to all students of every college.",
       "Participants must have valid student ID cards.",
-      "pending"
+      "pending",
     ],
-    rules:[
-      "pending....."
-    ],
+    rules: ["pending....."],
     faculty_Coordinator: {
       name: "Mrs. Shrashti Thakur",
       contact: "9691185077",
@@ -691,33 +700,26 @@ export const EVENT_DETAILS = [
       contact: null,
       email: null,
     },
-     link : "#"
+    link: "#",
   },
-
-
-
-
 
   {
     event: "free-fire",
     eventName: "Free Fire",
     category: "e-sports",
-    description : "Engage in fast-paced action and tactical gameplay as you compete against top players in a high-stakes battle for victory!",
+    description:
+      "Engage in fast-paced action and tactical gameplay as you compete against top players in a high-stakes battle for victory!",
     date: "09/04/2025",
-    time: "starts on : 10:00am",
+    time: "10:00am onwards",
     venue: "LNCT Indore",
     entry_Fee: "250",
     prize_Money: {
-        first: "1000",
-        second: "600",
-        third: "400",
+      first: "1000",
+      second: "600",
+      third: "400",
     },
-    eligibility: [
-      "pending"
-    ],
-    rules:[
-      "pending....."
-    ],
+    eligibility: ["pending"],
+    rules: ["pending....."],
     faculty_Coordinator: {
       name: "Mr. Dilip Sir",
       contact: "9406834767",
@@ -728,28 +730,25 @@ export const EVENT_DETAILS = [
       contact: "7489085871",
       email: null,
     },
-     link : "#"
+    link: "#",
   },
   {
     event: "bgmi",
     eventName: "BGMI",
     category: "e-sports",
-    description : "Showcase your strategic skills and survival instincts in an intense battle royale showdown. Team up, loot, and fight to be the last one standing!",
+    description:
+      "Showcase your strategic skills and survival instincts in an intense battle royale showdown. Team up, loot, and fight to be the last one standing!",
     date: "09/04/2025",
-    time: "starts on : 2:00pm",
+    time: "2:00pm onwards",
     venue: "LNCT Indore",
     entry_Fee: "250",
     prize_Money: {
-        first: "1000",
-        second: "600",
-        third: "400",
+      first: "1000",
+      second: "600",
+      third: "400",
     },
-    eligibility: [
-      "pending"
-    ],
-    rules:[
-      "pending....."
-    ],
+    eligibility: ["pending"],
+    rules: ["pending....."],
     faculty_Coordinator: {
       name: "Mr. Dilip Sir",
       contact: "9406834767",
@@ -760,33 +759,26 @@ export const EVENT_DETAILS = [
       contact: "7000061482",
       email: null,
     },
-     link : "#"
+    link: "#",
   },
-
-
-
-
 
   {
     event: "treasure-hunt",
     eventName: "Treasure Hunt",
     category: "thrill-arena",
-    description : "Embark on an adventurous quest where you'll solve intricate puzzles and decipher clever riddles to uncover hidden treasures before time runs out!",
+    description:
+      "Embark on an adventurous quest where you'll solve intricate puzzles and decipher clever riddles to uncover hidden treasures before time runs out!",
     date: "09/04/2025",
-    time: "starts on : 11:00am",
+    time: "11:00am onwards",
     venue: "LNCT Indore",
     entry_Fee: "150",
     prize_Money: {
-        first: "800",
-        second: "500",
-        third: "250",
+      first: "800",
+      second: "500",
+      third: "250",
     },
-    eligibility: [
-      "pending"
-    ],
-    rules:[
-      "pending....."
-    ],
+    eligibility: ["pending"],
+    rules: ["pending....."],
     faculty_Coordinator: {
       name: "Mr. Dilip Sir",
       contact: "9406834767",
@@ -797,28 +789,25 @@ export const EVENT_DETAILS = [
       contact: "7489085871",
       email: null,
     },
-     link : "#"
+    link: "#",
   },
   {
     event: "roadies",
     eventName: "Roadies",
     category: "thrill-arena",
-    description : "Test your endurance, strength, and mental grit as you tackle intense obstacle courses and thrilling challenges designed to push your limits!",
+    description:
+      "Test your endurance, strength, and mental grit as you tackle intense obstacle courses and thrilling challenges designed to push your limits!",
     date: "09/04/2025",
-    time: "starts on : 12:00pm",
+    time: "12:00pm onwards",
     venue: "LNCT Indore",
     entry_Fee: "150",
     prize_Money: {
-        first: "1000",
-        second: "600",
-        third: "400",
+      first: "1000",
+      second: "600",
+      third: "400",
     },
-    eligibility: [
-      "pending"
-    ],
-    rules:[
-      "pending....."
-    ],
+    eligibility: ["pending"],
+    rules: ["pending....."],
     faculty_Coordinator: {
       name: "Mr. Dilip Sir",
       contact: "9406834767",
@@ -829,9 +818,109 @@ export const EVENT_DETAILS = [
       contact: "7000061482",
       email: null,
     },
-     link : "#"
+    link: "#",
   },
 
-  
-
+  {
+    event: "fashionista-ads",
+    eventName: "Fashionista Ads",
+    category: "fashionista-ads",
+    description:
+      "A vibrant fashion event celebrating creativity, style, and self-expression through themed performances on the runway.",
+    eligibility: [
+      "Open to all students from all colleges across Indore.",
+      "Participants must present their college ID cards for verification.",
+      "Registration must be completed before the event begins.",
+    ],
+    rounds: [
+      {
+        name: "1st Round",
+        themes: ["Mismatch (Single)", "Retro (Couple)"],
+        description:
+          "Participants can choose either theme and compete accordingly.",
+      },
+      {
+        name: "2nd Round",
+        themes: ["Traditional"],
+        description:
+          "All selected participants from Round 1 must compete in this round. Couples will perform separately.",
+      },
+      {
+        name: "3rd Round",
+        themes: ["Interview-Based"],
+        description:
+          "Finalists from Round 2 will compete in this interview round to determine the winners.",
+      },
+    ],
+    performance_Rules: {
+      time_Limit: "60-90 seconds per walk, including entry and exit.",
+      penalty: "Exceeding the time limit will result in negative marking.",
+      music: "Background music will be provided by the college committee.",
+    },
+    restrictions: [
+      "No pyrotechnics, sharp objects, or hazardous materials allowed.",
+      "Participants must not throw objects or interact with the audience.",
+      "No damage to stage property or college facilities.",
+      "Strictly no cigarettes, alcohol, or unfair means.",
+    ],
+    costume_Rules: {
+      general: [
+        "No political, religious, or offensive symbols allowed.",
+        "Props, accessories, and makeup are permitted but must not pose safety risks.",
+        "Costumes must maintain decency and avoid vulgarity or offensive imagery.",
+        "Green rooms will be provided for changing.",
+      ],
+      girls: [
+        "The bottom should not be shorter than just above the knee.",
+        "Deep neck tops or blouses are not allowed, but backless outfits are permitted.",
+      ],
+      boys: ["Being topless or bottomless is not allowed."],
+    },
+    theme_Rules: [
+      "Participants can choose any theme for Round 1, but the 2nd Round is compulsory for all selected participants.",
+      "Costumes must align with the chosen theme and should reflect creativity and originality.",
+    ],
+    judging_Criteria: {
+      costume_Creativity: "20%",
+      theme_Alignment: "20%",
+      walking_Stance: "20%",
+      confidence_And_Attitude: "20%",
+      overall_Presentation: "20%",
+    },
+    decision_And_Disqualification: [
+      "The judges' decision is final and binding.",
+      "Any rule violation may result in negative marking or direct disqualification.",
+    ],
+    awards_And_Prizes: {
+      girls: {
+        "1st Prize": "Rs. 1,300",
+        "2nd Prize": "Rs. 1,050",
+      },
+      boys: {
+        "1st Prize": "Rs. 1,300",
+        "2nd Prize": "Rs. 1,050",
+      },
+    },
+    entry_Fee: "100/round",
+    venue: "LNCTS, Indore",
+    date: "07/04/2025",
+    time: "4:30 PM onwards",
+    additional_Guidelines: [
+      "Participants must bring their own props.",
+      "All participants need to bring a traditional costume.",
+      "Security volunteers will prevent unauthorized access to the stage.",
+      "The college is not responsible for any photos taken during the event being shared externally.",
+    ],
+    faculty_Coordinator: {
+      name: "Dr. Kulkarni Sir",
+      contact: "9893000169",
+      email: null,
+    },
+    student_Coordinator: {
+      name: "Mrs. Priya Chauhan",
+      contact: "9479878412",
+      email: null,
+    },
+    link: "https://forms.gle/8ya7qqXEQfo8oHMe8",
+  },
 ];

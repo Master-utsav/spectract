@@ -170,47 +170,48 @@ body {
   stroke-linejoin: round;
   opacity: 0;
   animation:
-    svgStrokeAnimationInfinite 2s infinite ease-in-out,
+    svgStrokeAnimationInfinite 3s infinite ease-in-out,
     waveFloat 2s ease-in-out 1s infinite alternate;
 }
 
 @keyframes svgStrokeAnimationInfinite {
   0% {
-    stroke-dashoffset: 50;
+    stroke-dashoffset: 100;
     opacity: 0;
   }
 
   40% {
-    stroke-dashoffset: 25;
-    opacity: 0.5;
+    stroke-dashoffset: 50;
+    opacity: 0.4;
   }
 
-  60% {
+  50% {
     stroke-dashoffset: 0;
   }
 
-  80% {
-    opacity: 0.5;
+  60% {
+    opacity: 0.4;
+    stroke-dashoffset: 50;
   }
 
   100% {
-    stroke-dashoffset: 50;
+    stroke-dashoffset: 100;
     opacity: 0;
   }
 }
 
 .svg-stroke-effect-fire path:nth-child(1) {
-  animation-delay: 0.3s;
-  fill: #D33D3D;
+  animation-delay: 0.8s;
+  fill: #d33d3d7b;
 }
 
 .svg-stroke-effect-fire path:nth-child(2) {
-  animation-delay: 0.6s;
+  animation-delay: 1.6s;
   fill: #FF884D;
 }
 
 .svg-stroke-effect-fire path:nth-child(3) {
-  animation-delay: 0.8s;
+  animation-delay: 2.8s;
   fill: #FFCF57;
 }
 

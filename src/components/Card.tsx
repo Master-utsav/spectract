@@ -115,7 +115,7 @@ const Card = ({ data }: { data: any }) => {
           />
         </div>
       </div>
-      
+
       {/* Buttons & Image */}
       <div className="flex sm:flex-row flex-col-reverse justify-between items-start mt-6 gap-2">
         <div className="flex flex-col justify-start items-center sm:items-start sm:gap-3 gap-1 font-[family-name:var(--font-maven-pro)] w-full">
@@ -140,20 +140,19 @@ const Card = ({ data }: { data: any }) => {
 
           {/* Register Now CTA */}
           <Link href={data.event_link} target="_blank" className="w-full">
-          <motion.button
-            whileHover={{ scale: 1.08 }}
-            whileTap={{ scale: 0.95 }}
-            className={cn(
-              "w-full sm:w-auto px-3 sm:px-4 py-2.5 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2 transition-all duration-300 hover:brightness-110 active:scale-95",
-              "min-w-0 max-w-full flex-nowrap",
-              colorMap[color + "_btn"]
-            )}
-          >
-            <Rocket className="size-5 text-white shrink-0" />
-            <span className="truncate">Register Now</span>
-          </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.08 }}
+              whileTap={{ scale: 0.95 }}
+              className={cn(
+                "w-full sm:w-auto px-3 sm:px-4 py-2.5 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2 transition-all duration-300 hover:brightness-110 active:scale-95",
+                "min-w-0 max-w-full flex-nowrap",
+                colorMap[color + "_btn"]
+              )}
+            >
+              <Rocket className="size-5 text-white shrink-0" />
+              <span className="truncate">Register Now</span>
+            </motion.button>
           </Link>
-
         </div>
 
         {/* <div>
@@ -201,20 +200,22 @@ const Card = ({ data }: { data: any }) => {
             </span>
 
             {/* Third Prize */}
-            <span className="text-lg font-medium text-yellow-200 drop-shadow-sm flex items-center lg:gap-3 gap-1">
-              <Image
-                width={40}
-                height={40}
-                src="/img/award_3.png"
-                alt="Third Prize"
-                loading="eager"
-                className="w-8 h-8 object-contain mix-blend-lighten"
-              />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500 flex justify-center items-center">
-                <IndianRupee className="size-3 text-orange-300 " />
-                {data.prize_money.third}
+            {data.prize_money.third && (
+              <span className="text-lg font-medium text-yellow-200 drop-shadow-sm flex items-center lg:gap-3 gap-1">
+                <Image
+                  width={40}
+                  height={40}
+                  src="/img/award_3.png"
+                  alt="Third Prize"
+                  loading="eager"
+                  className="w-8 h-8 object-contain mix-blend-lighten"
+                />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500 flex justify-center items-center">
+                  <IndianRupee className="size-3 text-orange-300 " />
+                  {data.prize_money.third}
+                </span>
               </span>
-            </span>
+            )}
           </div>
         )}
         {data.recognition !== undefined && (
@@ -230,7 +231,7 @@ const Card = ({ data }: { data: any }) => {
             )}
 
             {/* Certificate Recognition */}
-            {data.recognition &&  data.recognition.certificate && (
+            {data.recognition && data.recognition.certificate && (
               <span className="text-base font-medium text-blue-300 drop-shadow-sm flex items-center lg:gap-3 gap-1">
                 <FileText className="w-7 h-7 text-blue-400 stroke-[1.5]" />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-blue-400 flex justify-center items-center">
@@ -240,7 +241,6 @@ const Card = ({ data }: { data: any }) => {
             )}
           </div>
         )}
-        
       </div>
     </motion.div>
   );

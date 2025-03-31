@@ -67,7 +67,6 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
           whileTap={{ scale: 0.98 }}
         >
           <div className="flex items-center gap-3">
-            
             <Icon className={cn("size-6", colorMap[`${color}_text_code`])} />
             <h3
               className={cn(
@@ -127,17 +126,17 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
     >
       {/* Event Header */}
       <div className="flex flex-row justify-between items-center mb-6 font-[family-name:var(--font-salsa)]">
-      <motion.button
-              whileHover={{ scale: 1.08 }}
-              whileTap={{ scale: 0.95 }}
-              className={cn(
-                "px-4 py-2.5 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2",
-               colorMap[color + "_btn"]
-              )}
-              onClick={() => router.back()}
-            >
-              <GoArrowLeft className="size-5 text-white" />
-            </motion.button>
+        <motion.button
+          whileHover={{ scale: 1.08 }}
+          whileTap={{ scale: 0.95 }}
+          className={cn(
+            "px-4 py-2.5 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2",
+            colorMap[color + "_btn"]
+          )}
+          onClick={() => router.back()}
+        >
+          <GoArrowLeft className="size-5 text-white" />
+        </motion.button>
         <h1
           className={cn(
             "md:text-4xl sm:text-3xl text-2xl font-semibold capitalize  text-center w-full",
@@ -289,6 +288,200 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
       </div>
 
       {/* Expandable Sections */}
+      {event.rounds && (
+        <div className="mb-8">
+          <h3
+            className={cn(
+              "text-xl font-semibold mb-4 flex items-center gap-2",
+              colorMap[`${color}_header_text_code`]
+            )}
+          >
+            <Rocket className={cn("size-5", colorMap[`${color}_text_code`])} />
+            Event Rounds
+          </h3>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {event.rounds.map((round: any, index: any) => (
+              <div
+                key={index}
+                className={cn(
+                  "flex flex-col h-full rounded-lg p-4 transition-transform hover:translate-y-1 border border-dashed border-white/20 backdrop-blur-sm",
+                  colorMap[color],
+                  "shadow-lg"
+                )}
+              >
+                {/* Round Number */}
+                <div className="flex items-center gap-2 mb-3 font-[family-name:var(--font-assistant)]">
+                  <div
+                    className={cn(
+                      "w-8 h-8 rounded-full flex border border-dashed items-center justify-center text-lg font-bold",
+                      colorMap[`${color}`],
+                      colorMap[`${color}_gr_rd`]
+                    )}
+                  >
+                    {index + 1}
+                  </div>
+                  <h4 className="text-lg font-semibold text-white">
+                    {round.name}
+                  </h4>
+                </div>
+
+                {/* Theme section */}
+                {round.theme && (
+                  <div className="mb-2">
+                    <span className="text-sm text-gray-300">Theme:</span>
+                    <p className="text-white font-medium">{round.theme}</p>
+                  </div>
+                )}
+
+                {/* Themes array if present */}
+                {round.themes && (
+                  <div className="mb-2 font-[family-name:var(--font-assistant)]">
+                    <span className="text-sm text-gray-300">Themes:</span>
+                    <div className="flex flex-wrap gap-2 mt-1">
+                      {round.themes.map((theme: any, themeIndex: any) => (
+                        <span
+                          key={themeIndex}
+                          className={cn(
+                            "px-2 py-1 rounded-md text-sm font-medium",
+                            colorMap[`${color}_btn`]
+                          )}
+                        >
+                          {theme}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Description */}
+                {round.description && (
+                  <div className="mt-auto pt-2 font-[family-name:var(--font-maven-pro)]">
+                    <p className="text-white/80 text-sm">{round.description}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {event.awards_And_Prizes &&
+        Object.keys(event.awards_And_Prizes).length !== 0 && (
+          <>
+            <h3
+              className={cn(
+                "text-xl font-semibold mb-4 flex items-center gap-2",
+                colorMap[`${color}_header_text_code`]
+              )}
+            >
+              <Trophy
+                className={cn("size-5", colorMap[`${color}_text_code`])}
+              />
+              Awards and Prizes
+            </h3>
+            <div className="flex flex-col md:flex-row gap-6 justify-center">
+              {Object.entries(event.awards_And_Prizes).map(
+                ([category, prizes]) => (
+                  <div
+                    key={category}
+                    className={cn("bg-transparent rounded-lg p-4 flex-1 border border-solid border-white/20 backdrop-blur-sm relative", 
+                      colorMap[`${color}`])
+                    }
+                  >
+                    <h4 className="text-xl font-semibold mb-4 capitalize flex items-center relative justify-center pb-3">
+                      <User className="mr-2 text-pink-400 size-5" />
+                      {category} Category
+                    </h4>
+
+                    <span
+                      className={cn(
+                        "absolute inset-x-0 bottom-px h-[1.5px] w-full mx-auto",
+                        colorMap[`${color}_gr`]
+                      )}
+                    />
+                    <div className="gap-3 flex flex-row ">
+                      {Object.entries(prizes as any).map(([prize, amount]) => {
+                        const isPrize1 = prize.includes("1st");
+                        const isPrize2 = prize.includes("2nd");
+                        const isPrize3 = prize.includes("3rd");
+
+                        return (
+                          <div
+                            key={prize}
+                            className={cn(
+                              "flex items-center relative w-full  px-4 flex-col justify-center gap-1 rounded-md border border-dashed border-white/20 bg-white/10 backdrop-blur-sm",
+                              colorMap[color]
+                            )}
+                          >
+                            <div className="flex items-center justify-center size-16">
+                              {isPrize1 ? (
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  src="/img/award_1.png"
+                                  alt="First Prize"
+                                  className="object-contain mix-blend-lighten"
+                                />
+                              ) : isPrize2 ? (
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  src="/img/award_2.png"
+                                  alt="Second Prize"
+                                  className="object-contain mix-blend-lighten"
+                                />
+                              ) : isPrize3 ? (
+                                <Image
+                                  width={100}
+                                  height={100}
+                                  src="/img/award_3.png"
+                                  alt="Third Prize"
+                                  className="object-contain mix-blend-lighten"
+                                />
+                              ) : (
+                                <Trophy className="text-yellow-400 size-6" />
+                              )}
+                            </div>
+
+                            <div className="flex justify-center items-center w-fit mx-auto text-center">
+                              <p
+                                className={`text-xl font-semibold bg-clip-text text-transparent font-[family-name:var(--font-salsa)] flex items-center ${
+                                  isPrize1
+                                    ? "bg-gradient-to-r from-yellow-300 to-yellow-500"
+                                    : isPrize2
+                                    ? "bg-gradient-to-r from-gray-300 to-gray-500"
+                                    : ""
+                                }`}
+                              >
+                                <IndianRupee
+                                  className={`size-4  ${
+                                    isPrize1
+                                      ? "text-yellow-300"
+                                      : isPrize2
+                                      ? "text-gray-300"
+                                      : ""
+                                  }`}
+                                />
+                                {(amount as string).replace("Rs. ", "")}
+                              </p>
+                            </div>
+                            <span
+                              className={cn(
+                                "absolute inset-x-0 bottom-px h-[1.5px] w-full mx-auto",
+                                colorMap[`${color}_gr`]
+                              )}
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
+          </>
+        )}
 
       <div className="space-y-2 mb-6 text-sm sm:text-base">
         {/* Eligibility */}
@@ -301,6 +494,17 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
             {renderListSection(event.eligibility)}
           </AccordionSection>
         )}
+
+        {event.additional_Guidelines &&
+          event.additional_Guidelines?.[0] !== null && (
+            <AccordionSection
+              title="Additional Guidelines"
+              icon={Users}
+              sectionName="additional_Guidelines"
+            >
+              {renderListSection(event.additional_Guidelines)}
+            </AccordionSection>
+          )}
 
         {/* Rules */}
         {event.rules && (
@@ -356,6 +560,57 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
               </ul>
             </AccordionSection>
           )}
+
+        {event.performance_Rules &&
+          Object.keys(event.performance_Rules).length !== 0 && (
+            <AccordionSection
+              title="Performance Rules"
+              icon={ScrollText}
+              sectionName="performanceRules"
+            >
+              <ul className="list-disc pl-5 space-y-1">
+                {Object.entries(event.performance_Rules).map(([key, value]) => (
+                  <li key={key}>
+                    <strong>{key.replace(/_/g, " ")}:</strong>{" "}
+                    {value as ReactNode}
+                  </li>
+                ))}
+              </ul>
+            </AccordionSection>
+          )}
+
+        {event.costume_Rules && Object.keys(event.costume_Rules).length !== 0 && (
+          <AccordionSection
+            title="Costume Rules"
+            icon={ScrollText}
+            sectionName="costumeRules"
+          >
+            <ul className="space-y-4">
+              {Object.entries(event.costume_Rules).map(([category, rules]) => (
+                <li key={category} className="text-white/80">
+                  <strong className="text-white capitalize">
+                    {category.replace(/_/g, " ")}:
+                  </strong>
+                  <ul className="list-disc pl-5 space-y-1 mt-1">
+                    {Array.isArray(rules) &&
+                      rules.map((rule, index) => <li key={index}>{rule}</li>)}
+                  </ul>
+                </li>
+              ))}
+            </ul>
+          </AccordionSection>
+        )}
+
+        {event.theme_Rules && (
+          <AccordionSection
+            title="Theme Rules"
+            icon={ScrollText}
+            sectionName="themeRules"
+          >
+            {renderListSection(event.theme_Rules)}
+          </AccordionSection>
+        )}
+
         {event.content_Guidelines &&
           Object.keys(event.content_Guidelines).length !== 0 && (
             <AccordionSection
@@ -407,7 +662,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
         )}
 
         {/* Performance Rules */}
-        {event.performance_Rules && (
+        {/* {event.performance_Rules && (
           <AccordionSection
             title="Performance Rules"
             icon={ScrollText}
@@ -415,7 +670,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
           >
             {renderListSection(event.performance_Rules)}
           </AccordionSection>
-        )}
+        )} */}
 
         {/* Judging Criteria */}
         {event.judging_Criteria &&
@@ -435,6 +690,16 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
               </ul>
             </AccordionSection>
           )}
+
+        {event.restrictions && (
+          <AccordionSection
+            title="Restrictions"
+            icon={Ban}
+            sectionName="restrictions"
+          >
+            {renderListSection(event.restrictions)}
+          </AccordionSection>
+        )}
 
         {/* Disqualification */}
         {event.disqualification && (
@@ -542,18 +807,22 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
 
       {/* Action Buttons */}
       <div className="flex justify-center items-center gap-4 mt-6">
-      <Link href={event.link} target="_blank" className="w-full mx-auto justify-center items-center flex">
-        <motion.button
-          whileHover={{ scale: 1.08 }}
-          whileTap={{ scale: 0.95 }}
-          className={cn(
-            "px-4 w-full sm:w-auto py-2.5 text-white sm:justify-start justify-center font-semibold rounded-lg shadow-lg flex items-center gap-2",
-            colorMap[color + "_btn"]
-          )}
+        <Link
+          href={event.link}
+          target="_blank"
+          className="w-full mx-auto justify-center items-center flex"
         >
-          <Rocket className="size-5 text-white" />
-          Register Now
-        </motion.button>
+          <motion.button
+            whileHover={{ scale: 1.08 }}
+            whileTap={{ scale: 0.95 }}
+            className={cn(
+              "px-4 w-full sm:w-auto py-2.5 text-white sm:justify-start justify-center font-semibold rounded-lg shadow-lg flex items-center gap-2",
+              colorMap[color + "_btn"]
+            )}
+          >
+            <Rocket className="size-5 text-white" />
+            Register Now
+          </motion.button>
         </Link>
       </div>
     </motion.div>
