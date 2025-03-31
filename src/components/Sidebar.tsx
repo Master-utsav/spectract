@@ -103,7 +103,7 @@ const Sidebar = ({
             <div className="flex items-center gap-2">
               <Icon className={`size-4 ${colorMap[color + "_text_code"]}`} />
               <h4
-                className={`text-base font-medium ${
+                className={`sm:text-base text-lg font-medium ${
                   colorMap[color + "_text_code"]
                 } font-[family-name:var(--font-assistant)]`}
               >
@@ -111,7 +111,7 @@ const Sidebar = ({
               </h4>
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-sm text-white/60 font-[family-name:var(--font-salsa)]">{date}</span>
+              <span className="sm:text-sm text-base text-white/60 font-[family-name:var(--font-salsa)]">{date}</span>
               {children &&
                 (isActive ? (
                   <ChevronUp className="text-white/70 size-4" />
@@ -209,7 +209,7 @@ const Sidebar = ({
                       >
                         <div className="flex items-center gap-3">
                           <item.icon className="size-5 text-blue-500" />
-                          <span className="text-lg font-medium text-white">
+                          <span className="sm:text-lg text-xl font-medium text-white">
                             {item.text}
                           </span>
                         </div>
@@ -247,16 +247,16 @@ const Sidebar = ({
                                       onClick={onClose}
                                     >
                                       <div className="flex justify-start items-center gap-2 w-2/3">
-                                        <span className={` text-sm ${colorMap[get_colors(category.slug) + "_text_code"]}`}>
+                                        <span className={`sm:text-sm  text-base ${colorMap[get_colors(category.slug) + "_text_code"]}`}>
                                           •
                                         </span>
-                                        <span className="text-sm font-[family-name:var(--font-assistant)]">
+                                        <span className="sm:text-sm text-base font-[family-name:var(--font-assistant)]">
                                           {event.name}
                                         </span>
                                       </div>
                                       <div className="flex items-center gap-1 text-white/50 w-1/3">
                                         <Clock className="size-3" />
-                                        <span className="text-xs font-[family-name:var(--font-salsa)]">
+                                        <span className="sm:text-xs text-sm font-[family-name:var(--font-salsa)]">
                                           {event.time}
                                         </span>
                                       </div>
@@ -286,7 +286,7 @@ const Sidebar = ({
 
             {/* Footer content */}
             <motion.div className="mt-auto" variants={childVariants}>
-              <div className="pt-6 border-t border-gray-200 dark:border-gray-700 flex-col justify-center items-center gap-3 text-center">
+              <div className="pt-6 flex-col justify-center items-center gap-3 text-center">
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   © 2025 TEJANTA LNCT FEST | LNCT Group of Colleges, Indore
                 </p>
