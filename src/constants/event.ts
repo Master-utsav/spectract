@@ -912,7 +912,7 @@ export const EVENT_DETAILS = [
       "The college is not responsible for any photos taken during the event being shared externally.",
     ],
     faculty_Coordinator: {
-      name: "Dr. Kulkarni Sir",
+      name: "Dr. Prashant Sir",
       contact: "9893000169",
       email: null,
     },
