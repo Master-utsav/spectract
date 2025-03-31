@@ -15,8 +15,8 @@ const BlinkDot = ({ click , height , width}: { click: () => void , height : numb
           backgroundColor: ["#3498db", "#9b59b6", "#3498db"],
         }}
       /> */}
-      <div className="absolute inset-0 flex items-center justify-center">
-      <div className="absolute h-[200px] w-[200px] rounded-full bg-gradient-radial-glow opacity-60 blur-3xl animate-fireGlow"></div>
+      <div className="absolute inset-0 flex items-center justify-center ">
+      <div className="absolute h-[50px] w-[50px] rounded-full bg-gradient-radial-glow opacity-60 blur-3xl animate-fireGlow"></div>
         <FireAnimatedSvg height={height} width={width} />
       </div>
     </button>

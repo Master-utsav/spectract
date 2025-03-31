@@ -148,7 +148,7 @@ const Sidebar = ({
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.5 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 bg-black z-[3000]"
+            className="fixed inset-0 bg-black z-[3000] overflow-hidden"
             onClick={onClose}
           />
 
