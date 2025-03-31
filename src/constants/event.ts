@@ -684,21 +684,65 @@ export const EVENT_DETAILS = [
       second: "600",
       third: "400",
     },
-    eligibility: [
-      "Open to all students of every college.",
-      "Participants must have valid student ID cards.",
-      "pending",
-    ],
-    rules: ["pending....."],
-    faculty_Coordinator: {
-      name: "Mrs. Shrashti Thakur",
-      contact: "9691185077",
-      email: null,
-    },
+      eligibility: [
+        "Open to students from all departments.",
+        "Teams can consist of 2-5 members.",
+        "Each team can register only one robot."
+      ],
+      robot_Specifications: {
+        size: "Maximum dimensions of 30cm x 30cm x 30cm.",
+        weight: "Maximum weight of 3kg.",
+        power_Source: "Robots must be battery-operated. No external power sources allowed.",
+        control: "Robots can be autonomous or manually controlled via remote control."
+      },
+      track_Specifications: {
+        length: "Approximately 20 meters long.",
+        obstacles: "Includes ramps, barriers, tunnels, and sharp turns.",
+        surface: "Combination of smooth and rough surfaces."
+      },
+      event_Format: {
+        heats: "The competition will be conducted in heats with 3-4 teams competing simultaneously.",
+        timing: "Each team will have two attempts; the best time will be considered.",
+        scoring: "Shortest completion time wins. In case of a tie, the team with fewer penalties wins."
+      },
+      rules_And_Guidelines: {
+        starting_Procedure: [
+          "Robots must start from the designated start line.",
+          "Teams will be given a countdown before the race begins."
+        ],
+        track_Navigation: [
+          "Robots must follow the designated path and checkpoints.",
+          "Skipping obstacles or checkpoints will result in penalties.",
+          "Manual assistance is not allowed during the race."
+        ],
+        penalties: {
+          obstacle_Miss: "10 seconds added per missed obstacle.",
+          checkpoint_Miss: "20 seconds added per missed checkpoint.",
+          off_Track: "5 seconds added per off-track instance.",
+          manual_Assistance: "Disqualification from the heat if any manual assistance is provided."
+        },
+        safety_Measures: [
+          "Robots must not have any sharp or dangerous components.",
+          "All robots will be inspected before the race for safety compliance.",
+          "Participants must wear protective gear, including gloves and safety glasses."
+        ]
+      },
+      judging_Criteria: {
+        speed: "Primary criterion is the time taken to complete the track.",
+        navigation: "Efficient navigation and obstacle avoidance.",
+        design: "Innovative and robust robot design.",
+        adherence_To_Rules: "Following all rules without incurring penalties."
+      },
+      faculty_Coordinator: {
+        name: "Mrs. Shrashti Thakur",
+        contact: "9691185077",
+        email: null,
+      },
+
     student_Coordinator: {
-      name: "masterxdevs",
+      name: "Rujhan Bajpai",
       contact: null,
-      email: null,
+      email: "rujhanbajpai@gmail.com",
     },
     link: "#",
   },

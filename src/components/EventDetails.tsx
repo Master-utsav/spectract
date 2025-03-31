@@ -27,6 +27,7 @@ import {
   Music3,
   Trophy,
   LanguagesIcon,
+  TrainTrack,
 } from "lucide-react";
 import Image from "next/image";
 import { colorMap, get_colors } from "@/constants/colors";
@@ -34,6 +35,8 @@ import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { GoArrowLeft } from "react-icons/go";
 import Link from "next/link";
+import { BsRobot } from "react-icons/bs";
+import { MdEvent } from "react-icons/md";
 
 export const EventDetailsComponent = ({ event }: { event: any }) => {
   const [activeSection, setActiveSection] = useState(null);
@@ -385,9 +388,10 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
                 ([category, prizes]) => (
                   <div
                     key={category}
-                    className={cn("bg-transparent rounded-lg p-4 flex-1 border border-solid border-white/20 backdrop-blur-sm relative", 
-                      colorMap[`${color}`])
-                    }
+                    className={cn(
+                      "bg-transparent rounded-lg p-4 flex-1 border border-solid border-white/20 backdrop-blur-sm relative",
+                      colorMap[`${color}`]
+                    )}
                   >
                     <h4 className="text-xl font-semibold mb-4 capitalize flex items-center relative justify-center pb-3">
                       <User className="mr-2 text-pink-400 size-5" />
@@ -553,13 +557,78 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
               <ul className="list-disc pl-5 space-y-1">
                 {Object.entries(event.performance_Time).map(([key, value]) => (
                   <li key={key}>
-                    <strong>{key.replace(/_/g, " ")}:</strong>{" "}
+                    <strong className="capitalize">
+                      {key.replace(/_/g, " ")}:
+                    </strong>{" "}
                     {value as ReactNode}
                   </li>
                 ))}
               </ul>
             </AccordionSection>
           )}
+
+        {event.robot_Specifications &&
+          Object.keys(event.robot_Specifications).length !== 0 && (
+            <AccordionSection
+              title="Robot Specifications"
+              icon={BsRobot}
+              sectionName="robot_Specifications"
+            >
+              <ul className="list-disc pl-5 space-y-1">
+                {Object.entries(event.robot_Specifications).map(
+                  ([key, value]) => (
+                    <li key={key}>
+                      <strong className="capitalize">
+                        {key.replace(/_/g, " ")}:
+                      </strong>{" "}
+                      {value as ReactNode}
+                    </li>
+                  )
+                )}
+              </ul>
+            </AccordionSection>
+          )}
+
+        {event.track_Specifications &&
+          Object.keys(event.track_Specifications).length !== 0 && (
+            <AccordionSection
+              title="Track Specifications"
+              icon={TrainTrack}
+              sectionName="track_Specifications"
+            >
+              <ul className="list-disc pl-5 space-y-1">
+                {Object.entries(event.track_Specifications).map(
+                  ([key, value]) => (
+                    <li key={key}>
+                      <strong className="capitalize">
+                        {key.replace(/_/g, " ")}:
+                      </strong>{" "}
+                      {value as ReactNode}
+                    </li>
+                  )
+                )}
+              </ul>
+            </AccordionSection>
+          )}
+
+        {event.event_Format && Object.keys(event.event_Format).length !== 0 && (
+          <AccordionSection
+            title="Event Format"
+            icon={MdEvent}
+            sectionName="event_Format"
+          >
+            <ul className="list-disc pl-5 space-y-1">
+              {Object.entries(event.event_Format).map(([key, value]) => (
+                <li key={key}>
+                  <strong className="capitalize">
+                    {key.replace(/_/g, " ")}:
+                  </strong>{" "}
+                  {value as ReactNode}
+                </li>
+              ))}
+            </ul>
+          </AccordionSection>
+        )}
 
         {event.performance_Rules &&
           Object.keys(event.performance_Rules).length !== 0 && (
@@ -571,7 +640,9 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
               <ul className="list-disc pl-5 space-y-1">
                 {Object.entries(event.performance_Rules).map(([key, value]) => (
                   <li key={key}>
-                    <strong>{key.replace(/_/g, " ")}:</strong>{" "}
+                    <strong className="capitalize">
+                      {key.replace(/_/g, " ")}:
+                    </strong>{" "}
                     {value as ReactNode}
                   </li>
                 ))}
@@ -587,7 +658,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
           >
             <ul className="space-y-4">
               {Object.entries(event.costume_Rules).map(([category, rules]) => (
-                <li key={category} className="text-white/80">
+                <li key={category} className="text-white/80 capitalize">
                   <strong className="text-white capitalize">
                     {category.replace(/_/g, " ")}:
                   </strong>
@@ -622,11 +693,15 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
                 {Object.entries(event.content_Guidelines).map(
                   ([key, values]) => (
                     <li key={key}>
-                      <strong>{key.replace(/_/g, " ")}:</strong>
-                      <ul className="list-disc pl-5 space-y-1">
+                      <strong className="capitalize">
+                        {key.replace(/_/g, " ")}:
+                      </strong>
+                      <ul className="list-disc pl-5 space-y-">
                         {Array.isArray(values) ? (
                           values.map((point, index) => (
-                            <li key={index}>{point}</li>
+                            <li key={index} className="capitalize">
+                              {point}
+                            </li>
                           ))
                         ) : (
                           <li>{values as ReactNode}</li>
@@ -639,6 +714,48 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
             </AccordionSection>
           )}
 
+        {event.rules_And_Guidelines &&
+          Object.keys(event.rules_And_Guidelines).length !== 0 && (
+            <AccordionSection
+              title="Rules and Guidelines"
+              icon={BookOpen}
+              sectionName="rules_And_Guidelines"
+            >
+              <ul className="list-disc pl-5 space-y-3">
+                {Object.entries(event.rules_And_Guidelines).map(
+                  ([key, values]) => (
+                    <li key={key}>
+                      <strong className="capitalize">
+                        {key.replace(/_/g, " ")}:
+                      </strong>
+                      <ul className="list-disc pl-5 space-y-1">
+                        {Array.isArray(values) ? (
+                          values.map((point, index) => (
+                            <li key={index} className="capitalize">
+                              {point}
+                            </li>
+                          ))
+                        ) : typeof values === "object" ? (
+                          Object.entries((values as unknown) as any).map(
+                            ([subKey, subValue]) => (
+                              <li key={subKey}>
+                                <strong className="capitalize">
+                                  {subKey.replace(/_/g, " ")}:
+                                </strong>{" "}
+                                {subValue as React.ReactNode}
+                              </li>
+                            )
+                          )
+                        ) : (
+                          <li>{values as React.ReactNode}</li>
+                        )}
+                      </ul>
+                    </li>
+                  )
+                )}
+              </ul>
+            </AccordionSection>
+          )}
         {/* Dance Categories */}
         {event.categories && (
           <AccordionSection
@@ -683,7 +800,9 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
               <ul className="list-disc pl-5 space-y-1">
                 {Object.entries(event.judging_Criteria).map(([key, value]) => (
                   <li key={key}>
-                    <strong>{key.replace(/_/g, " ")}:</strong>{" "}
+                    <strong className="capitalize">
+                      {key.replace(/_/g, " ")}:
+                    </strong>{" "}
                     {value as ReactNode}
                   </li>
                 ))}

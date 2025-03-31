@@ -71,7 +71,7 @@ export const EVENT_DATA = [
     event_name: "robo-race",
     event_date: "07-04-2025",
     event_time: "1:00PM",
-    event_organizer: "masterxdevs",
+    event_organizer: "Rujhan Bajpai",
     event_location: "LNCT Entry Hall",
     event_description:
       "Race your robot cars through obstacles and challenges to claim victory.",
