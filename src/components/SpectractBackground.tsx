@@ -18,7 +18,9 @@ const SpectractBackground: React.FC = () => {
         setShow(true);
       }, 4500);
     } else {
-      setShow(true);
+      timer = setTimeout(() => {
+        setShow(true);
+      }, 500);
     }
 
     return () => clearTimeout(timer);
