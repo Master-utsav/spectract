@@ -21,7 +21,7 @@ export const eventCategories = [
       slug: "fashionista-ada",
       icon: Shirt,
       events: [
-        { name: "Fashionista Ada", time: "04:30 PM", slug: "fashionista-ada" },
+        { name: "Fashionista Ada", time: "05:30 PM", slug: "fashionista-ada" },
       ]
     },
     { 
@@ -107,7 +107,7 @@ export const contactInfo = [
     name: "Rang Riwaaz",
     slug : "rang-riwaaz",
     coordinators: [
-      {name: "Ms. Rajashree Sahu" , contact : "7008439345"},
+      {name: "Mrs. Rajashree Sahoo" , contact : "7008439345"},
       {name: "Ms. Sayali Kulkarni" , contact : "8889723672"}
     ]
   },
