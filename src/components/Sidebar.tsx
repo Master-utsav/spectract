@@ -387,7 +387,7 @@ const Sidebar = ({
             {/* Footer content */}
             <motion.div className="mt-auto" variants={childVariants}>
               <div className="pt-6 flex-col justify-center items-center gap-3 text-center">
-                <p className="text-sm text-gray-600 dark:text-gray-400">
+                <p className="text-sm text-white dark:text-gray-100">
                   © 2025 TEJANTA LNCT FEST | LNCT Group of Colleges, Indore
                 </p>
                 <div className="w-fit flex flex-wrap gap-2 py-2">

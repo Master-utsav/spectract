@@ -319,7 +319,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
                 <div className="flex items-center gap-2 mb-3 font-[family-name:var(--font-assistant)]">
                   <div
                     className={cn(
-                      "w-8 h-8 rounded-full flex border border-dashed items-center justify-center text-lg font-bold",
+                      "w-8 h-8 rounded-full flex border text-white border-dashed items-center justify-center text-lg font-bold",
                       colorMap[`${color}`],
                       colorMap[`${color}_gr_rd`]
                     )}
@@ -348,7 +348,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
                         <span
                           key={themeIndex}
                           className={cn(
-                            "px-2 py-1 rounded-md text-sm font-medium",
+                            "px-2 py-1 rounded-md text-sm font-medium text-white",
                             colorMap[`${color}_btn`]
                           )}
                         >
@@ -395,7 +395,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
                       colorMap[`${color}`]
                     )}
                   >
-                    <h4 className="text-xl font-semibold mb-4 capitalize flex items-center relative justify-center pb-3">
+                    <h4 className="text-xl font-semibold mb-4 capitalize flex items-center relative justify-center pb-3 text-white">
                       <User className="mr-2 text-pink-400 size-5" />
                       {category} Category
                     </h4>
