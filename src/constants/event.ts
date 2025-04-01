@@ -349,7 +349,7 @@ export const EVENT_DETAILS = [
     time: "10:00am – 12:00pm",
     faculty_Coordinator: {
       name: "Ms. Sayali Kulkarni",
-      contact: null,
+      contact: "8889723672",
       email: null,
     },
     student_Coordinator: {
@@ -415,7 +415,7 @@ export const EVENT_DETAILS = [
     time: "2:00pm – 3:00pm",
     faculty_Coordinator: {
       name: "Ms. Nikita Yadav",
-      contact: "9171125237",
+      contact: null,
       email: null,
     },
     student_Coordinator: {
@@ -448,7 +448,7 @@ export const EVENT_DETAILS = [
     time: "2:30pm – 3:30pm",
     faculty_Coordinator: {
       name: "Ms. Nikita Yadav",
-      contact: "9171125237",
+      contact: null,
       email: null,
     },
     student_Coordinator: {
@@ -961,7 +961,7 @@ export const EVENT_DETAILS = [
       email: null,
     },
     student_Coordinator: {
-      name: "Mrs. Priya Chauhan",
+      name: "Ms. Priya Chauhan",
       contact: "9479878412",
       email: null,
     },

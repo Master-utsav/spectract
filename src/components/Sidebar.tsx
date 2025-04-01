@@ -5,9 +5,14 @@ import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import TejantaLogo from "./TejantaLogo";
-import { ChevronDown, ChevronUp, Clock } from "lucide-react";
-import { eventCategories, navItems } from "@/constants/sidebar_data";
+import { ChevronDown, ChevronUp, Clock, Contact2Icon, Phone } from "lucide-react";
+import {
+  contactInfo,
+  eventCategories,
+  navItems,
+} from "@/constants/sidebar_data";
 import { colorMap, get_colors } from "@/constants/colors";
+import { cn } from "@/lib/utils";
 
 const Sidebar = ({
   isOpen,
@@ -82,13 +87,21 @@ const Sidebar = ({
     },
   };
 
+
+
   const AccordionSection = ({
     title,
     children,
     icon: Icon,
     sectionName,
     date,
-  }: any) => {
+  }: {
+    title: string;
+    children: React.ReactNode;
+    icon?: any;
+    sectionName: string;
+    date?: string;
+  }) => {
     const isActive = activeEventCategory === sectionName;
     const color = get_colors(sectionName);
     return (
@@ -111,7 +124,9 @@ const Sidebar = ({
               </h4>
             </div>
             <div className="flex items-center gap-2">
-              <span className="sm:text-sm text-base text-white/60 font-[family-name:var(--font-salsa)]">{date}</span>
+              <span className="sm:text-sm text-base text-white/60 font-[family-name:var(--font-salsa)]">
+                {date}
+              </span>
               {children &&
                 (isActive ? (
                   <ChevronUp className="text-white/70 size-4" />
@@ -200,74 +215,159 @@ const Sidebar = ({
                   className="border-b border-white/20 font-[family-name:var(--font-salsa)]"
                 >
                   {item.hasDropdown ? (
-                    <div>
-                      <motion.button
-                        onClick={() => toggleSection("events")}
-                        className="w-full py-4 flex justify-between items-center cursor-pointer"
-                        whileHover={{ opacity: 0.8 }}
-                        whileTap={{ scale: 0.98 }}
-                      >
-                        <div className="flex items-center gap-3">
-                          <item.icon className="size-5 text-blue-500" />
-                          <span className="sm:text-lg text-xl font-medium text-white">
-                            {item.text}
-                          </span>
-                        </div>
-                        {activeSection === "events" ? (
-                          <ChevronUp className="text-white/70" />
-                        ) : (
-                          <ChevronDown className="text-white/70" />
-                        )}
-                      </motion.button>
-
-                      {activeSection === "events" && (
-                        <motion.div
-                          initial={{ opacity: 0, height: 0 }}
-                          animate={{
-                            opacity: 1,
-                            height: "auto",
-                            transition: { duration: 0.3 },
-                          }}
-                          className="mt-2 pl-2 pr-2 pb-4 text-white/80 space-y-1 divide-white/10 divide-y-[1px]"
+                    item.text === "Events" ? (
+                      <div>
+                        <motion.button
+                          onClick={() => toggleSection("events")}
+                          className="w-full py-4 flex justify-between items-center cursor-pointer"
+                          whileHover={{ opacity: 0.8 }}
+                          whileTap={{ scale: 0.98 }}
                         >
-                          {eventCategories.map((category, idx) => (
-                            <AccordionSection
-                              key={idx}
-                              title={category.name}
-                              sectionName={category.slug}
-                              icon={category.icon}
-                              date={category.date}
-                            >
-                              {category.events.length > 0
-                                ? category.events.map((event, eventIdx) => (
-                                    <Link
-                                      href={`/${category.slug}/${event.slug}`}
-                                      key={eventIdx}
-                                      className="flex items-center w-full relative justify-between py-1 hover:bg-white/5 rounded px-2 transition-colors "
-                                      onClick={onClose}
-                                    >
-                                      <div className="flex justify-start items-center gap-2 w-2/3">
-                                        <span className={`sm:text-sm  text-base ${colorMap[get_colors(category.slug) + "_text_code"]}`}>
-                                          •
-                                        </span>
-                                        <span className="sm:text-sm text-base font-[family-name:var(--font-assistant)]">
-                                          {event.name}
-                                        </span>
-                                      </div>
-                                      <div className="flex items-center gap-1 text-white/50 w-1/3">
-                                        <Clock className="size-3" />
-                                        <span className="sm:text-xs text-sm font-[family-name:var(--font-salsa)]">
-                                          {event.time}
-                                        </span>
-                                      </div>
-                                    </Link>
-                                  ))
-                                : null}
-                            </AccordionSection>
-                          ))}
-                        </motion.div>
-                      )}
-                    </div>
+                          <div className="flex items-center gap-3">
+                            <item.icon className="size-5 text-blue-500" />
+                            <span className="sm:text-lg text-xl font-medium text-white">
+                              {item.text}
+                            </span>
+                          </div>
+                          {activeSection === "events" ? (
+                            <ChevronUp className="text-white/70" />
+                          ) : (
+                            <ChevronDown className="text-white/70" />
+                          )}
+                        </motion.button>
+
+                        {activeSection === "events" && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{
+                              opacity: 1,
+                              height: "auto",
+                              transition: { duration: 0.3 },
+                            }}
+                            className="mt-2 pl-2 pr-2 pb-4 text-white/80 space-y-1 divide-white/10 divide-y-[1px]"
+                          >
+                            {eventCategories.map((category, idx) => (
+                              <AccordionSection
+                                key={idx}
+                                title={category.name}
+                                sectionName={category.slug}
+                                icon={category.icon}
+                                date={category.date}
+                              >
+                                {category.events.length > 0
+                                  ? category.events.map((event, eventIdx) => (
+                                      <Link
+                                        href={`/${category.slug}/${event.slug}`}
+                                        key={eventIdx}
+                                        className={cn("sm:text-xs text-sm font-[family-name:var(--font-salsa)] px-2 py-1  flex items-center w-full relative justify-between hover:bg-white/5 transition-colors" , colorMap[get_colors(category.slug)] , colorMap[get_colors(category.slug) + "_gr_rd"])}
+                                        onClick={onClose}
+                                      >
+                                        <div className="flex justify-start items-center gap-2 w-2/3">
+                                          <span
+                                            className={`sm:text-sm  text-base ${
+                                              colorMap[
+                                                get_colors(category.slug) +
+                                                  "_text_code"
+                                              ]
+                                            }`}
+                                          >
+                                            •
+                                          </span>
+                                          <span className="sm:text-sm text-base font-[family-name:var(--font-assistant)]">
+                                            {event.name}
+                                          </span>
+                                        </div>
+                                        <div className="flex items-center gap-1 text-white/50 w-1/3">
+                                          <Clock className="size-3" />
+                                          <span className="sm:text-xs text-sm font-[family-name:var(--font-salsa)]">
+                                            {event.time}
+                                          </span>
+                                        </div>
+                                      </Link>
+                                    ))
+                                  : null}
+                              </AccordionSection>
+                            ))}
+                          </motion.div>
+                        )}
+                      </div>
+                    ) : (
+                      <div>
+                        <motion.button
+                          onClick={() => toggleSection("contacts")}
+                          className="w-full py-4 flex justify-between items-center cursor-pointer"
+                          whileHover={{ opacity: 0.8 }}
+                          whileTap={{ scale: 0.98 }}
+                        >
+                          <div className="flex items-center gap-3">
+                            <item.icon className="size-5 text-blue-500" />
+                            <span className="sm:text-lg text-xl font-medium text-white">
+                              {item.text}
+                            </span>
+                          </div>
+                          {activeSection === "contacts" ? (
+                            <ChevronUp className="text-white/70" />
+                          ) : (
+                            <ChevronDown className="text-white/70" />
+                          )}
+                        </motion.button>
+
+                        {activeSection === "contacts" && (
+                          <motion.div
+                            initial={{ opacity: 0, height: 0 }}
+                            animate={{
+                              opacity: 1,
+                              height: "auto",
+                              transition: { duration: 0.3 },
+                            }}
+                            className="mt-2 pl-2 pr-2 pb-4 text-white/80 space-y-1 divide-white/10 divide-y-[1px]"
+                          >
+                            {contactInfo.map((contact, idx) => (
+                              <AccordionSection
+                                key={idx}
+                                title={contact.name}
+                                sectionName={contact.slug}
+                                icon={Contact2Icon}
+                              >
+                                {contact.coordinators.length > 0
+                                  ? contact.coordinators.map(
+                                      (cont, contactIdx) => (
+                                        <Link
+                                          href={`tel:${cont.contact}`}
+                                          key={contactIdx}
+                                          className={cn("sm:text-xs text-sm font-[family-name:var(--font-salsa)] px-2 py-1  flex items-center w-full relative justify-between hover:bg-white/5 transition-colors" , colorMap[get_colors(contact.slug)] , colorMap[get_colors(contact.slug) + "_gr_rd"])}
+                                          onClick={onClose}
+                                        >
+                                          <div className="flex justify-start items-center gap-2 w-[90%]">
+                                            <span
+                                              className={`sm:text-sm  text-base ${
+                                                colorMap[
+                                                  get_colors(contact.slug) +
+                                                    "_text_code"
+                                                ]
+                                              }`}
+                                            >
+                                              •
+                                            </span>
+                                            <span className="sm:text-sm text-base font-[family-name:var(--font-assistant)]">
+                                              {cont.name}
+                                            </span>
+                                          </div>
+                                          <div className="flex items-center gap-1 text-white/100 w-[10%]">
+                                            <button className={cn("sm:text-xs text-sm font-[family-name:var(--font-salsa)] px-2 py-1 rounded")}>
+                                              <Phone className="size-4"/>
+                                            </button>
+                                          </div>
+                                        </Link>
+                                      )
+                                    )
+                                  : null}
+                              </AccordionSection>
+                            ))}
+                          </motion.div>
+                        )}
+                      </div>
+                    )
                   ) : (
                     <Link
                       href={item.href}

@@ -78,6 +78,57 @@ export const eventCategories = [
     }
   ];
 
+export const contactInfo = [
+  {
+    name: "Tech Spardha",
+    slug : "tech-spardha",
+    coordinators: [
+      {name: "Utsav Jaiswal" , contact : "78038717124"},
+      {name: "Kalash Maurya" , contact : "9926666022"}
+    ]
+  },
+  {
+    name: "Fashionista Ads",
+    slug : "fashionista-ads",
+    coordinators: [
+      {name: "Ms. Priya Chauhan" , contact : "9479878412"},
+      {name: "Rujhan Bajpai" , contact : "8643033396"}
+    ]
+  },
+  {
+    name: "Kalaa Utsav",
+    slug : "kalaa-utsav",
+    coordinators: [
+      {name: "Ms. Nikita Gavhade" , contact : "9171125237"},
+      {name: "Rajveer Gaud" , contact : "9926510065"}
+    ]
+  },
+  {
+    name: "Rang Riwaaz",
+    slug : "rang-riwaaz",
+    coordinators: [
+      {name: "Ms. Rajashree Sahu" , contact : "7008439345"},
+      {name: "Ms. Sayali Kulkarni" , contact : "8889723672"}
+    ]
+  },
+  {
+    name: "E-Sports",
+    slug : "e-sports",
+    coordinators: [
+      {name: "Tilak Gehlot" , contact : "7000061482"},
+      {name: "Vishal Patidar" , contact : "8889004296"}
+    ]
+  },
+  {
+    name: "Thrill Arena",
+    slug : "thrill-arena",
+    coordinators: [
+      {name: "Jatin Kushwah" , contact : "7489085871"},
+      {name: "Mr. Dilip Sir" , contact : "9406834767"}
+    ]
+  }
+]
+
 export const navItems = [
     { text: "Home", href: "/", icon: Home },
     { 
@@ -87,7 +138,7 @@ export const navItems = [
       hasDropdown: true 
     },
     { text: "Sponsors", href: "#", icon: Gift },
-    { text: "Contact", href: "#", icon: Phone }
+    { text: "Contact", href: "#", hasDropdown : true, icon: Phone }
   ];
 
 

@@ -32,7 +32,7 @@ import {
 import Image from "next/image";
 import { colorMap, get_colors } from "@/constants/colors";
 import { cn } from "@/lib/utils";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { GoArrowLeft } from "react-icons/go";
 import Link from "next/link";
 import { BsRobot } from "react-icons/bs";
@@ -42,6 +42,8 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
   const [activeSection, setActiveSection] = useState(null);
   const color = get_colors(event.category);
   const router = useRouter();
+  const currentPath = usePathname();
+  
 
   const toggleSection = (section: React.SetStateAction<null>) => {
     setActiveSection(activeSection === section ? null : section);
@@ -136,7 +138,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
             "px-4 py-2.5 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2",
             colorMap[color + "_btn"]
           )}
-          onClick={() => router.back()}
+          onClick={() =>  router.replace(`/${currentPath.split("/")[1]}`)}
         >
           <GoArrowLeft className="size-5 text-white" />
         </motion.button>
