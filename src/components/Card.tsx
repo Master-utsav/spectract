@@ -135,7 +135,7 @@ const Card = ({ data }: { data: any }) => {
             <ScrollText
               className={cn("size-5 shrink-0", colorMap[color + "_text_code"])}
             />
-            <span className="truncate">Event Details</span>
+            <span className="truncate">Event Details...</span>
           </motion.button>
 
           {/* Register Now CTA */}

@@ -30,7 +30,6 @@ const VideoComponent = ({ cachedHome }: { cachedHome: boolean}) => {
       autoPlay
       preload="auto"
       muted
-      playsInline
       style={{
         objectFit: "cover",
         backgroundColor: "transparent",
