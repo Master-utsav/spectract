@@ -28,6 +28,7 @@ import {
   Trophy,
   LanguagesIcon,
   TrainTrack,
+  BadgeHelpIcon,
 } from "lucide-react";
 import Image from "next/image";
 import { colorMap, get_colors } from "@/constants/colors";
@@ -897,6 +898,16 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
             sectionName="disqualification"
           >
             {renderListSection(event.disqualification)}
+          </AccordionSection>
+        )}
+
+        {event.recommendations && (
+          <AccordionSection
+            title="Recommendations"
+            icon={BadgeHelpIcon}
+            sectionName="recommendations"
+          >
+            {renderListSection(event.recommendations)}
           </AccordionSection>
         )}
 

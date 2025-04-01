@@ -16,7 +16,7 @@ const SpectractBackground: React.FC = () => {
     if (cachedHome === false) {
       timer = setTimeout(() => {
         setShow(true);
-      }, 4000);
+      }, 4500);
     } else {
       setShow(true);
     }

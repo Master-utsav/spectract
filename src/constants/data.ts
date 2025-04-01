@@ -194,8 +194,8 @@ export const EVENT_DATA = [
       "Test your endurance, strength, and mental grit as you tackle intense obstacle courses and thrilling challenges designed to push your limits!",
     event_image: "adventure_rush_poster",
     event_link: "https://forms.gle/4BNzC7sYf2gC958QA",
-    entry_fees: 200,
-    prize_money: { first: 2000, second: 1000, third: 500 },
+    entry_fees: 100,
+    prize_money: { first: 1000, second: 800, third: 500 },
   },
    
 

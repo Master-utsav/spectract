@@ -654,9 +654,34 @@ export const EVENT_DETAILS = [
     eligibility: [
       "Open to all students of every college.",
       "Participants must have valid student ID cards.",
-      "pending",
+      "Participants must have a strong understanding of core technologies such as FFmpeg, compiler design, AI, HTML Canvas, sorting algorithms, developer tools, WebSockets, Express, Node.js, and Array Buffers.",
+      "Participants should be able to collaborate effectively in a team and contribute meaningfully to the project.",
+      "Applicants must demonstrate strong analytical skills and creativity in building innovative solutions.",
+      "Commitment to dedicating time and effort throughout the hackathon is required.",
+      "Open to all levels: Beginners and experienced developers with the required knowledge and passion are welcome.",
     ],
-    rules: ["pending....."],
+    rules: [
+      "Participants must complete their project within the given time.",
+      "Single or duo participation is allowed (Specify team size limit if needed).",
+      "The theme/problem statement will be revealed at the event.",
+      "Use of AI tools or external pre-built code is not allowed.",
+      "Submissions must include a brief explanation/demo of the project.",
+      "Judging Criteria: Innovation, Functionality, UI/UX, and Presentation.",
+      "Participants must bring their own laptop and necessary software/tools.",
+      "The judges' decision is final.",
+    ],
+    recommendations: [
+      "FFmpeg – Strong understanding of FFmpeg for multimedia processing.",
+      "Compiler Design – Familiarity with compiler construction and optimization techniques.",
+      "Artificial Intelligence – AI-related knowledge is a plus.",
+      "HTML Canvas – Proficiency in working with the HTML5 Canvas API for graphics rendering.",
+      "Sorting Algorithms – Solid grasp of various sorting algorithms and their complexities.",
+      "Developer Tools – Experience with debugging and profiling using modern development tools.",
+      "WebSocket Connections – Understanding of real-time communication via WebSockets.",
+      "Express & Node.js – Hands-on experience in backend development using Express and Node.js.",
+      "Array Buffers – Knowledge of handling binary data using Array Buffers in JavaScript.",
+    ],
+
     faculty_Coordinator: {
       name: "Mrs. Shrashti Thakur",
       contact: "9691185077",
@@ -849,19 +874,17 @@ export const EVENT_DETAILS = [
       second: "500",
       third: "300",
     },
-    treasure_Hunt_Penalties:[
+    treasure_Hunt_Penalties: [
       "10-minute penalty for incorrect answers.",
-      "30-minute penalty for cheating or unsportsmanlike behavior."
+      "30-minute penalty for cheating or unsportsmanlike behavior.",
     ],
-    awards_And_Certificates:[
-      "The winning team receives a cash prize and bragging rights."
+    awards_And_Certificates: [
+      "The winning team receives a cash prize and bragging rights.",
     ],
-    treasure_Hunt_Time_Limit:[
-      "The treasure hunt starts at 10:00 AM and ends at 2:00 PM."
+    treasure_Hunt_Time_Limit: [
+      "The treasure hunt starts at 10:00 AM and ends at 2:00 PM.",
     ],
-    eligibility :[
-      "Teams must register by 9:00 AM."
-    ],
+    eligibility: ["Teams must register by 9:00 AM."],
     rules: [
       "Teams must consist of 3-5 members.",
       "Each team must have a unique name.",
@@ -889,10 +912,10 @@ export const EVENT_DETAILS = [
     date: "09/04/2025",
     time: "12:00pm onwards",
     venue: "LNCT Indore",
-    entry_Fee: "200",
+    entry_Fee: "100",
     prize_Money: {
-      first: "2000",
-      second: "1000",
+      first: "1000",
+      second: "800",
       third: "500",
     },
     rounds: [
