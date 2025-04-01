@@ -26,7 +26,7 @@ export default function SEOData() {
         content="Join us at Tejanta LNCT Indore for a vibrant mix of technology, arts, and cultural events including Tech Spardha, Rang Riwaaz, and more."
       />
       <meta property="og:image" content="/img/tejanta_1.jpg" />
-      <meta property="og:url" content="https://tejanta.vercel.app" />
+      <meta property="og:url" content="https://tejanta.info" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content="Tejanta LNCT Fest 2025" />
@@ -56,13 +56,13 @@ export default function SEOData() {
                 addressCountry: "India",
               },
             },
-            image: "https://tejanta.vercel.app/img/tejanta_1.jpg",
+            image: "https://tejanta.info/img/tejanta_1.jpg",
             description:
               "Experience the vibrant fusion of technology, art, and culture at Tejanta LNCT Fest. Join us for Tech Spardha, Rang Riwaaz, Fashion Show, and more.",
             organizer: {
               "@type": "Person",
               name: "Utsav Jaiswal",
-              url: "https://tejanta.vercel.app",
+              url: "https://tejanta.info",
             },
             eventCategory: ["Technology", "Cultural", "Competitions"],
           }),

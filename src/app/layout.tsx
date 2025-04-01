@@ -68,10 +68,10 @@ export const metadata: Metadata = {
     title: "Tejanta LNCT Fest",
     description:
       "Experience the vibrant fusion of technology, art, and culture at Tejanta LNCT Fest. Engage in thrilling competitions, tech showcases, and cultural performances.",
-    url: "https://tejanta.vercel.app",
+    url: "https://tejanta.info",
     images: [
       {
-        url: "https://tejanta.vercel.app/img/tejanta_1.jpg",
+        url: "https://tejanta.info/img/tejanta_1.jpg",
         width: 1200,
         height: 630,
         alt: "Tejanta LNCT Fest - The Ultimate Tech & Cultural Celebration",
@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     title: "Tejanta LNCT Fest",
     description:
       "Join us at Tejanta LNCT Fest for an immersive experience in technology, culture, and innovation! Competitions, exhibitions, and performances await.",
-    images: "https://tejanta.vercel.app/img/tejanta_1.jpg",
+    images: "https://tejanta.info/img/tejanta_1.jpg",
   },
 };
 
