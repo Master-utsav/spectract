@@ -17,7 +17,7 @@ const Logo = () => {
      if (cachedHome === false) {
        timer = setTimeout(() => {
          setShow(true);
-       }, 6500);
+       }, 3500);
      } else {
        setShow(true);
      }

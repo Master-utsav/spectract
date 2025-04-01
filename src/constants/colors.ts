@@ -80,7 +80,7 @@ export const get_colors = (data: string): string => {
     return "purple";
   } else if (data === "kalaa-utsav") {
     return "blue";
-  } else if (data === "fashionista-ads") {
+  } else if (data === "fashionista-ada") {
     return "pink";
   } else if (data === "e-sports") {
     return "amber";

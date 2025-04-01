@@ -18,7 +18,7 @@ export const VideoProvider = ({ children }: { children: React.ReactNode }) => {
 
 export const useVideo = () => useContext(VideoContext);
 
-const VideoComponent = ({ cachedHome }: { cachedHome: boolean | null }) => {
+const VideoComponent = ({ cachedHome }: { cachedHome: boolean}) => {
   const { videoUrl } = useVideo();
 
   return (
@@ -37,10 +37,10 @@ const VideoComponent = ({ cachedHome }: { cachedHome: boolean | null }) => {
         mixBlendMode: "lighten",
         willChange: "transform, opacity",
       }}
-      initial={cachedHome !== null ? { y: 20, opacity: 1 } : { y: 800, opacity: 0 }}
+      initial={cachedHome ? { y: 20, opacity: 1 } : { y: 800, opacity: 0 }}
       animate={{ opacity: 1, y: 20 }}
       exit={{ opacity: 0, y: 0 }}
-      transition={{ delay: 0, duration: 6, ease: [0, 0.55, 0.45, 1] }}
+      transition={{ delay: 0, duration: 3, ease: [0, 0.55, 0.45, 1] }}
       width={500}
       height={800}
     />

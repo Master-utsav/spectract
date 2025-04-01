@@ -16,12 +16,12 @@ export const eventCategories = [
       ]
     },
     { 
-      name: "Fashionista Ads", 
+      name: "Fashionista Ada", 
       date: "7th April", 
-      slug: "fashionista-ads",
+      slug: "fashionista-ada",
       icon: Shirt,
       events: [
-        { name: "Fashionista Ads", time: "04:30 PM", slug: "fashionista-ads" },
+        { name: "Fashionista Ada", time: "04:30 PM", slug: "fashionista-ada" },
       ]
     },
     { 
@@ -55,7 +55,7 @@ export const eventCategories = [
       slug: "e-sports",
       icon: Gamepad2,
       events: [
-        { name: "Free Fire", time: "10:00 AM", slug: "free-fire" },
+        { name: "Free Fire", time: "12:00 AM", slug: "free-fire" },
         { name: "BGMI", time: "02:00 PM", slug: "bgmi" }
       ]
     },
@@ -65,8 +65,8 @@ export const eventCategories = [
       slug: "thrill-arena",
       icon: Zap,
       events: [
-        { name: "Treasure Hunt", time: "11:00 AM", slug: "treasure-hunt" },
-        { name: "Rodies", time: "12:00 PM", slug: "roadies" }
+        { name: "Treasure Hunt", time: "10:00 AM", slug: "treasure-hunt" },
+        { name: "Rodies", time: "09:00 AM", slug: "roadies" }
       ]
     },
     { 
@@ -88,8 +88,8 @@ export const contactInfo = [
     ]
   },
   {
-    name: "Fashionista Ads",
-    slug : "fashionista-ads",
+    name: "Fashionista Ada",
+    slug : "fashionista-ada",
     coordinators: [
       {name: "Ms. Priya Chauhan" , contact : "9479878412"},
       {name: "Rujhan Bajpai" , contact : "8643033396"}

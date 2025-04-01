@@ -16,7 +16,7 @@ export default function Home() {
     if (!cachedHome) {
       const timer = setTimeout(() => {
         setIsIntroComplete(true);
-      }, 4500);
+      }, 3500);
 
       return () => clearTimeout(timer);
     } else {

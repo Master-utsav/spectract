@@ -16,7 +16,7 @@ const SpectractBackground: React.FC = () => {
     if (cachedHome === false) {
       timer = setTimeout(() => {
         setShow(true);
-      }, 5000);
+      }, 4000);
     } else {
       setShow(true);
     }
@@ -229,13 +229,13 @@ const SpectractBackground: React.FC = () => {
 
       {/* video of the spiral  */}
       <div className="w-[90vw] rounded-full sm:h-[85%] h-[80vh] md:scale-100 max-w-[500px] bottom-[8rem] sm:bottom-24 absolute  transform -translate-x-1/2 left-1/2 z-[900]  overflow-hidden mix-blend-lighten">
-      <VideoComponent cachedHome={cachedHome ? !!cachedHome : null}/>
+      <VideoComponent cachedHome={cachedHome}/>
       </div>
 
       <motion.div
         className="absolute sm:bottom-0 bottom-16 left-1/2 transform -translate-x-1/2 z-[800]"
         initial={
-          cachedHome !== null
+          cachedHome
             ? { scale: 1, opacity: 1, rotateX: 0 }
             : { scale: 0.2, opacity: 0, rotateX: 50 }
         }
@@ -252,7 +252,7 @@ const SpectractBackground: React.FC = () => {
       >
         <motion.div
           initial={
-            cachedHome !== null
+            cachedHome
               ? { scale: 1, opacity: 1, rotateY: 0, rotateX: 0 }
               : { scale: 0.2, opacity: 0.5, rotateY: -15, rotateX: 10 }
           }

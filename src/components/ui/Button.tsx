@@ -39,12 +39,12 @@ const Button = ({
           )}
         >
           <Image
-            src={"/img/robo_race_flyer_temp.png"}
+            src={`/img/${btnName === "Fashionista Ada" ? "fashionista_ada_flyer.jpg" : btnName === "Kalaa Utsav" ? "kalaa_utsav_flyer.jpg" : "tech_spardha_flyer.png"}`}
             alt="Floating Image"
-            width={100}
-            height={100}
+            width={150}
+            height={200}
             className={cn(
-              "rounded-lg shadow-lg",
+              "rounded-lg shadow-lg object-cover",
               colorMap[color],
               isRight ? "rotate-y-180" : ""
             )}

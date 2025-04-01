@@ -26,7 +26,7 @@ const ButtonContainer = () => {
     if (cachedHome === false) {
       timer = setTimeout(() => {
         setShow(true);
-      }, 5000);
+      }, 3500);
     } else {
       setShow(true);
     }
@@ -99,7 +99,7 @@ const ButtonContainer = () => {
                 className:
                   "absolute max-[640px]:left-[50%] max-[420px]:left-[45%] sm:left-36 sm:bottom-44 max-[640px]:top-[50%] max-[500px]:top-[60%] max-[420px]:top-[70%]",
                 color: "pink",
-                btnName: "Fashionista Ads",
+                btnName: "Fashionista Ada",
               },
               {
                 key: "6",

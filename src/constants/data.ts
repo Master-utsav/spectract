@@ -173,7 +173,7 @@ export const EVENT_DATA = [
       event_category: "thrill-arena",
       event_name: "treasure-hunt",
       event_date: "09-04-2025",
-      event_time: "11:00 AM",
+      event_time: "10:00 AM",
       event_organizer: "Tilak Gehlot",
       event_location: "LNCT Indore",
       event_description:
@@ -181,21 +181,21 @@ export const EVENT_DATA = [
       event_image: "escape_room_poster",
       event_link: "#",
       entry_fees: 150,
-      prize_money: { first: 800, second: 500, third: 250 },
+      prize_money: { first: 800, second: 500, third: 300 },
     },
   {
     event_category: "thrill-arena",
     event_name: "roadies",
     event_date: "09-04-2025",
-    event_time: "12:00 PM",
+    event_time: "09:00 AM",
     event_organizer: "Jatin Kushwah",
     event_location: "LNCT Indore",
     event_description:
       "Test your endurance, strength, and mental grit as you tackle intense obstacle courses and thrilling challenges designed to push your limits!",
     event_image: "adventure_rush_poster",
-    event_link: "#",
-    entry_fees: 150,
-    prize_money: { first: 1000, second: 600, third: 300 },
+    event_link: "https://forms.gle/4BNzC7sYf2gC958QA",
+    entry_fees: 200,
+    prize_money: { first: 2000, second: 1000, third: 500 },
   },
    
 
@@ -205,37 +205,37 @@ export const EVENT_DATA = [
     event_category: "e-sports",
     event_name: "bgmi",
     event_date: "09-04-2025",
-    event_time: "02:00 PM",
+    event_time: "12:00 PM",
     event_organizer: "Tilak Gehlot",
     event_location: "LNCT Indore",
     event_description:
       "Showcase your strategic skills and survival instincts in an intense battle royale showdown. Team up, loot, and fight to be the last one standing!",
     event_image: "escape_room_poster",
-    event_link: "#",
-    entry_fees: 150,
-    prize_money: { first: 800, second: 500, third: 250 },
+    event_link: "https://forms.gle/DEsrXWbNojWEAaoz9",
+    entry_fees: 200,
+    prize_money: { first: 2000, second: 1000, third: 500 },
   },
 {
   event_category: "e-sports",
   event_name: "free-fire",
   event_date: "09-04-2025",
-  event_time: "10:00 AM",
+  event_time: "12:00 PM",
   event_organizer: "Jatin Kushwah",
   event_location: "LNCT Indore",
   event_description:
     "Engage in fast-paced action and tactical gameplay as you compete against top players in a high-stakes battle for victory!",
   event_image: "adventure_rush_poster",
-  event_link: "#",
-  entry_fees: 250,
-  prize_money: { first: 1000, second: 600, third: 300 },
+  event_link: "https://forms.gle/DEsrXWbNojWEAaoz9",
+  entry_fees: 200,
+  prize_money: { first: 2000, second: 1000, third: 500 },
 },
 
 
 
 
   {
-    event_category: "fashionista-ads",
-    event_name: "fashionista-ads",
+    event_category: "fashionista-ada",
+    event_name: "fashionista-ada",
     event_date: "07-04-2025",
     event_time: "04:30 PM onwards",
     event_organizer: "Ms. Priya Chauhan",
@@ -243,15 +243,11 @@ export const EVENT_DATA = [
     event_description:
       "A vibrant fashion event celebrating creativity, style, and self-expression through themed performances on the runway.",
     event_image: "glamour_night_poster",
-    event_link: "https://forms.gle/8ya7qqXEQfo8oHMe8",
-    entry_fees: 100,
-    prize_money: { first: 1300, second: 1050},
+    event_link: "https://forms.gle/pQA16iTnC5mKuFt16",
+    entry_fees: 200,
+    prize_money: { first: 2100},
   },
   
-
-
-
-
 
   {
     event_category: "rang-riwaaz",

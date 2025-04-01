@@ -61,9 +61,9 @@ export const metadata: Metadata = {
     "LNCT College Events",
     "Student Fest LNCT",
   ],
-  verification: {
-    google: "UCXi1Cjwp3J0OMwafKDmgsznHtdR0JQVGhmnmKbrkVk",
-  },
+  // verification: {
+  //   google: "UCXi1Cjwp3J0OMwafKDmgsznHtdR0JQVGhmnmKbrkVk",
+  // },
   openGraph: {
     title: "Tejanta LNCT Fest",
     description:

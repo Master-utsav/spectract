@@ -14,7 +14,7 @@ export default function LogoText() {
     if (cachedHome === false) {
       timer = setTimeout(() => {
         setShow(true);
-      }, 6000);
+      }, 3500);
     } else {
       setShow(true);
     }

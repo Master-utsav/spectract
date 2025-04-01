@@ -27,7 +27,7 @@ export function PageCacheProvider({ children }: { children: ReactNode }) {
     if (!cachedHome) {
       const timer = setTimeout(() => {
         setCachedHome(true);
-      }, 12000);
+      }, 6000);
       
       return () => clearTimeout(timer);
     }

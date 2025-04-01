@@ -184,20 +184,22 @@ const Card = ({ data }: { data: any }) => {
             </span>
 
             {/* Second Prize */}
-            <span className="text-xl font-semibold text-yellow-300 drop-shadow-md flex items-center lg:gap-3 gap-1">
-              <Image
-                width={40}
-                height={40}
-                src="/img/award_2.png"
-                alt="Second Prize"
-                loading="eager"
-                className="w-8 h-8 object-contain mix-blend-lighten"
-              />
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-500 flex justify-center items-center">
-                <IndianRupee className="size-4 text-gray-300 " />
-                {data.prize_money.second}
+            {data.prize_money.second && (
+              <span className="text-xl font-semibold text-yellow-300 drop-shadow-md flex items-center lg:gap-3 gap-1">
+                <Image
+                  width={40}
+                  height={40}
+                  src="/img/award_2.png"
+                  alt="Second Prize"
+                  loading="eager"
+                  className="w-8 h-8 object-contain mix-blend-lighten"
+                />
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-500 flex justify-center items-center">
+                  <IndianRupee className="size-4 text-gray-300 " />
+                  {data.prize_money.second}
+                </span>
               </span>
-            </span>
+            )}
 
             {/* Third Prize */}
             {data.prize_money.third && (

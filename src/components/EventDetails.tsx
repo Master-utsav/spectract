@@ -37,13 +37,14 @@ import { GoArrowLeft } from "react-icons/go";
 import Link from "next/link";
 import { BsRobot } from "react-icons/bs";
 import { MdEvent } from "react-icons/md";
+import { BiMoney } from "react-icons/bi";
+import { CgTrophy } from "react-icons/cg";
 
 export const EventDetailsComponent = ({ event }: { event: any }) => {
   const [activeSection, setActiveSection] = useState(null);
   const color = get_colors(event.category);
   const router = useRouter();
   const currentPath = usePathname();
-  
 
   const toggleSection = (section: React.SetStateAction<null>) => {
     setActiveSection(activeSection === section ? null : section);
@@ -138,7 +139,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
             "px-4 py-2.5 text-white font-semibold rounded-lg shadow-lg flex items-center gap-2",
             colorMap[color + "_btn"]
           )}
-          onClick={() =>  router.replace(`/${currentPath.split("/")[1]}`)}
+          onClick={() => router.replace(`/${currentPath.split("/")[1]}`)}
         >
           <GoArrowLeft className="size-5 text-white" />
         </motion.button>
@@ -217,31 +218,68 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
                 <User className="size-6 text-blue-300 rounded-full border-dashed border-[1px]" />
                 Faculty Coordinator:
               </span>
-              <p className="pl-8 text-base">{event.faculty_Coordinator.name}</p>
+              <div className="flex flex-row gap-4 justify-between items-start">
+                <div className="flex flex-col gap-2 w-full md:w-1/2 ">
+                  <p className="pl-8 text-base">
+                    {event.faculty_Coordinator.name}
+                  </p>
 
-              {event.faculty_Coordinator.contact && (
-                <div className="flex items-center gap-2 text-sm pl-8 text-white/70">
-                  <Phone className="size-5 text-blue-400" />
-                  <a
-                    href={`tel:${event.faculty_Coordinator.contact}`}
-                    className="hover:text-white/90 transition-colors"
-                  >
-                    {event.faculty_Coordinator.contact}
-                  </a>
-                </div>
-              )}
+                  {event.faculty_Coordinator.contact && (
+                    <div className="flex items-center gap-2 text-sm pl-8 text-white/70">
+                      <Phone className="size-5 text-blue-400" />
+                      <a
+                        href={`tel:${event.faculty_Coordinator.contact}`}
+                        className="hover:text-white/90 transition-colors"
+                      >
+                        {event.faculty_Coordinator.contact}
+                      </a>
+                    </div>
+                  )}
 
-              {event.faculty_Coordinator.email && (
-                <div className="flex items-center gap-2 text-sm pl-8 text-white/70">
-                  <Mail className="size-5 text-red-400" />
-                  <a
-                    href={`mailto:${event.faculty_Coordinator.email}`}
-                    className="hover:text-white/90 transition-colors"
-                  >
-                    {event.faculty_Coordinator.email}
-                  </a>
+                  {event.faculty_Coordinator.email && (
+                    <div className="flex items-center gap-2 text-sm pl-8 text-white/70">
+                      <Mail className="size-5 text-red-400" />
+                      <a
+                        href={`mailto:${event.faculty_Coordinator.email}`}
+                        className="hover:text-white/90 transition-colors"
+                      >
+                        {event.faculty_Coordinator.email}
+                      </a>
+                    </div>
+                  )}
                 </div>
-              )}
+                {event.extra_Coordinator && (
+                  <div className="flex flex-col justify-start items-start gap-2 w-full md:w-1/2 ">
+                    <p className="pl-8 text-base">
+                      {event.extra_Coordinator.name}
+                    </p>
+
+                    {event.extra_Coordinator.contact && (
+                      <div className="flex items-center gap-2 text-sm pl-8 text-white/70">
+                        <Phone className="size-5 text-blue-400" />
+                        <a
+                          href={`tel:${event.extra_Coordinator.contact}`}
+                          className="hover:text-white/90 transition-colors"
+                        >
+                          {event.extra_Coordinator.contact}
+                        </a>
+                      </div>
+                    )}
+
+                    {event.extra_Coordinator.email && (
+                      <div className="flex items-center gap-2 text-sm pl-8 text-white/70">
+                        <Mail className="size-5 text-red-400" />
+                        <a
+                          href={`mailto:${event.extra_Coordinator.email}`}
+                          className="hover:text-white/90 transition-colors"
+                        >
+                          {event.extra_Coordinator.email}
+                        </a>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </div>
             </div>
           )}
 
@@ -489,7 +527,17 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
           </>
         )}
 
-      <div className="space-y-2 mb-6 text-sm sm:text-base">
+      <div className="space-y-2 mb-6 mt-2 text-sm sm:text-base">
+        {event.fees_Criteria && event.fees_Criteria?.[0] !== null && (
+          <AccordionSection
+            title="Fees Criteria"
+            icon={BiMoney}
+            sectionName="fees_criteria"
+          >
+            {renderListSection(event.fees_Criteria)}
+          </AccordionSection>
+        )}
+
         {/* Eligibility */}
         {event.eligibility?.[0] !== null && (
           <AccordionSection
@@ -501,16 +549,25 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
           </AccordionSection>
         )}
 
-        {event.additional_Guidelines &&
-          event.additional_Guidelines?.[0] !== null && (
-            <AccordionSection
-              title="Additional Guidelines"
-              icon={Users}
-              sectionName="additional_Guidelines"
-            >
-              {renderListSection(event.additional_Guidelines)}
-            </AccordionSection>
-          )}
+        {event.Guidelines && event.Guidelines?.[0] !== null && (
+          <AccordionSection
+            title="Guidelines"
+            icon={Users}
+            sectionName="add_Guidelines"
+          >
+            {renderListSection(event.Guidelines)}
+          </AccordionSection>
+        )}
+
+        {event.winning_Criteria && event.winning_Criteria?.[0] !== null && (
+          <AccordionSection
+            title="Winning Criteria"
+            icon={CgTrophy}
+            sectionName="winning_Criteria"
+          >
+            {renderListSection(event.winning_Criteria)}
+          </AccordionSection>
+        )}
 
         {/* Rules */}
         {event.rules && (
@@ -518,7 +575,17 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
             {renderListSection(event.rules)}
           </AccordionSection>
         )}
-
+        {event.treasure_Hunt_Penalties && (
+          <AccordionSection title="Penalties" icon={Ban} sectionName="treasure_Hunt_Penalties">
+            {renderListSection(event.treasure_Hunt_Penalties)}
+          </AccordionSection>
+        )}
+        {event.treasure_Hunt_Time_Limit && (
+          <AccordionSection title="Time Limit" icon={Clock} sectionName="treasure_Hunt_Time_Limit">
+            {renderListSection(event.treasure_Hunt_Time_Limit)}
+          </AccordionSection>
+        )}
+       
         {event.language && (
           <AccordionSection
             title="Language"

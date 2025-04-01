@@ -13,7 +13,7 @@ export default function ComingSoon() {
     if (cachedHome === false) {
       timer = setTimeout(() => {
         setShow(true);
-      }, 7000);
+      }, 3500);
     } else {
       setShow(true);
     }

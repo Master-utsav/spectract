@@ -38,7 +38,7 @@ const IntroPage = () => {
           scale: 1.5,
           opacity: 0,
           transition: {
-            duration: 0.5
+            duration: 0.2
           }
         }}
       >

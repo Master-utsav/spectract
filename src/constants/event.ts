@@ -381,7 +381,7 @@ export const EVENT_DETAILS = [
     date: "08/04/2025",
     time: "12:00pm – 2:00pm",
     faculty_Coordinator: {
-      name: "Ms. Rajashree Sahu",
+      name: "Mrs. Rajashree Sahoo",
       contact: "7008439345",
       email: null,
     },
@@ -684,60 +684,66 @@ export const EVENT_DETAILS = [
       second: "600",
       third: "400",
     },
-      eligibility: [
-        "Open to students from all departments.",
-        "Teams can consist of 2-5 members.",
-        "Each team can register only one robot."
+    eligibility: [
+      "Open to students from all departments.",
+      "Teams can consist of 2-5 members.",
+      "Each team can register only one robot.",
+    ],
+    robot_Specifications: {
+      size: "Maximum dimensions of 30cm x 30cm x 30cm.",
+      weight: "Maximum weight of 3kg.",
+      power_Source:
+        "Robots must be battery-operated. No external power sources allowed.",
+      control:
+        "Robots can be autonomous or manually controlled via remote control.",
+    },
+    track_Specifications: {
+      length: "Approximately 20 meters long.",
+      obstacles: "Includes ramps, barriers, tunnels, and sharp turns.",
+      surface: "Combination of smooth and rough surfaces.",
+    },
+    event_Format: {
+      heats:
+        "The competition will be conducted in heats with 3-4 teams competing simultaneously.",
+      timing:
+        "Each team will have two attempts; the best time will be considered.",
+      scoring:
+        "Shortest completion time wins. In case of a tie, the team with fewer penalties wins.",
+    },
+    rules_And_Guidelines: {
+      starting_Procedure: [
+        "Robots must start from the designated start line.",
+        "Teams will be given a countdown before the race begins.",
       ],
-      robot_Specifications: {
-        size: "Maximum dimensions of 30cm x 30cm x 30cm.",
-        weight: "Maximum weight of 3kg.",
-        power_Source: "Robots must be battery-operated. No external power sources allowed.",
-        control: "Robots can be autonomous or manually controlled via remote control."
+      track_Navigation: [
+        "Robots must follow the designated path and checkpoints.",
+        "Skipping obstacles or checkpoints will result in penalties.",
+        "Manual assistance is not allowed during the race.",
+      ],
+      penalties: {
+        obstacle_Miss: "10 seconds added per missed obstacle.",
+        checkpoint_Miss: "20 seconds added per missed checkpoint.",
+        off_Track: "5 seconds added per off-track instance.",
+        manual_Assistance:
+          "Disqualification from the heat if any manual assistance is provided.",
       },
-      track_Specifications: {
-        length: "Approximately 20 meters long.",
-        obstacles: "Includes ramps, barriers, tunnels, and sharp turns.",
-        surface: "Combination of smooth and rough surfaces."
-      },
-      event_Format: {
-        heats: "The competition will be conducted in heats with 3-4 teams competing simultaneously.",
-        timing: "Each team will have two attempts; the best time will be considered.",
-        scoring: "Shortest completion time wins. In case of a tie, the team with fewer penalties wins."
-      },
-      rules_And_Guidelines: {
-        starting_Procedure: [
-          "Robots must start from the designated start line.",
-          "Teams will be given a countdown before the race begins."
-        ],
-        track_Navigation: [
-          "Robots must follow the designated path and checkpoints.",
-          "Skipping obstacles or checkpoints will result in penalties.",
-          "Manual assistance is not allowed during the race."
-        ],
-        penalties: {
-          obstacle_Miss: "10 seconds added per missed obstacle.",
-          checkpoint_Miss: "20 seconds added per missed checkpoint.",
-          off_Track: "5 seconds added per off-track instance.",
-          manual_Assistance: "Disqualification from the heat if any manual assistance is provided."
-        },
-        safety_Measures: [
-          "Robots must not have any sharp or dangerous components.",
-          "All robots will be inspected before the race for safety compliance.",
-          "Participants must wear protective gear, including gloves and safety glasses."
-        ]
-      },
-      judging_Criteria: {
-        speed: "Primary criterion is the time taken to complete the track.",
-        navigation: "Efficient navigation and obstacle avoidance.",
-        design: "Innovative and robust robot design.",
-        adherence_To_Rules: "Following all rules without incurring penalties."
-      },
-      faculty_Coordinator: {
-        name: "Mrs. Shrashti Thakur",
-        contact: "9691185077",
-        email: null,
-      },
+      safety_Measures: [
+        "Robots must not have any sharp or dangerous components.",
+        "All robots will be inspected before the race for safety compliance.",
+        "Participants must wear protective gear, including gloves and safety glasses.",
+      ],
+    },
+    judging_Criteria: {
+      speed: "Primary criterion is the time taken to complete the track.",
+      navigation: "Efficient navigation and obstacle avoidance.",
+      design: "Innovative and robust robot design.",
+      adherence_To_Rules: "Following all rules without incurring penalties.",
+    },
+    faculty_Coordinator: {
+      name: "Mrs. Shrashti Thakur",
+      contact: "9691185077",
+      email: null,
+    },
 
     student_Coordinator: {
       name: "Rujhan Bajpai",
@@ -754,16 +760,27 @@ export const EVENT_DETAILS = [
     description:
       "Engage in fast-paced action and tactical gameplay as you compete against top players in a high-stakes battle for victory!",
     date: "09/04/2025",
-    time: "10:00am onwards",
+    time: "12:00pm onwards",
     venue: "LNCT Indore",
-    entry_Fee: "250",
+    entry_Fee: "200/squad",
     prize_Money: {
-      first: "1000",
-      second: "600",
-      third: "400",
+      first: "upto 2000",
+      second: "upto 1000",
+      third: "upto 500",
     },
-    eligibility: ["pending"],
-    rules: ["pending....."],
+    winning_Criteria: [
+      "Booyah! = 25 Points",
+      "Kills = 1 Point per Kill",
+      "Placement Bonus: 2nd place = 20 Points, 3rd place = 18 Points, and so on",
+    ],
+    rules: [
+      "Cheating is strictly prohibited.",
+      "Hacking or any form of software manipulation is not allowed.",
+      "Unauthorized panels or external tools are not permitted.",
+      "Participants must bring their own devices.",
+      "Personal computers (PCs) are not allowed.",
+      "The committee reserves the right to make the final decision on any rule violations.",
+    ],
     faculty_Coordinator: {
       name: "Mr. Dilip Sir",
       contact: "9406834767",
@@ -774,7 +791,7 @@ export const EVENT_DETAILS = [
       contact: "7489085871",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/DEsrXWbNojWEAaoz9",
   },
   {
     event: "bgmi",
@@ -783,16 +800,27 @@ export const EVENT_DETAILS = [
     description:
       "Showcase your strategic skills and survival instincts in an intense battle royale showdown. Team up, loot, and fight to be the last one standing!",
     date: "09/04/2025",
-    time: "2:00pm onwards",
+    time: "12:00pm onwards",
     venue: "LNCT Indore",
-    entry_Fee: "250",
+    entry_Fee: "200/squad",
     prize_Money: {
-      first: "1000",
-      second: "600",
-      third: "400",
+      first: "upto 2000",
+      second: "upto 1000",
+      third: "upto 500",
     },
-    eligibility: ["pending"],
-    rules: ["pending....."],
+    winning_Criteria: [
+      "Chicken Dinner = 30 Points",
+      "Kills = 1 Point per Kill",
+      "Placement Bonus: 2nd place = 25 Points, 3rd place = 20 Points, and so on.",
+    ],
+    rules: [
+      "Cheating is strictly prohibited.",
+      "Hacking or any form of software manipulation is not allowed.",
+      "Unauthorized panels or external tools are not permitted.",
+      "Participants must bring their own devices.",
+      "Personal computers (PCs) are not allowed.",
+      "The committee reserves the right to make the final decision on any rule violations.",
+    ],
     faculty_Coordinator: {
       name: "Mr. Dilip Sir",
       contact: "9406834767",
@@ -803,7 +831,7 @@ export const EVENT_DETAILS = [
       contact: "7000061482",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/DEsrXWbNojWEAaoz9",
   },
 
   {
@@ -813,16 +841,33 @@ export const EVENT_DETAILS = [
     description:
       "Embark on an adventurous quest where you'll solve intricate puzzles and decipher clever riddles to uncover hidden treasures before time runs out!",
     date: "09/04/2025",
-    time: "11:00am onwards",
+    time: "10:00am onwards",
     venue: "LNCT Indore",
     entry_Fee: "150",
     prize_Money: {
       first: "800",
       second: "500",
-      third: "250",
+      third: "300",
     },
-    eligibility: ["pending"],
-    rules: ["pending....."],
+    treasure_Hunt_Penalties:[
+      "10-minute penalty for incorrect answers.",
+      "30-minute penalty for cheating or unsportsmanlike behavior."
+    ],
+    awards_And_Certificates:[
+      "The winning team receives a cash prize and bragging rights."
+    ],
+    treasure_Hunt_Time_Limit:[
+      "The treasure hunt starts at 10:00 AM and ends at 2:00 PM."
+    ],
+    eligibility :[
+      "Teams must register by 9:00 AM."
+    ],
+    rules: [
+      "Teams must consist of 3-5 members.",
+      "Each team must have a unique name.",
+      "Teams must provide proof of completion at each clue location.",
+      "The first team to find the treasure wins.",
+    ],
     faculty_Coordinator: {
       name: "Mr. Dilip Sir",
       contact: "9406834767",
@@ -844,14 +889,43 @@ export const EVENT_DETAILS = [
     date: "09/04/2025",
     time: "12:00pm onwards",
     venue: "LNCT Indore",
-    entry_Fee: "150",
+    entry_Fee: "200",
     prize_Money: {
-      first: "1000",
-      second: "600",
-      third: "400",
+      first: "2000",
+      second: "1000",
+      third: "500",
     },
-    eligibility: ["pending"],
-    rules: ["pending....."],
+    rounds: [
+      {
+        name: "1st Round",
+        themes: ["Audition Round"],
+        description: "Prove why you're born to be a Roadie!",
+      },
+      {
+        name: "2nd Round",
+        themes: ["Personal Interview"],
+        description: "Face the heat, test your mental strength!",
+      },
+      {
+        name: "3rd Round",
+        themes: ["Task Round"],
+        description: "A test of endurance, teamwork, and raw power!",
+      },
+    ],
+    rules: [
+      "Participants must be physically fit and mentally strong to compete.",
+      "All contestants must adhere to the event guidelines and instructions given by the organizers.",
+      "Any form of cheating, bribery, or unfair advantage will result in immediate disqualification.",
+      "Participants must complete all assigned tasks to proceed to the next round.",
+      "Use of external assistance or third-party help during tasks is strictly prohibited.",
+      "The judges' decisions will be final and binding.",
+    ],
+    eligibility: [
+      "Open to individuals aged 18 and above.",
+      "Participants must sign a liability waiver before competing.",
+      "All contestants must carry a valid ID for verification.",
+      "No prior experience required, but enthusiasm and endurance are a must.",
+    ],
     faculty_Coordinator: {
       name: "Mr. Dilip Sir",
       contact: "9406834767",
@@ -862,38 +936,39 @@ export const EVENT_DETAILS = [
       contact: "7000061482",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/4BNzC7sYf2gC958QA",
   },
 
   {
-    event: "fashionista-ads",
-    eventName: "Fashionista Ads",
-    category: "fashionista-ads",
+    event: "fashionista-ada",
+    eventName: "Fashionista Ada",
+    category: "fashionista-ada",
     description:
       "A vibrant fashion event celebrating creativity, style, and self-expression through themed performances on the runway.",
     eligibility: [
       "Open to all students from all colleges across Indore.",
       "Participants must present their college ID cards for verification.",
       "Registration must be completed before the event begins.",
+      "Props should not be harmful and must not damage college property and audience.",
     ],
     rounds: [
       {
         name: "1st Round",
-        themes: ["Mismatch (Single)", "Retro (Couple)"],
+        themes: ["Western/Corporate"],
         description:
           "Participants can choose either theme and compete accordingly.",
       },
       {
         name: "2nd Round",
-        themes: ["Traditional"],
+        themes: ["Retro (60s-80s)"],
         description:
           "All selected participants from Round 1 must compete in this round. Couples will perform separately.",
       },
       {
         name: "3rd Round",
-        themes: ["Interview-Based"],
+        themes: ["Traditional/Ethnic"],
         description:
-          "Finalists from Round 2 will compete in this interview round to determine the winners.",
+          "Finalists from Round 2 will compete in this for interview round to determine the winners.",
       },
     ],
     performance_Rules: {
@@ -921,43 +996,46 @@ export const EVENT_DETAILS = [
       boys: ["Being topless or bottomless is not allowed."],
     },
     theme_Rules: [
-      "Participants can choose any theme for Round 1, but the 2nd Round is compulsory for all selected participants.",
       "Costumes must align with the chosen theme and should reflect creativity and originality.",
     ],
-    judging_Criteria: {
-      costume_Creativity: "20%",
-      theme_Alignment: "20%",
-      walking_Stance: "20%",
-      confidence_And_Attitude: "20%",
-      overall_Presentation: "20%",
-    },
     decision_And_Disqualification: [
       "The judges' decision is final and binding.",
       "Any rule violation may result in negative marking or direct disqualification.",
     ],
+    awards_And_Certificates: [
+      "Trophy to seperate round winners.",
+      "Trophy and cash prize to overall winners",
+    ],
     awards_And_Prizes: {
       girls: {
-        "1st Prize": "Rs. 1,300",
-        "2nd Prize": "Rs. 1,050",
+        "1st Prize": "Rs. 2,100",
       },
       boys: {
-        "1st Prize": "Rs. 1,300",
-        "2nd Prize": "Rs. 1,050",
+        "1st Prize": "Rs. 2,100",
       },
     },
-    entry_Fee: "100/round",
+    entry_Fee: "200/round",
     venue: "LNCTS, Indore",
     date: "07/04/2025",
-    time: "4:30 PM onwards",
-    additional_Guidelines: [
+    time: "5:30 PM onwards",
+    fees_Criteria: [
+      "Rs. 200 per round, irrespective of couple and solo",
+      "Rs. 500 if you participate in all rounds.",
+    ],
+    Guidelines: [
       "Participants must bring their own props.",
       "All participants need to bring a traditional costume.",
       "Security volunteers will prevent unauthorized access to the stage.",
       "The college is not responsible for any photos taken during the event being shared externally.",
     ],
     faculty_Coordinator: {
-      name: "Dr. Prashant Sir",
+      name: "Dr. Prashant ",
       contact: "9893000169",
+      email: null,
+    },
+    extra_Coordinator: {
+      name: "Lt. Neelam sharma",
+      contact: "xxxxxxxxxx",
       email: null,
     },
     student_Coordinator: {
@@ -965,6 +1043,6 @@ export const EVENT_DETAILS = [
       contact: "9479878412",
       email: null,
     },
-    link: "https://forms.gle/8ya7qqXEQfo8oHMe8",
+    link: "https://forms.gle/pQA16iTnC5mKuFt16",
   },
 ];
