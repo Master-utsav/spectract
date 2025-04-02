@@ -237,7 +237,7 @@ export const EVENT_DATA = [
     event_category: "fashionista-ada",
     event_name: "fashionista-ada",
     event_date: "07-04-2025",
-    event_time: "04:30 PM onwards",
+    event_time: "05:30 PM onwards",
     event_organizer: "Ms. Priya Chauhan",
     event_location: "LNCTS Indore",
     event_description:
