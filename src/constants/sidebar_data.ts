@@ -107,7 +107,7 @@ export const contactInfo = [
     name: "Rang Riwaaz",
     slug : "rang-riwaaz",
     coordinators: [
-      {name: "Mrs. Rajashree Sahoo" , contact : "7008439345"},
+      {name: "Ms. Rajashree Sahoo" , contact : "7008439345"},
       {name: "Ms. Sayali Kulkarni" , contact : "8889723672"}
     ]
   },

@@ -64,7 +64,7 @@ export const EVENT_DETAILS = [
       contact: "7805060610",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/CqpDoZMUnVz71DNk7",
   },
 
   {
@@ -119,7 +119,7 @@ export const EVENT_DETAILS = [
       contact: "7441162752",
       email: "rujhanbajpai@gmail.com",
     },
-    link: "#",
+    link: "https://forms.gle/CqpDoZMUnVz71DNk7",
   },
   {
     event: "drama-performance",
@@ -177,7 +177,7 @@ export const EVENT_DETAILS = [
       contact: "9516844542",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/CqpDoZMUnVz71DNk7",
   },
 
   {
@@ -254,7 +254,7 @@ export const EVENT_DETAILS = [
       contact: "9926510065",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/CqpDoZMUnVz71DNk7",
   },
   {
     event: "stand-up-comedy-competition",
@@ -323,7 +323,7 @@ export const EVENT_DETAILS = [
       contact: "7581008074",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/CqpDoZMUnVz71DNk7",
   },
 
   //  RANG RIWAAZ
@@ -354,7 +354,7 @@ export const EVENT_DETAILS = [
     },
     student_Coordinator: {
       name: "Deepti Mahisare",
-      contact: null,
+      contact: "9993998317",
       email: null,
     },
     link: "#",
@@ -381,13 +381,13 @@ export const EVENT_DETAILS = [
     date: "08/04/2025",
     time: "12:00pm – 2:00pm",
     faculty_Coordinator: {
-      name: "Mrs. Rajashree Sahoo",
+      name: "Ms. Rajashree Sahoo",
       contact: "7008439345",
       email: null,
     },
     student_Coordinator: {
       name: "Nayanshree Soni",
-      contact: null,
+      contact: "9575991150",
       email: null,
     },
     link: "#",
@@ -415,12 +415,12 @@ export const EVENT_DETAILS = [
     time: "2:00pm – 3:00pm",
     faculty_Coordinator: {
       name: "Ms. Nikita Yadav",
-      contact: null,
+      contact: "9893892514",
       email: null,
     },
     student_Coordinator: {
       name: "Poonam Sahu",
-      contact: null,
+      contact: "7828207001",
       email: null,
     },
     link: "#",
@@ -447,13 +447,13 @@ export const EVENT_DETAILS = [
     date: "08/04/2025",
     time: "2:30pm – 3:30pm",
     faculty_Coordinator: {
-      name: "Ms. Nikita Yadav",
-      contact: null,
+      name: "Ms. Manisha Meena",
+      contact: "7879010084",
       email: null,
     },
     student_Coordinator: {
       name: "Vaishali Sahu",
-      contact: null,
+      contact: "8964847960",
       email: null,
     },
     link: "#",
@@ -481,7 +481,7 @@ export const EVENT_DETAILS = [
       contact: null,
     },
     faculty_Coordinator: {
-      name: "Mrs. Shrashti Thakur",
+      name: "Ms. Shrashti Thakur",
       contact: "9691185077",
       email: null,
     },
@@ -522,7 +522,7 @@ export const EVENT_DETAILS = [
       contact: null,
     },
     faculty_Coordinator: {
-      name: "Mrs. Shrashti Thakur",
+      name: "Ms. Shrashti Thakur",
       contact: "9691185077",
       email: null,
     },
@@ -568,7 +568,7 @@ export const EVENT_DETAILS = [
       contact: null,
     },
     faculty_Coordinator: {
-      name: "Mrs. Shrashti Thakur",
+      name: "Ms. Shrashti Thakur",
       contact: "9691185077",
       email: null,
     },
@@ -625,7 +625,7 @@ export const EVENT_DETAILS = [
       "Any favorable software like Canva, Adobe, etc.",
     ],
     faculty_Coordinator: {
-      name: "Mrs. Shrashti Thakur",
+      name: "Ms. Shrashti Thakur",
       contact: "9691185077",
       email: null,
     },
@@ -683,7 +683,7 @@ export const EVENT_DETAILS = [
     ],
 
     faculty_Coordinator: {
-      name: "Mrs. Shrashti Thakur",
+      name: "Ms. Shrashti Thakur",
       contact: "9691185077",
       email: null,
     },
@@ -765,7 +765,7 @@ export const EVENT_DETAILS = [
       adherence_To_Rules: "Following all rules without incurring penalties.",
     },
     faculty_Coordinator: {
-      name: "Mrs. Shrashti Thakur",
+      name: "Ms. Shrashti Thakur",
       contact: "9691185077",
       email: null,
     },

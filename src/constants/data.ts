@@ -90,11 +90,11 @@ export const EVENT_DATA = [
       event_name: "drama-performance",
       event_date: "08-04-2025",
       event_time: "starts on : 11:30 AM",
-      event_organizer: "Mehak Vijaywargiya",
+      event_organizer: "Mahak Vijaywargiya",
       event_location: "LNCT Indore",
       event_description: "Experience the magic of theatre and bring characters to life on stage.",
       event_image: "drama_event_poster",
-      event_link: "#",
+      event_link: "https://forms.gle/CqpDoZMUnVz71DNk7",
       entry_fees: 50,
       recognition: {
         award: "Winners will receive a prestigious drama excellence trophy and special recognition.",
@@ -110,7 +110,7 @@ export const EVENT_DATA = [
       event_location: "LNCT Indore",
       event_description: "Express emotions, thoughts, and creativity through the art of spoken poetry.",
       event_image: "poetry_slam_poster",
-      event_link: "#",
+      event_link: "https://forms.gle/CqpDoZMUnVz71DNk7",
       entry_fees: 50,
       recognition: {
         award: "Top poets will receive an exclusive poetry achievement award and recognition.",
@@ -126,7 +126,7 @@ export const EVENT_DATA = [
       event_location: "LNCT Indore",
       event_description: "Showcase your talent in an energetic and expressive dance competition.",
       event_image: "dance_competition_poster",
-      event_link: "#",
+      event_link: "https://forms.gle/CqpDoZMUnVz71DNk7",
       entry_fees: 50,
       recognition: {
         award: "Winners will be honored with a dance maestro trophy and appreciation.",
@@ -158,7 +158,7 @@ export const EVENT_DATA = [
       event_location: "LNCT Indore",
       event_description: "Make the audience laugh with your wit and humor in this comedy battle.",
       event_image: "standup_comedy_poster",
-      event_link: "#",
+      event_link: "https://forms.gle/CqpDoZMUnVz71DNk7",
       entry_fees: 50,
       recognition: {
         award: "Funniest acts will receive a comedy champion trophy and recognition.",
@@ -179,7 +179,7 @@ export const EVENT_DATA = [
       event_description:
         "Embark on an adventurous quest where you'll solve intricate puzzles and decipher clever riddles to uncover hidden treasures before time runs out!",
       event_image: "escape_room_poster",
-      event_link: "#",
+      event_link: "https://forms.gle/CqpDoZMUnVz71DNk7",
       entry_fees: 150,
       prize_money: { first: 800, second: 500, third: 300 },
     },
