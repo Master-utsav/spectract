@@ -641,8 +641,8 @@ export const EVENT_DETAILS = [
       "Any favorable software like Canva, Adobe, etc.",
     ],
     faculty_Coordinator: {
-      name: "Ms. Shrashti Thakur",
-      contact: "9691185077",
+      name: "Dr. Abhishek",
+      contact: "8982257918",
       email: null,
     },
     student_Coordinator: {
@@ -704,7 +704,7 @@ export const EVENT_DETAILS = [
       email: null,
     },
     student_Coordinator: {
-      name: "Kalash Maurya",
+      name: "Kalash Mourya",
       contact: "9926666022",
       email: null,
     },
@@ -781,8 +781,8 @@ export const EVENT_DETAILS = [
       adherence_To_Rules: "Following all rules without incurring penalties.",
     },
     faculty_Coordinator: {
-      name: "Ms. Shrashti Thakur",
-      contact: "9691185077",
+      name: "Dr. Abhishek",
+      contact: "8982257918",
       email: null,
     },
 
@@ -1074,7 +1074,7 @@ export const EVENT_DETAILS = [
     },
     extra_Coordinator: {
       name: "Lt. Neelam sharma",
-      contact: "xxxxxxxxxx",
+      contact: "8889522281",
       email: null,
     },
     student_Coordinator: {

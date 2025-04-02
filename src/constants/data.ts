@@ -57,7 +57,7 @@ export const EVENT_DATA = [
     event_name: "code-forge",
     event_date: "07-04-2025",
     event_time: "10:30am",
-    event_organizer: "Kalash Maurya",
+    event_organizer: "Kalash Mourya",
     event_location: "LNCT Boss Lab",
     event_description: "A time-bound mini hackathon where teams build innovative projects on given themes.",
     event_image: "hackathon_poster",
