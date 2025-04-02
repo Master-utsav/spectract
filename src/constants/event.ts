@@ -494,7 +494,7 @@ export const EVENT_DETAILS = [
     student_Coordinator: {
       name: "Utsav Jaiswal",
       email: "masterutsav.in@gmail.com",
-      contact: null,
+      contact: "7803871724",
     },
     faculty_Coordinator: {
       name: "Ms. Shrashti Thakur",
@@ -535,7 +535,7 @@ export const EVENT_DETAILS = [
     student_Coordinator: {
       name: "Utsav Jaiswal",
       email: "masterutsav.in@gmail.com",
-      contact: null,
+      contact: "7803871724",
     },
     faculty_Coordinator: {
       name: "Ms. Shrashti Thakur",
@@ -581,7 +581,7 @@ export const EVENT_DETAILS = [
     student_Coordinator: {
       name: "Utsav Jaiswal",
       email: "masterutsav.in@gmail.com",
-      contact: null,
+      contact: "7803871724",
     },
     faculty_Coordinator: {
       name: "Ms. Shrashti Thakur",
