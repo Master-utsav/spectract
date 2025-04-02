@@ -343,6 +343,10 @@ export const EVENT_DETAILS = [
       "Sheets will be provided, but participants must bring their own stationery.",
       "Phones are not allowed.",
     ],
+    awards_And_Certificates: [
+      "Attractive prizes will be awarded to the top performers.",
+      "All participants will receive Medals.",
+    ],
     venue: "LNCT Physics Lab",
     entry_Fee: "50",
     date: "08/04/2025",
@@ -376,6 +380,10 @@ export const EVENT_DETAILS = [
       "Participants must bring their own rangoli colors.",
       "Phones are not allowed.",
     ],
+    awards_And_Certificates: [
+      "Attractive prizes will be awarded to the top performers.",
+      "All participants will receive Medals.",
+    ],
     venue: "LNCT Lobby",
     entry_Fee: "50",
     date: "08/04/2025",
@@ -401,6 +409,10 @@ export const EVENT_DETAILS = [
     eligibility: [
       "Open to all registered students of SKC LNCT Group of Colleges.",
       "Participants must present their college ID cards for verification.",
+    ],
+    awards_And_Certificates: [
+      "Attractive prizes will be awarded to the top performers.",
+      "All participants will receive Medals.",
     ],
     rules: [
       "Theme: Innovation.",
@@ -441,6 +453,10 @@ export const EVENT_DETAILS = [
       "Participants must bring their own colors.",
       "Pre-select the person they want to paint.",
       "No phones, no outside help allowed.",
+    ],
+    awards_And_Certificates: [
+      "Attractive prizes will be awarded to the top performers.",
+      "All participants will receive Medals.",
     ],
     venue: "LNCT Physics Lab",
     entry_Fee: "50",
@@ -912,7 +928,7 @@ export const EVENT_DETAILS = [
     date: "09/04/2025",
     time: "12:00pm onwards",
     venue: "LNCT Indore",
-    entry_Fee: "100",
+    entry_Fee: "50",
     prize_Money: {
       first: "1000",
       second: "800",
