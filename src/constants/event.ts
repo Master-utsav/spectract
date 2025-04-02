@@ -361,7 +361,7 @@ export const EVENT_DETAILS = [
       contact: "9993998317",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/w2WiVytxEjiV5WLBA",
   },
   {
     event: "rangoli",
@@ -398,7 +398,7 @@ export const EVENT_DETAILS = [
       contact: "9575991150",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/w2WiVytxEjiV5WLBA",
   },
   {
     event: "tattoo-making",
@@ -435,7 +435,7 @@ export const EVENT_DETAILS = [
       contact: "7828207001",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/w2WiVytxEjiV5WLBA",
   },
   {
     event: "face-painting",
@@ -472,7 +472,7 @@ export const EVENT_DETAILS = [
       contact: "8964847960",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/w2WiVytxEjiV5WLBA",
   },
 
   //   TECH SPARDHA

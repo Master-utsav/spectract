@@ -258,7 +258,7 @@ export const EVENT_DATA = [
     event_location: "LNCT Physics Lab",
     event_description: "Unleash your creativity and design stunning posters on cultural themes!",
     event_image: "folk_dance_festival_poster",
-    event_link: "#",
+    event_link: "https://forms.gle/w2WiVytxEjiV5WLBA",
     entry_fees: 50,
     recognition: {
       award: "Winners will receive a prestigious drama excellence trophy and special recognition.",
@@ -274,7 +274,7 @@ export const EVENT_DATA = [
     event_location: "LNCT Lobby",
     event_description: "Create vibrant and intricate rangoli designs that showcase your artistic skills.",
     event_image: "handicraft_exhibition_poster",
-    event_link: "#",
+    event_link: "https://forms.gle/w2WiVytxEjiV5WLBA",
     entry_fees: 50,
     recognition: {
       award: "Winners will receive a prestigious drama excellence trophy and special recognition.",
@@ -290,7 +290,7 @@ export const EVENT_DATA = [
     event_location: "LNCT Physics Lab",
     event_description: "Showcase your talent in temporary tattoo artistry with unique and intricate designs.",
     event_image: "traditional_music_concert_poster",
-    event_link: "#",
+    event_link: "https://forms.gle/w2WiVytxEjiV5WLBA",
     entry_fees: 50,
     recognition: {
       award: "Winners will receive a prestigious drama excellence trophy and special recognition.",
@@ -306,7 +306,7 @@ export const EVENT_DATA = [
     event_location: "LNCT Physics Lab",
     event_description: "Transform faces into artistic masterpieces with creative and colorful face painting.",
     event_image: "traditional_music_concert_poster",
-    event_link: "#",
+    event_link: "https://forms.gle/w2WiVytxEjiV5WLBA",
     entry_fees: 50,
     recognition: {
       award: "Winners will receive a prestigious drama excellence trophy and special recognition.",
