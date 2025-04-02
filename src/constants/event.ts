@@ -787,11 +787,11 @@ export const EVENT_DETAILS = [
     },
 
     student_Coordinator: {
-      name: "Rujhan Bajpai",
-      contact: null,
-      email: "rujhanbajpai@gmail.com",
+      name: "Abhineet Pandey",
+      contact: "6268939767",
+      email: null,
     },
-    link: "#",
+    link: "https://forms.gle/6cU21KekMri4fhA57",
   },
 
   {
@@ -917,7 +917,7 @@ export const EVENT_DETAILS = [
       contact: "7489085871",
       email: null,
     },
-    link: "#",
+    link: "https://forms.gle/4BNzC7sYf2gC958QA",
   },
   {
     event: "roadies",

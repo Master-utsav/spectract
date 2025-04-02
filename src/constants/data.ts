@@ -71,12 +71,12 @@ export const EVENT_DATA = [
     event_name: "robo-race",
     event_date: "07-04-2025",
     event_time: "1:00PM",
-    event_organizer: "Rujhan Bajpai",
+    event_organizer: "Abhineet Pandey",
     event_location: "LNCT Entry Hall",
     event_description:
       "Race your robot cars through obstacles and challenges to claim victory.",
     event_image: "robo_race_poster",
-    event_link: "#",
+    event_link: "https://forms.gle/6cU21KekMri4fhA57",
     entry_fees: 150,
     prize_money: { first: 1000, second: 600, third: 400 },
   },
@@ -179,7 +179,7 @@ export const EVENT_DATA = [
       event_description:
         "Embark on an adventurous quest where you'll solve intricate puzzles and decipher clever riddles to uncover hidden treasures before time runs out!",
       event_image: "escape_room_poster",
-      event_link: "https://forms.gle/CqpDoZMUnVz71DNk7",
+      event_link: "https://forms.gle/7jB484iJxkc456Jh8",
       entry_fees: 150,
       prize_money: { first: 800, second: 500, third: 300 },
     },
