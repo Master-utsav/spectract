@@ -260,7 +260,10 @@ export const EVENT_DATA = [
     event_image: "folk_dance_festival_poster",
     event_link: "#",
     entry_fees: 50,
-    prize_money: { first: 500, second: 300, third: 200 },
+    recognition: {
+      award: "Winners will receive a prestigious drama excellence trophy and special recognition.",
+      certificate: "All participants will be awarded a certificate of appreciation for their performance."
+    }
   },
   {
     event_category: "rang-riwaaz",
@@ -273,7 +276,10 @@ export const EVENT_DATA = [
     event_image: "handicraft_exhibition_poster",
     event_link: "#",
     entry_fees: 50,
-    prize_money: { first: 500, second: 300, third: 200 },
+    recognition: {
+      award: "Winners will receive a prestigious drama excellence trophy and special recognition.",
+      certificate: "All participants will be awarded a certificate of appreciation for their performance."
+    }
   },
   {
     event_category: "rang-riwaaz",
@@ -286,7 +292,10 @@ export const EVENT_DATA = [
     event_image: "traditional_music_concert_poster",
     event_link: "#",
     entry_fees: 50,
-    prize_money: { first: 500, second: 300, third: 200 },
+    recognition: {
+      award: "Winners will receive a prestigious drama excellence trophy and special recognition.",
+      certificate: "All participants will be awarded a certificate of appreciation for their performance."
+    }
   },
   {
     event_category: "rang-riwaaz",
@@ -299,7 +308,10 @@ export const EVENT_DATA = [
     event_image: "traditional_music_concert_poster",
     event_link: "#",
     entry_fees: 50,
-    prize_money: { first: 500, second: 300, third: 200 },
+    recognition: {
+      award: "Winners will receive a prestigious drama excellence trophy and special recognition.",
+      certificate: "All participants will be awarded a certificate of appreciation for their performance."
+    }
   },
  
 ];
