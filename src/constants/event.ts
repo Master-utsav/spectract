@@ -485,11 +485,11 @@ export const EVENT_DETAILS = [
     date: "07/04/2025",
     time: "12:50pm - 1:40pm",
     venue: "LNCT Server Room",
-    entry_Fee: "75",
+    entry_Fee: "Free",
     prize_Money: {
-      first: "500",
-      second: "300",
-      third: "200",
+      first: "2500",
+      second: "1500",
+      third: "1000",
     },
     student_Coordinator: {
       name: "Utsav Jaiswal",

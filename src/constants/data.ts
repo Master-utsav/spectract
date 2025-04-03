@@ -10,8 +10,8 @@ export const EVENT_DATA = [
     event_description: "A fast-paced coding quiz testing your knowledge of programming, algorithms, and logic.",
     event_image: "code_clash_poster",
     event_link: "https://forms.gle/bVJ5z2sNWgqwkAWK8",
-    entry_fees: 75,
-    prize_money: { first: 500, second: 300, third: 200 },
+    entry_fees: 0,
+    prize_money: { first: 2500, second: 1500, third: 1000 },
   },
   {
     event_category: "tech-spardha",
