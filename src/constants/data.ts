@@ -24,7 +24,11 @@ export const EVENT_DATA = [
     event_image: "bug_bash_poster",
     event_link: "https://forms.gle/R4mX8aea9Dq1v51k6",
     entry_fees: 75,
-    prize_money: { first: 500, second: 300, third: 200 },
+    // prize_money: { first: 500, second: 300, third: 200 },
+    recognition: {
+      award: "Funniest acts will receive a comedy champion trophy and recognition.",
+      certificate: "Every participant will get a certificate of humor and creativity."
+    }
   },
   {
     event_category: "tech-spardha",
@@ -37,7 +41,11 @@ export const EVENT_DATA = [
     event_image: "code_mirage_poster",
     event_link: "https://forms.gle/eNGHcrhsXf2qsFdB9",
     entry_fees: 75,
-    prize_money: { first: 500, second: 300, third: 200 },
+    // prize_money: { first: 500, second: 300, third: 200 },
+    recognition: {
+      award: "Funniest acts will receive a comedy champion trophy and recognition.",
+      certificate: "Every participant will get a certificate of humor and creativity."
+    }
   },
   {
     event_category: "tech-spardha",
@@ -50,7 +58,11 @@ export const EVENT_DATA = [
     event_image: "hackathon_poster",
     event_link: "https://forms.gle/ePUPfny867qk7BbBA",
     entry_fees: 75,
-    prize_money: { first: 500, second: 300, third: 200 },
+    // prize_money: { first: 500, second: 300, third: 200 },
+    recognition: {
+      award: "Funniest acts will receive a comedy champion trophy and recognition.",
+      certificate: "Every participant will get a certificate of humor and creativity."
+    }
   },
   {
     event_category: "tech-spardha",
@@ -63,7 +75,11 @@ export const EVENT_DATA = [
     event_image: "hackathon_poster",
     event_link: "https://forms.gle/U6UsvF2deSBAjEWN8",
     entry_fees: 150,
-    prize_money: { first: 1000, second: 600, third: 400 },
+    // prize_money: { first: 1000, second: 600, third: 400 },
+    recognition: {
+      award: "Funniest acts will receive a comedy champion trophy and recognition.",
+      certificate: "Every participant will get a certificate of humor and creativity."
+    }
   },
 
   {
@@ -180,8 +196,12 @@ export const EVENT_DATA = [
         "Embark on an adventurous quest where you'll solve intricate puzzles and decipher clever riddles to uncover hidden treasures before time runs out!",
       event_image: "escape_room_poster",
       event_link: "https://forms.gle/7jB484iJxkc456Jh8",
-      entry_fees: 150,
-      prize_money: { first: 800, second: 500, third: 300 },
+      entry_fees: 50,
+      // prize_money: { first: 800, second: 500, third: 300 },
+      recognition: {
+        award: "Winners will receive a prestigious drama excellence trophy and special recognition.",
+        certificate: "All participants will be awarded a certificate of appreciation for their performance."
+      }
     },
   {
     event_category: "thrill-arena",

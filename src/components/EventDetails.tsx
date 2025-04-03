@@ -197,7 +197,7 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
                   Entry Fee
                 </span>
                 <span className="flex items-center text-xl font-semibold text-emerald-300">
-                  <IndianRupee className="size-5 text-emerald-400 mr-1" />
+                {event.entry_Fee !== "Free" && <IndianRupee className="size-5 text-emerald-400 mr-1" />}
                   {event.entry_Fee}
                 </span>
               </div>

@@ -104,8 +104,14 @@ const Card = ({ data }: { data: any }) => {
             Entry Fee
           </span>
           <span className="flex justify-center items-center text-lg font-[family-name:var(--font-salsa)] text-emerald-200">
-            <IndianRupee className="size-4 text-emerald-300" />
-            {data.entry_fees}
+            {data.entry_fees === 0 ? (
+              "Free"
+            ) : (
+              <>
+                <IndianRupee className="size-4 text-emerald-300" />{" "}
+                {data.entry_fees}
+              </>
+            )}
           </span>
           <span
             className={cn(

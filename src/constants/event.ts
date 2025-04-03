@@ -527,11 +527,15 @@ export const EVENT_DETAILS = [
     time: "1:40pm - 2:30pm",
     venue: "LNCT Server Room",
     entry_Fee: "75",
-    prize_Money: {
-      first: "500",
-      second: "300",
-      third: "200",
-    },
+    // prize_Money: {
+    //   first: "500",
+    //   second: "300",
+    //   third: "200",
+    // },
+    awards_And_Certificates: [
+      "Attractive prizes will be awarded to the top performers.",
+      "All participants will receive Medals.",
+    ],
     student_Coordinator: {
       name: "Utsav Jaiswal",
       email: "masterutsav.in@gmail.com",
@@ -573,11 +577,15 @@ export const EVENT_DETAILS = [
     time: "2:30pm - 3:20pm",
     venue: "LNCT Server Room",
     entry_Fee: "75",
-    prize_Money: {
-      first: "500",
-      second: "300",
-      third: "200",
-    },
+    // prize_Money: {
+    //   first: "500",
+    //   second: "300",
+    //   third: "200",
+    // },
+    awards_And_Certificates: [
+      "Attractive prizes will be awarded to the top performers.",
+      "All participants will receive Medals.",
+    ],
     student_Coordinator: {
       name: "Utsav Jaiswal",
       email: "masterutsav.in@gmail.com",
@@ -611,11 +619,15 @@ export const EVENT_DETAILS = [
     time: "2:30pm - 3:30pm",
     venue: "LNCT Boss Lab",
     entry_Fee: "75",
-    prize_Money: {
-      first: "500",
-      second: "300",
-      third: "200",
-    },
+    // prize_Money: {
+    //   first: "500",
+    //   second: "300",
+    //   third: "200",
+    // },
+    awards_And_Certificates: [
+      "Attractive prizes will be awarded to the top performers.",
+      "All participants will receive Medals.",
+    ],
     eligibility: [
       "Open to all students of every college.",
       "Participants must have valid student ID cards.",
@@ -662,11 +674,15 @@ export const EVENT_DETAILS = [
     time: "10:30am onwards",
     venue: "LNCT Boss Lab",
     entry_Fee: "150",
-    prize_Money: {
-      first: "1000",
-      second: "600",
-      third: "400",
-    },
+    // prize_Money: {
+    //   first: "1000",
+    //   second: "600",
+    //   third: "400",
+    // },
+    awards_And_Certificates: [
+      "Attractive prizes will be awarded to the top performers.",
+      "All participants will receive Medals.",
+    ],
     eligibility: [
       "Open to all students of every college.",
       "Participants must have valid student ID cards.",
@@ -884,12 +900,13 @@ export const EVENT_DETAILS = [
     date: "09/04/2025",
     time: "10:00am onwards",
     venue: "LNCT Indore",
-    entry_Fee: "150",
-    prize_Money: {
-      first: "800",
-      second: "500",
-      third: "300",
-    },
+    entry_Fee: "50",
+    // prize_Money: {
+    //   first: "800",
+    //   second: "500",
+    //   third: "300",
+    // },
+    
     treasure_Hunt_Penalties: [
       "10-minute penalty for incorrect answers.",
       "30-minute penalty for cheating or unsportsmanlike behavior.",
