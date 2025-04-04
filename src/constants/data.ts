@@ -264,7 +264,7 @@ export const EVENT_DATA = [
       "A vibrant fashion event celebrating creativity, style, and self-expression through themed performances on the runway.",
     event_image: "glamour_night_poster",
     event_link: "https://forms.gle/pQA16iTnC5mKuFt16",
-    entry_fees: 200,
+    entry_fees: 100,
     prize_money: { first: 2100},
   },
   

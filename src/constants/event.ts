@@ -1070,13 +1070,13 @@ export const EVENT_DETAILS = [
         "1st Prize": "Rs. 2,100",
       },
     },
-    entry_Fee: "200/round",
+    entry_Fee: "100/round",
     venue: "LNCTS, Indore",
     date: "07/04/2025",
     time: "5:30 PM onwards",
     fees_Criteria: [
-      "Rs. 200 per round, irrespective of couple and solo",
-      "Rs. 500 if you participate in all rounds.",
+      "Rs. 100 per round, irrespective of couple and solo",
+      // "Rs. 500 if you participate in all rounds.",
     ],
     Guidelines: [
       "Participants must bring their own props.",
