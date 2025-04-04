@@ -25,7 +25,7 @@ export default function SEOData() {
         property="og:description"
         content="Join us at Tejanta LNCT Indore for a vibrant mix of technology, arts, and cultural events including Tech Spardha, Rang Riwaaz, and more."
       />
-      <meta property="og:image" content="/img/tejanta_1.jpg" />
+      <meta property="og:image" content="/img/tejanta_small_1.jpg" />
       <meta property="og:url" content="https://tejanta.info" />
       <meta property="og:type" content="website" />
       <meta name="twitter:card" content="summary_large_image" />
@@ -34,7 +34,7 @@ export default function SEOData() {
         name="twitter:description"
         content="Tech Spardha, Cultural Events, Rang Riwaaz, Fashion Show, and more at Tejanta LNCT Indore Fest."
       />
-      <meta name="twitter:image" content="/img/tejanta_1.png" />
+      <meta name="twitter:image" content="/img/tejanta_small_1.jpg" />
 
       {/* Structured Data for Better Indexing */}
       <script
@@ -56,7 +56,7 @@ export default function SEOData() {
                 addressCountry: "India",
               },
             },
-            image: "https://tejanta.info/img/tejanta_1.jpg",
+            image: "https://tejanta.info/img/tejanta_small_1.jpg",
             description:
               "Experience the vibrant fusion of technology, art, and culture at Tejanta LNCT Fest. Join us for Tech Spardha, Rang Riwaaz, Fashion Show, and more.",
             organizer: {
@@ -73,7 +73,7 @@ export default function SEOData() {
       <Image
         width={1600}
         height={900}
-        src="/img/tejanta_1.png"
+        src="/img/tejanta_small_1.jpg"
         alt="Tejanta LNCT Indore Fest - Tech, Art, and Cultural Events"
         loading="lazy"
         className="hidden"

@@ -86,7 +86,7 @@ export const metadata: Metadata = {
     title: "Tejanta LNCT Fest",
     description:
       "Join us at Tejanta LNCT Fest for an immersive experience in technology, culture, and innovation! Competitions, exhibitions, and performances await.",
-    images: "https://tejanta.info/img/tejanta_1.jpg",
+    images: "https://tejanta.info/img/tejanta_small_1.jpg",
   },
 };
 
