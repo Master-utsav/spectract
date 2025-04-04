@@ -39,7 +39,7 @@ const Button = ({
           )}
         >
           <Image
-            src={`/img/${btnName === "Fashionista Ada" ? "fashionista_ada_flyer.jpg" : btnName === "Kalaa Utsav" ? "kalaa_utsav_flyer.jpg" : btnName === "Tech Spardha" ? "tech_spardha_flyer.jpg" : btnName === "E-Sports" ? "e_sports_flyer.jpg" : btnName === "Thrill Arena" ? "thrill_arena_flyer" : "rang_riwaaz_flyer.jpg"}`}
+            src={`/img/${btnName === "Fashionista Ada" ? "fashionista_ada_flyer.jpg" : btnName === "Kalaa Utsav" ? "kalaa_utsav_flyer.jpg" : btnName === "Tech Spardha" ? "tech_spardha_flyer.jpg" : btnName === "E-Sports" ? "e_sports_flyer.jpg" : btnName === "Thrill Arena" ? "thrill_arena_flyer.jpeg" : "rang_riwaaz_flyer.jpg"}`}
             alt="Floating Image"
             width={150}
             height={200}
