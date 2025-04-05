@@ -74,7 +74,7 @@ export const EVENT_DATA = [
     event_description: "A time-bound mini hackathon where teams build innovative projects on given themes.",
     event_image: "hackathon_poster",
     event_link: "https://forms.gle/U6UsvF2deSBAjEWN8",
-    entry_fees: 0,
+    entry_fees: 50,
     // prize_money: { first: 1000, second: 600, third: 400 },
     recognition: {
       award: "Funniest acts will receive a comedy champion trophy and recognition.",

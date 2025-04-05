@@ -673,7 +673,7 @@ export const EVENT_DETAILS = [
     date: "07/04/2025",
     time: "10:30am onwards",
     venue: "LNCT Boss Lab",
-    entry_Fee: "Free",
+    entry_Fee: "50",
     // prize_Money: {
     //   first: "1000",
     //   second: "600",
