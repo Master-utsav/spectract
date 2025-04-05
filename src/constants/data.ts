@@ -23,7 +23,7 @@ export const EVENT_DATA = [
     event_description: "Find and fix hidden bugs in given programs within a limited time.",
     event_image: "bug_bash_poster",
     event_link: "https://forms.gle/R4mX8aea9Dq1v51k6",
-    entry_fees: 75,
+    entry_fees: 0,
     // prize_money: { first: 500, second: 300, third: 200 },
     recognition: {
       award: "Funniest acts will receive a comedy champion trophy and recognition.",
@@ -40,7 +40,7 @@ export const EVENT_DATA = [
     event_description: "Recreate the exact code structure based on given outputs, testing logical deduction.",
     event_image: "code_mirage_poster",
     event_link: "https://forms.gle/eNGHcrhsXf2qsFdB9",
-    entry_fees: 75,
+    entry_fees: 0,
     // prize_money: { first: 500, second: 300, third: 200 },
     recognition: {
       award: "Funniest acts will receive a comedy champion trophy and recognition.",
@@ -57,7 +57,7 @@ export const EVENT_DATA = [
     event_description: "Unleash your creativity and design stunning digital illustrations using advanced tools and techniques.",
     event_image: "hackathon_poster",
     event_link: "https://forms.gle/ePUPfny867qk7BbBA",
-    entry_fees: 75,
+    entry_fees: 0,
     // prize_money: { first: 500, second: 300, third: 200 },
     recognition: {
       award: "Funniest acts will receive a comedy champion trophy and recognition.",
@@ -74,7 +74,7 @@ export const EVENT_DATA = [
     event_description: "A time-bound mini hackathon where teams build innovative projects on given themes.",
     event_image: "hackathon_poster",
     event_link: "https://forms.gle/U6UsvF2deSBAjEWN8",
-    entry_fees: 150,
+    entry_fees: 0,
     // prize_money: { first: 1000, second: 600, third: 400 },
     recognition: {
       award: "Funniest acts will receive a comedy champion trophy and recognition.",
@@ -93,7 +93,7 @@ export const EVENT_DATA = [
       "Race your robot cars through obstacles and challenges to claim victory.",
     event_image: "robo_race_poster",
     event_link: "https://forms.gle/6cU21KekMri4fhA57",
-    entry_fees: 150,
+    entry_fees: 50,
     prize_money: { first: 1000, second: 600, third: 400 },
   },
 

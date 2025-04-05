@@ -526,7 +526,7 @@ export const EVENT_DETAILS = [
     date: "07/04/2025",
     time: "1:40pm - 2:30pm",
     venue: "LNCT Server Room",
-    entry_Fee: "75",
+    entry_Fee: "Free",
     // prize_Money: {
     //   first: "500",
     //   second: "300",
@@ -576,7 +576,7 @@ export const EVENT_DETAILS = [
     date: "07/04/2025",
     time: "2:30pm - 3:20pm",
     venue: "LNCT Server Room",
-    entry_Fee: "75",
+    entry_Fee: "Free",
     // prize_Money: {
     //   first: "500",
     //   second: "300",
@@ -618,7 +618,7 @@ export const EVENT_DETAILS = [
     date: "07/04/2025",
     time: "2:30pm - 3:30pm",
     venue: "LNCT Boss Lab",
-    entry_Fee: "75",
+    entry_Fee: "Free",
     // prize_Money: {
     //   first: "500",
     //   second: "300",
@@ -673,7 +673,7 @@ export const EVENT_DETAILS = [
     date: "07/04/2025",
     time: "10:30am onwards",
     venue: "LNCT Boss Lab",
-    entry_Fee: "150",
+    entry_Fee: "Free",
     // prize_Money: {
     //   first: "1000",
     //   second: "600",
@@ -735,7 +735,7 @@ export const EVENT_DETAILS = [
     date: "07/04/2025",
     time: "1:00pm onwards",
     venue: "LNCT Entry Hall",
-    entry_Fee: "150",
+    entry_Fee: "50",
     prize_Money: {
       first: "1000",
       second: "600",
