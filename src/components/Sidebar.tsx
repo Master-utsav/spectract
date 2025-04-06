@@ -443,6 +443,19 @@ const Sidebar = ({
                       className="h-auto w-32 px-2 flex justify-center items-center filter brightness-300 drop-shadow-md"
                     />
                   </Link>
+                  <Link
+                    href={"https://www.lncpsindore.com/"}
+                    target="_blank"
+                    className="w-fit rounded-full mx-auto flex justify-center items-center"
+                  >
+                    <Image
+                      src="/img/lncps_logo.png"
+                      alt=""
+                      width={450}
+                      height={160}
+                      className="h-auto w-32 px-2 flex justify-center items-center filter brightness-300 drop-shadow-md"
+                    />
+                  </Link>
                 </div>
                 <Link
                   href={"https://masterutsav.in"}
