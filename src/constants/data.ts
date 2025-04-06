@@ -11,7 +11,11 @@ export const EVENT_DATA = [
     event_image: "code_clash_poster",
     event_link: "https://forms.gle/bVJ5z2sNWgqwkAWK8",
     entry_fees: 0,
-    prize_money: { first: 2500, second: 1500, third: 1000 },
+    // prize_money: { first: 2500, second: 1500, third: 1000 },
+    recognition: {
+      award: "Funniest acts will receive a comedy champion trophy and recognition.",
+      certificate: "Every participant will get a certificate of humor and creativity."
+    }
   },
   {
     event_category: "tech-spardha",
@@ -214,7 +218,7 @@ export const EVENT_DATA = [
       "Test your endurance, strength, and mental grit as you tackle intense obstacle courses and thrilling challenges designed to push your limits!",
     event_image: "adventure_rush_poster",
     event_link: "https://forms.gle/4BNzC7sYf2gC958QA",
-    entry_fees: 50,
+    entry_fees: 0,
     prize_money: { first: 1000, second: 800, third: 500 },
   },
    
@@ -248,6 +252,21 @@ export const EVENT_DATA = [
   event_link: "https://forms.gle/DEsrXWbNojWEAaoz9",
   entry_fees: 200,
   prize_money: { first: 2000, second: 1000, third: 500 },
+},
+
+{
+  event_category: "Ludo",
+  event_name: "ludo",
+  event_date: "09-04-2025",
+  event_time: "1:00 PM",
+  event_organizer: "Jatin Kushwah",
+  event_location: "LNCT Indore",
+  event_description:
+    "Roll the dice and race to victory in the ultimate Ludo showdown! Outsmart your opponents, strategize every move, and battle it out for glory in this fun and competitive board game tournament.",
+  event_image: "adventure_rush_poster",
+  event_link: "https://forms.gle/DEsrXWbNojWEAaoz9",
+  entry_fees: 50,
+  prize_money: { first: 1000, second: 500, third: 300 },
 },
 
 

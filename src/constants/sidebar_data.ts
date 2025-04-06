@@ -55,8 +55,9 @@ export const eventCategories = [
       slug: "e-sports",
       icon: Gamepad2,
       events: [
-        { name: "Free Fire", time: "12:00 AM", slug: "free-fire" },
-        { name: "BGMI", time: "02:00 PM", slug: "bgmi" }
+        { name: "Free Fire", time: "12:00 PM", slug: "free-fire" },
+        { name: "BGMI", time: "12:00 PM", slug: "bgmi" },
+        { name: "LUDO", time: "01:00 PM", slug: "ludo" }
       ]
     },
     { 

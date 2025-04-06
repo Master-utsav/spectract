@@ -486,11 +486,15 @@ export const EVENT_DETAILS = [
     time: "12:50pm - 1:40pm",
     venue: "LNCT Server Room",
     entry_Fee: "Free",
-    prize_Money: {
-      first: "2500",
-      second: "1500",
-      third: "1000",
-    },
+    // prize_Money: {
+    //   first: "2500",
+    //   second: "1500",
+    //   third: "1000",
+    // },
+    awards_And_Certificates: [
+      "Attractive prizes will be awarded to the top performers.",
+      "All participants will receive Medals.",
+    ],
     student_Coordinator: {
       name: "Utsav Jaiswal",
       email: "masterutsav.in@gmail.com",
@@ -892,6 +896,52 @@ export const EVENT_DETAILS = [
   },
 
   {
+    event: "ludo",
+    eventName: "LUDO",
+    category: "e-sports",
+    description:
+      "Roll the dice and race to victory in the ultimate Ludo showdown! Outsmart your opponents, strategize every move, and battle it out for glory in this fun and competitive board game tournament.",
+    date: "09/04/2025",
+    time: "1:00pm onwards",
+    venue: "LNCT Indore",
+    entry_Fee: "50",
+    prize_Money: {
+      first: "upto 1000",
+      second: "upto 500",
+      third: "upto 300",
+    },
+    winning_Criteria: [
+      "Team seggretate as per the count of the participants and each team have 4 members.",
+      "Winners will again play and the last 4 players will be awarded.",
+    ],
+    rules: [
+      "Cheating is strictly prohibited.",
+      "Hacking or any form of software manipulation is not allowed.",
+      "Unauthorized panels or external tools are not permitted.",
+      "Participants must bring their own devices.",
+      "Personal computers (PCs) are not allowed.",
+      "The committee reserves the right to make the final decision on any rule violations.",
+    ],
+    faculty_Coordinator: {
+      name: "Mr. Dilip Sir",
+      contact: "9406834767",
+      email: null,
+    },
+    student_Coordinator: {
+      name: "Jatin Kushwah",
+      contact: "7489085871",
+      email: null,
+    },
+    link: "https://forms.gle/DEsrXWbNojWEAaoz9",
+  },
+
+
+
+
+
+
+
+  {
     event: "treasure-hunt",
     eventName: "Treasure Hunt",
     category: "thrill-arena",
@@ -945,7 +995,7 @@ export const EVENT_DETAILS = [
     date: "09/04/2025",
     time: "12:00pm onwards",
     venue: "LNCT Indore",
-    entry_Fee: "50",
+    entry_Fee: "Free",
     prize_Money: {
       first: "1000",
       second: "800",
