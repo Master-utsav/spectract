@@ -394,7 +394,7 @@ const Sidebar = ({
                   <Link
                     href={"https://lnctgroup.in/"}
                     target="_blank"
-                    className="w-fit rounded-xl mx-auto flex justify-center items-center border-orange-500 border-[1px]"
+                    className="w-fit rounded-xl mx-auto flex justify-center items-center "
                   >
                     <Image
                       src="/img/skc_lnct_group_logo.png"
@@ -407,7 +407,7 @@ const Sidebar = ({
                   <Link
                     href={"https://lnctgroup.in/"}
                     target="_blank"
-                    className="w-fit rounded-full mx-auto flex justify-center items-center border-orange-500 border-[1px]"
+                    className="w-fit rounded-full mx-auto flex justify-center items-center "
                   >
                     <Image
                       src="/img/lnct_logo.png"
@@ -420,7 +420,7 @@ const Sidebar = ({
                   <Link
                     href={"https://lnctgroup.in/"}
                     target="_blank"
-                    className="w-fit rounded-full mx-auto flex justify-center items-center border-orange-500 border-[1px]"
+                    className="w-fit rounded-full mx-auto flex justify-center items-center "
                   >
                     <Image
                       src="/img/lncts_logo.png"
@@ -433,7 +433,7 @@ const Sidebar = ({
                   <Link
                     href={"https://lnctgroup.in/"}
                     target="_blank"
-                    className="w-fit rounded-full mx-auto flex justify-center items-center border-orange-500 border-[1px]"
+                    className="w-fit rounded-full mx-auto flex justify-center items-center "
                   >
                     <Image
                       src="/img/lncp_logo.png"
@@ -446,7 +446,7 @@ const Sidebar = ({
                   <Link
                     href={"https://www.lncpsindore.com/"}
                     target="_blank"
-                    className="w-fit rounded-full mx-auto flex justify-center items-center border-orange-500 border-[1px]"
+                    className="w-fit rounded-full mx-auto flex justify-center items-center "
                   >
                     <Image
                       src="/img/lncps_logo.png"
