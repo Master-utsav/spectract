@@ -255,7 +255,7 @@ export const EVENT_DATA = [
 },
 
 {
-  event_category: "Ludo",
+  event_category: "e-sports",
   event_name: "ludo",
   event_date: "09-04-2025",
   event_time: "1:00 PM",

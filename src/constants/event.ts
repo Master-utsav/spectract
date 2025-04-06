@@ -897,7 +897,7 @@ export const EVENT_DETAILS = [
 
   {
     event: "ludo",
-    eventName: "LUDO",
+    eventName: "Ludo",
     category: "e-sports",
     description:
       "Roll the dice and race to victory in the ultimate Ludo showdown! Outsmart your opponents, strategize every move, and battle it out for glory in this fun and competitive board game tournament.",
