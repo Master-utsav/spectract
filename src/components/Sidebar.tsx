@@ -394,66 +394,66 @@ const Sidebar = ({
                   <Link
                     href={"https://lnctgroup.in/"}
                     target="_blank"
-                    className="w-full mx-auto flex justify-center items-center"
+                    className="w-fit rounded-xl mx-auto flex justify-center items-center border-orange-500 border-[1px]"
                   >
                     <Image
-                      src="/img/skc_logo.png"
+                      src="/img/skc_lnct_group_logo.png"
                       alt=""
                       width={450}
                       height={160}
-                      className="h-auto w-40 px-2 bg-blend-hard-light filter brightness-120 flex justify-center items-center "
+                      className="h-auto w-40   mix-blend-multiply filter  flex justify-center items-center "
                     />
                   </Link>
                   <Link
                     href={"https://lnctgroup.in/"}
                     target="_blank"
-                    className="w-fit rounded-full mx-auto flex justify-center items-center"
+                    className="w-fit rounded-full mx-auto flex justify-center items-center border-orange-500 border-[1px]"
                   >
                     <Image
                       src="/img/lnct_logo.png"
                       alt=""
                       width={450}
                       height={160}
-                      className="h-auto w-32 px-2 flex justify-center items-center filter brightness-300 drop-shadow-md"
+                      className="h-auto w-32  flex justify-center items-center filter mix-blend-multiply drop-shadow-md"
                     />
                   </Link>
                   <Link
                     href={"https://lnctgroup.in/"}
                     target="_blank"
-                    className="w-fit rounded-full mx-auto flex justify-center items-center"
+                    className="w-fit rounded-full mx-auto flex justify-center items-center border-orange-500 border-[1px]"
                   >
                     <Image
                       src="/img/lncts_logo.png"
                       alt=""
                       width={450}
                       height={160}
-                      className="h-auto w-32 px-2 flex justify-center items-center filter brightness-300 drop-shadow-md"
+                      className="h-auto w-32  flex justify-center items-center filter mix-blend-multiply drop-shadow-md"
                     />
                   </Link>
                   <Link
                     href={"https://lnctgroup.in/"}
                     target="_blank"
-                    className="w-fit rounded-full mx-auto flex justify-center items-center"
+                    className="w-fit rounded-full mx-auto flex justify-center items-center border-orange-500 border-[1px]"
                   >
                     <Image
                       src="/img/lncp_logo.png"
                       alt=""
                       width={450}
                       height={160}
-                      className="h-auto w-32 px-2 flex justify-center items-center filter brightness-300 drop-shadow-md"
+                      className="h-auto w-32  flex justify-center items-center filter mix-blend-multiply  drop-shadow-md"
                     />
                   </Link>
                   <Link
                     href={"https://www.lncpsindore.com/"}
                     target="_blank"
-                    className="w-fit rounded-full mx-auto flex justify-center items-center"
+                    className="w-fit rounded-full mx-auto flex justify-center items-center border-orange-500 border-[1px]"
                   >
                     <Image
                       src="/img/lncps_logo.png"
                       alt=""
                       width={450}
                       height={160}
-                      className="h-auto w-32 px-2 flex justify-center items-center filter brightness-300 drop-shadow-md"
+                      className="h-auto w-32  flex justify-center items-center filter mix-blend-multiply drop-shadow-md"
                     />
                   </Link>
                 </div>
