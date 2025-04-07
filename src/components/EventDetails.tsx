@@ -197,7 +197,9 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
                   Entry Fee
                 </span>
                 <span className="flex items-center text-xl font-semibold text-emerald-300">
-                {event.entry_Fee !== "Free" && <IndianRupee className="size-5 text-emerald-400 mr-1" />}
+                  {event.entry_Fee !== "Free" && (
+                    <IndianRupee className="size-5 text-emerald-400 mr-1" />
+                  )}
                   {event.entry_Fee}
                 </span>
               </div>
@@ -577,16 +579,24 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
           </AccordionSection>
         )}
         {event.treasure_Hunt_Penalties && (
-          <AccordionSection title="Penalties" icon={Ban} sectionName="treasure_Hunt_Penalties">
+          <AccordionSection
+            title="Penalties"
+            icon={Ban}
+            sectionName="treasure_Hunt_Penalties"
+          >
             {renderListSection(event.treasure_Hunt_Penalties)}
           </AccordionSection>
         )}
         {event.treasure_Hunt_Time_Limit && (
-          <AccordionSection title="Time Limit" icon={Clock} sectionName="treasure_Hunt_Time_Limit">
+          <AccordionSection
+            title="Time Limit"
+            icon={Clock}
+            sectionName="treasure_Hunt_Time_Limit"
+          >
             {renderListSection(event.treasure_Hunt_Time_Limit)}
           </AccordionSection>
         )}
-       
+
         {event.language && (
           <AccordionSection
             title="Language"
@@ -957,50 +967,56 @@ export const EventDetailsComponent = ({ event }: { event: any }) => {
       {/* Prize Money Section */}
       {event.prize_Money && (
         <div className="flex flex-col justify-center items-center gap-3 p-4 rounded-lg shadow-lg border border-white/30 bg-gradient-to-b from-white/20 to-transparent font-[family-name:var(--font-salsa)] backdrop-blur-3xl">
-          <span className="text-2xl font-bold text-yellow-400 drop-shadow-lg flex items-center gap-3">
-            <Image
-              width={40}
-              height={40}
-              src="/img/award_1.png"
-              alt="First Prize"
-              className="w-8 h-8 object-contain mix-blend-lighten"
-            />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500 flex items-center">
-              <IndianRupee className="size-5 text-yellow-300" />
-              {event.prize_Money?.first}
+          {event.prize_Money?.first && (
+            <span className="text-2xl font-bold text-yellow-400 drop-shadow-lg flex items-center gap-3">
+              <Image
+                width={40}
+                height={40}
+                src="/img/award_1.png"
+                alt="First Prize"
+                className="w-8 h-8 object-contain mix-blend-lighten"
+              />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-yellow-300 to-yellow-500 flex items-center">
+                <IndianRupee className="size-5 text-yellow-300" />
+                {event.prize_Money?.first}
+              </span>
             </span>
-          </span>
+          )}
           {/* Second Prize */}
-          <span className="text-xl font-semibold text-yellow-300 drop-shadow-md flex items-center lg:gap-3 gap-1">
-            <Image
-              width={40}
-              height={40}
-              src="/img/award_2.png"
-              alt="Second Prize"
-              loading="eager"
-              className="w-8 h-8 object-contain mix-blend-lighten"
-            />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-500 flex justify-center items-center">
-              <IndianRupee className="size-4 text-gray-300 " />
-              {event.prize_Money.second}
+          {event.prize_Money?.second && (
+            <span className="text-xl font-semibold text-yellow-300 drop-shadow-md flex items-center lg:gap-3 gap-1">
+              <Image
+                width={40}
+                height={40}
+                src="/img/award_2.png"
+                alt="Second Prize"
+                loading="eager"
+                className="w-8 h-8 object-contain mix-blend-lighten"
+              />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-gray-500 flex justify-center items-center">
+                <IndianRupee className="size-4 text-gray-300 " />
+                {event.prize_Money?.second}
+              </span>
             </span>
-          </span>
+          )}
 
           {/* Third Prize */}
-          <span className="text-lg font-medium text-yellow-200 drop-shadow-sm flex items-center lg:gap-3 gap-1">
-            <Image
-              width={40}
-              height={40}
-              src="/img/award_3.png"
-              alt="Third Prize"
-              loading="eager"
-              className="w-8 h-8 object-contain mix-blend-lighten"
-            />
-            <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500 flex justify-center items-center">
-              <IndianRupee className="size-3 text-orange-300 " />
-              {event.prize_Money.third}
+          {event.prize_Money?.third && (
+            <span className="text-lg font-medium text-yellow-200 drop-shadow-sm flex items-center lg:gap-3 gap-1">
+              <Image
+                width={40}
+                height={40}
+                src="/img/award_3.png"
+                alt="Third Prize"
+                loading="eager"
+                className="w-8 h-8 object-contain mix-blend-lighten"
+              />
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-orange-300 to-orange-500 flex justify-center items-center">
+                <IndianRupee className="size-3 text-orange-300 " />
+                {event.prize_Money?.third}
+              </span>
             </span>
-          </span>
+          )}
         </div>
       )}
 
