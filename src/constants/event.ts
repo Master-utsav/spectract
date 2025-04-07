@@ -739,11 +739,9 @@ export const EVENT_DETAILS = [
     date: "07/04/2025",
     time: "1:00pm onwards",
     venue: "LNCT Entry Hall",
-    entry_Fee: "50",
+    entry_Fee: "150",
     prize_Money: {
       first: "1000",
-      second: "600",
-      third: "400",
     },
     eligibility: [
       "Open to students from all departments.",
